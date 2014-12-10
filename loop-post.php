@@ -3,10 +3,6 @@
 <!-- BEGIN .post-holder -->
 <div class="post-holder shadow radius-full">
 
-	<?php if ( has_post_thumbnail()) { ?>
-		<div class="feature-img radius-top"><?php the_post_thumbnail( 'swell-featured-medium' ); ?></div>
-	<?php } ?>
-
 	<!-- BEGIN .article -->
 	<div class="article">
 		
