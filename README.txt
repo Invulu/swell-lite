@@ -1,4 +1,4 @@
-Swell Theme v1.0
+Swell Theme v1.0.1
 http://www.swelltheme.com
  
 INSTALL: 
