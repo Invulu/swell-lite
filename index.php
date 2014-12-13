@@ -17,40 +17,8 @@ get_header(); ?>
 	
 		<!-- BEGIN .content -->
 		<div class="content">
-		
-		<?php if ( is_active_sidebar( 'blog-sidebar' ) && is_active_sidebar( 'left-sidebar' ) ) { ?>
-		
-			<!-- BEGIN .three columns -->
-			<div class="three columns">
-			
-				<?php get_sidebar('left'); ?>
-				
-			<!-- END .three columns -->
-			</div>
-			
-			<!-- BEGIN .nine columns -->
-			<div class="nine columns">
 	
-				<!-- BEGIN .postarea middle -->
-				<div id="infinite-container" class="postarea middle">
-				
-					<?php get_template_part( 'content/loop', 'blog' ); ?>
-			
-				<!-- END .postarea middle -->
-				</div>
-			
-			<!-- END .nine columns -->
-			</div>
-			
-			<!-- BEGIN .four columns -->
-			<div class="four columns">
-			
-				<?php get_sidebar('blog'); ?>
-				
-			<!-- END .four columns -->
-			</div>
-	
-		<?php } elseif ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
+		<?php if ( is_active_sidebar( 'blog-sidebar' ) ) { ?>
 			
 			<!-- BEGIN .eleven columns -->
 			<div class="columns eleven">
@@ -72,30 +40,6 @@ get_header(); ?>
 				<?php get_sidebar('blog'); ?>
 				
 			<!-- END .five columns -->
-			</div>
-		
-		<?php } elseif ( is_active_sidebar( 'left-sidebar' ) ) { ?>
-		
-			<!-- BEGIN .four columns -->
-			<div class="four columns">
-			
-				<?php get_sidebar('left'); ?>
-				
-			<!-- END .four columns -->
-			</div>
-			
-			<!-- BEGIN .twelve columns -->
-			<div class="twelve columns">
-	
-				<!-- BEGIN .postarea right -->
-				<div id="infinite-container" class="postarea right">
-				
-					<?php get_template_part( 'content/loop', 'blog' ); ?>
-			
-				<!-- END .postarea right -->
-				</div>
-			
-			<!-- END .twelve columns -->
 			</div>
 		
 		<?php } else { ?>
