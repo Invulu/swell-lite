@@ -34,7 +34,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea full -->
 				<div class="postarea full">
 		
-					<?php get_template_part( 'loop', 'page' ); ?>
+					<?php get_template_part( 'content/loop', 'page' ); ?>
 		
 				<!-- END .postarea full -->
 				</div>

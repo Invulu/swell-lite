@@ -34,7 +34,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea middle -->
 				<div id="infinite-container" class="postarea middle">
 				
-					<?php get_template_part( 'loop', 'blog' ); ?>
+					<?php get_template_part( 'content/loop', 'blog' ); ?>
 			
 				<!-- END .postarea middle -->
 				</div>
@@ -58,7 +58,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea -->
 				<div id="infinite-container" class="postarea">
 				
-					<?php get_template_part( 'loop', 'blog' ); ?>
+					<?php get_template_part( 'content/loop', 'blog' ); ?>
 			
 				<!-- END .postarea -->
 				</div>
@@ -90,7 +90,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea right -->
 				<div id="infinite-container" class="postarea right">
 				
-					<?php get_template_part( 'loop', 'blog' ); ?>
+					<?php get_template_part( 'content/loop', 'blog' ); ?>
 			
 				<!-- END .postarea right -->
 				</div>
@@ -106,7 +106,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea full -->
 				<div id="infinite-container" class="postarea full">
 		
-					<?php get_template_part( 'loop', 'blog' ); ?>
+					<?php get_template_part( 'content/loop', 'blog' ); ?>
 				
 				<!-- END .postarea full -->
 				</div>

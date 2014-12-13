@@ -34,7 +34,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea middle -->
 				<div class="postarea middle">
 				
-					<?php get_template_part( 'loop', 'archive' ); ?>
+					<?php get_template_part( 'content/loop', 'archive' ); ?>
 					
 				<!-- END .postarea middle -->
 				</div>
@@ -66,7 +66,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea -->
 				<div class="postarea right">
 				
-					<?php get_template_part( 'loop', 'archive' ); ?>
+					<?php get_template_part( 'content/loop', 'archive' ); ?>
 				
 				<!-- END .postarea -->
 				</div>
@@ -82,7 +82,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea -->
 				<div class="postarea">
 				
-					<?php get_template_part( 'loop', 'archive' ); ?>
+					<?php get_template_part( 'content/loop', 'archive' ); ?>
 				
 				<!-- END .postarea -->
 				</div>
@@ -106,7 +106,7 @@ get_header(); ?>
 				<!-- BEGIN .postarea full -->
 				<div class="postarea full">
 				
-					<?php get_template_part( 'loop', 'archive' ); ?>
+					<?php get_template_part( 'content/loop', 'archive' ); ?>
 				
 				<!-- END .postarea full -->
 				</div>
