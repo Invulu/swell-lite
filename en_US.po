@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Swell\n"
-"POT-Creation-Date: 2014-11-11 14:31-1000\n"
-"PO-Revision-Date: 2014-11-11 14:32-1000\n"
+"Project-Id-Version: Swell Lite\n"
+"POT-Creation-Date: 2014-12-13 12:59-1000\n"
+"PO-Revision-Date: 2014-12-13 13:00-1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -75,273 +75,258 @@ msgstr ""
 msgid "No posts by this author."
 msgstr ""
 
-#: content/page-featured.php:7 formats/format-audio.php:5
-#: formats/format-gallery.php:11 formats/format-image.php:5
-#: formats/format-image.php:7 formats/format-image.php:10
-#: formats/format-link.php:5 formats/format-quote.php:7
-#: formats/format-standard.php:10 formats/format-status.php:5
-#: formats/format-video.php:22 loop-archive.php:11 loop-portfolio.php:21
+#: content/loop-archive.php:11 content/loop-blog.php:11
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: content/slider-featured.php:38
-msgid "Learn More"
-msgstr ""
-
-#: footer.php:56
-msgid "Copyright"
-msgstr ""
-
-#: footer.php:56
-msgid "Y"
-msgstr ""
-
-#: footer.php:56
-msgid "All Rights Reserved"
-msgstr ""
-
-#: footer.php:60 footer.php:64
-msgid "RSS Feed"
-msgstr ""
-
-#: footer.php:64
-msgid "Swell Theme"
-msgstr ""
-
-#: footer.php:64 formats/format-standard.php:28 loop-archive.php:30
-#: loop-archive.php:34 loop-post.php:23 loop-post.php:27
-msgid "by"
-msgstr ""
-
-#: footer.php:64
-msgid "David Morgan"
-msgstr ""
-
-#: formats/format-audio.php:15 formats/format-gallery.php:13
-#: formats/format-standard.php:34 formats/format-video.php:26
-#: functions.php:692 loop-page.php:15 loop-project.php:11 template-home.php:37
-#: template-home.php:64 template-landing.php:58
-msgid "Read More"
-msgstr ""
-
-#: formats/format-link.php:20
-msgid "Visit Link"
-msgstr ""
-
-#: formats/format-standard.php:19 formats/format-video.php:17
-#: loop-archive.php:20 loop-post.php:11
+#: content/loop-archive.php:20 content/loop-blog.php:20
+#: content/loop-post.php:11
 msgid "Leave a Comment"
 msgstr ""
 
-#: formats/format-standard.php:19 formats/format-video.php:17
-#: loop-archive.php:20 loop-post.php:11
+#: content/loop-archive.php:20 content/loop-blog.php:20
+#: content/loop-post.php:11
 msgid "1 Comment"
 msgstr ""
 
-#: formats/format-standard.php:20 formats/format-video.php:18
-#: loop-archive.php:21 loop-post.php:12
+#: content/loop-archive.php:21 content/loop-blog.php:21
+#: content/loop-post.php:12
 msgid "Posted on"
 msgstr ""
 
-#: formats/format-standard.php:20 formats/format-video.php:18
-#: loop-archive.php:21 loop-post.php:12
+#: content/loop-archive.php:21 content/loop-blog.php:21
+#: content/loop-post.php:12
 msgid "F j, Y"
 msgstr ""
 
-#: functions.php:42
-msgid "Theme License Options"
+#: content/loop-archive.php:29 content/loop-blog.php:29
+#: content/loop-post.php:22 footer.php:56
+msgid "by"
 msgstr ""
 
-#: functions.php:51
-msgid "License Key"
+#: content/loop-archive.php:35 content/loop-post.php:49
+msgid ", "
 msgstr ""
 
-#: functions.php:55
-msgid "Enter your license key"
+#: content/loop-archive.php:40 content/loop-post.php:49
+msgid "Category:"
 msgstr ""
 
-#: functions.php:61 functions.php:70
-msgid "Activate License"
+#: content/loop-archive.php:40 content/loop-post.php:49
+msgid "Tags:"
 msgstr ""
 
-#: functions.php:65
-msgid "Active"
+#: content/loop-archive.php:63
+msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: functions.php:67
-msgid "Deactivate License"
+#: content/loop-blog.php:35 content/loop-page.php:15 functions.php:248
+msgid "Read More"
 msgstr ""
 
-#: functions.php:235
+#: content/loop-blog.php:56 content/loop-post.php:80
+msgid "No Posts Found"
+msgstr ""
+
+#: content/loop-blog.php:57
+msgid ""
+"We're sorry, but no posts have been found. Create a post to be added to this "
+"section, and configure your theme options."
+msgstr ""
+
+#: content/loop-page.php:18 content/loop-post.php:35
+msgid "Pages:"
+msgstr ""
+
+#: content/loop-page.php:23 content/loop-post.php:40
+msgid "Next"
+msgstr ""
+
+#: content/loop-page.php:24 content/loop-post.php:41
+msgid "Previous"
+msgstr ""
+
+#: content/loop-page.php:29
+msgid "(Edit)"
+msgstr ""
+
+#: content/loop-page.php:50
+msgid "Page Not Found"
+msgstr ""
+
+#: content/loop-page.php:51
+msgid "We're sorry, but the page could not be found."
+msgstr ""
+
+#: content/loop-post.php:81
+msgid "We're sorry, but the post was not found."
+msgstr ""
+
+#: footer.php:54
+msgid "Copyright"
+msgstr ""
+
+#: footer.php:54
+msgid "Y"
+msgstr ""
+
+#: footer.php:54
+msgid "All Rights Reserved"
+msgstr ""
+
+#: footer.php:56
+msgid "Free Swell Theme"
+msgstr ""
+
+#: footer.php:56
+msgid "David Morgan"
+msgstr ""
+
+#: footer.php:56
+msgid "RSS Feed"
+msgstr ""
+
+#: functions.php:26
 msgid "Fixed Menu"
 msgstr ""
 
-#: functions.php:236
+#: functions.php:27
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:28
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:367
+#: functions.php:103
 msgid "Default Sidebar"
 msgstr ""
 
-#: functions.php:375
+#: functions.php:111
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:383
-msgid "Left Sidebar"
-msgstr ""
-
-#: functions.php:391
+#: functions.php:119
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:425
-msgid "Link Information"
-msgstr ""
-
-#: functions.php:432
-msgid "Link URL: "
-msgstr ""
-
-#: functions.php:440
-msgid "Quote Author"
-msgstr ""
-
-#: functions.php:447
-msgid "Author: "
-msgstr ""
-
-#: functions.php:618
+#: functions.php:174
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:618 functions.php:658
+#: functions.php:174 functions.php:214
 msgid "Edit"
 msgstr ""
 
-#: functions.php:636
+#: functions.php:192
 #, php-format
 msgid "%1$s <br/> %2$s <br/>"
 msgstr ""
 
-#: functions.php:642
+#: functions.php:198
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: functions.php:651
+#: functions.php:207
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:656
+#: functions.php:212
 msgid "Reply"
 msgstr ""
 
-#: functions.php:716
+#: functions.php:272
 msgid "&laquo;"
 msgstr ""
 
-#: functions.php:717
+#: functions.php:273
 msgid "&raquo;"
 msgstr ""
 
-#: functions.php:758
+#: functions.php:314
 msgid "Featured Video Embed Code"
 msgstr ""
 
-#: functions.php:846
+#: functions.php:402
 #, php-format
 msgid "Page %s"
-msgstr ""
-
-#: includes/EDD_SL_Theme_Updater.php:54
-msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
 msgstr ""
 
 #: includes/customizer.php:21
 msgid "&mdash; Select &mdash;"
 msgstr ""
 
-#: includes/customizer.php:59 includes/customizer.php:306
+#: includes/customizer.php:59
 msgid "2 Seconds"
 msgstr ""
 
-#: includes/customizer.php:60 includes/customizer.php:307
+#: includes/customizer.php:60
 msgid "4 Seconds"
 msgstr ""
 
-#: includes/customizer.php:61 includes/customizer.php:308
+#: includes/customizer.php:61
 msgid "6 Seconds"
 msgstr ""
 
-#: includes/customizer.php:62 includes/customizer.php:309
+#: includes/customizer.php:62
 msgid "8 Seconds"
 msgstr ""
 
-#: includes/customizer.php:63 includes/customizer.php:310
+#: includes/customizer.php:63
 msgid "10 Seconds"
 msgstr ""
 
-#: includes/customizer.php:64 includes/customizer.php:311
+#: includes/customizer.php:64
 msgid "12 Seconds"
 msgstr ""
 
-#: includes/customizer.php:65 includes/customizer.php:312
+#: includes/customizer.php:65
 msgid "20 Seconds"
 msgstr ""
 
-#: includes/customizer.php:66 includes/customizer.php:313
+#: includes/customizer.php:66
 msgid "30 Seconds"
 msgstr ""
 
-#: includes/customizer.php:67 includes/customizer.php:314
+#: includes/customizer.php:67
 msgid "1 Minute"
 msgstr ""
 
-#: includes/customizer.php:68 includes/customizer.php:315
+#: includes/customizer.php:68
 msgid "Hold Frame"
 msgstr ""
 
-#: includes/customizer.php:80 includes/customizer.php:330
+#: includes/customizer.php:80
 msgid "Fade"
 msgstr ""
 
-#: includes/customizer.php:81 includes/customizer.php:331
+#: includes/customizer.php:81
 msgid "Slide"
 msgstr ""
 
-#: includes/customizer.php:93 includes/customizer.php:394
+#: includes/customizer.php:93
 msgid "One Column"
 msgstr ""
 
-#: includes/customizer.php:94 includes/customizer.php:395
+#: includes/customizer.php:94
 msgid "Two Columns"
 msgstr ""
 
-#: includes/customizer.php:95 includes/customizer.php:396
+#: includes/customizer.php:95
 msgid "Three Columns"
 msgstr ""
 
-#: includes/customizer.php:107 includes/customizer.php:183
-#: includes/customizer.php:204
+#: includes/customizer.php:107 includes/customizer.php:182
 msgid "Left Align"
 msgstr ""
 
-#: includes/customizer.php:108 includes/customizer.php:184
-#: includes/customizer.php:205
+#: includes/customizer.php:108 includes/customizer.php:183
 msgid "Center Align"
 msgstr ""
 
-#: includes/customizer.php:109 includes/customizer.php:185
-#: includes/customizer.php:206
+#: includes/customizer.php:109 includes/customizer.php:184
 msgid "Right Align"
 msgstr ""
 
@@ -353,84 +338,44 @@ msgstr ""
 msgid "White"
 msgstr ""
 
-#: includes/customizer.php:156 includes/customizer.php:167
+#: includes/customizer.php:156
+msgid "Site Title, Tagline & Logo"
+msgstr ""
+
+#: includes/customizer.php:166
 msgid "Logo"
 msgstr ""
 
-#: includes/customizer.php:157
-msgid "Logo images have a max-height of 140px."
+#: includes/customizer.php:179
+msgid "Title & Logo Alignment"
 msgstr ""
 
-#: includes/customizer.php:180
-msgid "Logo Alignment"
-msgstr ""
-
-#: includes/customizer.php:201
-msgid "Site Title & Tagline Alignment"
-msgstr ""
-
-#: includes/customizer.php:292
-msgid "Slideshow"
-msgstr ""
-
-#: includes/customizer.php:303
-msgid "Transition Interval"
-msgstr ""
-
-#: includes/customizer.php:327
-msgid "Transition Style"
-msgstr ""
-
-#: includes/customizer.php:341
-msgid "Page Templates"
-msgstr ""
-
-#: includes/customizer.php:351
-msgid "Home Template Featured Page Left"
-msgstr ""
-
-#: includes/customizer.php:364
-msgid "Home Template Featured Page Mid"
-msgstr ""
-
-#: includes/customizer.php:377
-msgid "Home Template Featured Page Right"
-msgstr ""
-
-#: includes/customizer.php:391
-msgid "Portfolio Template Column Layout"
-msgstr ""
-
-#: includes/customizer.php:406
+#: includes/customizer.php:194
 msgid "Layout"
 msgstr ""
 
-#: includes/customizer.php:416
+#: includes/customizer.php:204
 msgid "Enable Responsive Grid?"
 msgstr ""
 
-#: includes/customizer.php:429
+#: includes/customizer.php:217
 msgid "Show Post Author Link?"
 msgstr ""
 
-#: includes/customizer.php:442
+#: includes/customizer.php:230
 msgid "Show Blog Author Link?"
 msgstr ""
 
-#: includes/customizer.php:455
+#: includes/customizer.php:243
 msgid "Show Blog Date & Comment Link?"
 msgstr ""
 
-#: includes/customizer.php:468
+#: includes/customizer.php:256
 msgid "Show Post Featured Images?"
 msgstr ""
 
-#: includes/customizer.php:481
+#: includes/customizer.php:269
 msgid "Enable Full Width Background Image?"
-msgstr ""
-
-#: includes/customizer.php:493
-msgid "Footer Text"
 msgstr ""
 
 #: includes/typefaces.php:24
@@ -458,68 +403,6 @@ msgctxt "Droid Serif font: on or off"
 msgid "on"
 msgstr ""
 
-#: loop-archive.php:41 loop-post.php:59
-msgid ", "
-msgstr ""
-
-#: loop-archive.php:46 loop-post.php:59
-msgid "Category:"
-msgstr ""
-
-#: loop-archive.php:46 loop-post.php:59
-msgid "Tags:"
-msgstr ""
-
-#: loop-archive.php:69
-msgid "Sorry, no posts matched your criteria."
-msgstr ""
-
-#: loop-blog.php:18 loop-post.php:90
-msgid "No Posts Found"
-msgstr ""
-
-#: loop-blog.php:19
-msgid ""
-"We're sorry, but no posts have been found. Create a post to be added to this "
-"section, and configure your theme options."
-msgstr ""
-
-#: loop-page.php:18 loop-post.php:45 loop-project.php:14
-msgid "Pages:"
-msgstr ""
-
-#: loop-page.php:23 loop-post.php:50 loop-project.php:19
-msgid "Next"
-msgstr ""
-
-#: loop-page.php:24 loop-post.php:51 loop-project.php:20
-msgid "Previous"
-msgstr ""
-
-#: loop-page.php:29
-msgid "(Edit)"
-msgstr ""
-
-#: loop-page.php:50 template-home.php:88
-msgid "Page Not Found"
-msgstr ""
-
-#: loop-page.php:51 template-home.php:89
-msgid "We're sorry, but the page could not be found."
-msgstr ""
-
-#: loop-post.php:91
-msgid "We're sorry, but the post was not found."
-msgstr ""
-
-#: loop-project.php:57
-msgid "No Project Found"
-msgstr ""
-
-#: loop-project.php:58
-msgid "We're sorry, but the project was not found."
-msgstr ""
-
 #: searchform.php:12
 msgid "Search"
 msgstr ""
@@ -532,18 +415,18 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: template-archive.php:47
+#: template-archive.php:46
 msgid "By Page:"
 msgstr ""
 
-#: template-archive.php:52
+#: template-archive.php:51
 msgid "By Post:"
 msgstr ""
 
-#: template-archive.php:57
+#: template-archive.php:56
 msgid "By Month:"
 msgstr ""
 
-#: template-archive.php:60
+#: template-archive.php:59
 msgid "By Category:"
 msgstr ""
