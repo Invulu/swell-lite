@@ -1793,6 +1793,13 @@ a, a:link {
 #infinite-footer .container {
 	width: auto;
 	}
+.infinite-scroll .pagination,
+.infinite-scroll.neverending .footer {
+    display: none;
+	}
+.infinity-end.neverending .footer {
+    display: block;
+	}
 .infinite-loader .spinner {
 	margin: 0px auto 0px;
 	}

@@ -42,7 +42,7 @@
 
 <?php endwhile; ?>
 
-	<?php if ( $wp_query->max_num_pages > 1 && ! Jetpack::is_module_active( 'infinite-scroll' ) ) { ?>
+	<?php if ( $wp_query->max_num_pages > 1 ) { ?>
 		<!-- BEGIN .pagination -->
 		<div class="pagination">
 			<?php echo swell_get_pagination_links(); ?>
