@@ -6,7 +6,9 @@ body {
 	font-weight: 300;
 	line-height: 1.7;
 	margin: 0px;
-	padding: 0px;
+	}
+body.wp-autoresize {
+	padding: 12px 24px !important;
 	}
 
 /************************************************
@@ -382,25 +384,26 @@ img.alignleft {
 ************************************************/
 
 a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit, 
-#comments #respond input#submit, .gform_wrapper input.button, #infinite-handle span {
+#comments #respond input#submit, .container .gform_wrapper input.button, #wrap #infinite-handle span {
 	display: inline-block;
 	position: relative;
-	top: -2px;
-	background-color: #f4f4f4;
-	color: #666666 !important;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 0.9em;
-	font-weight: bold;
+	background-color: #10c7b4;
+	color: #cccccc !important;
+	color: rgba(255, 255, 255, .7) !important;
+	font-family: 'Raleway';
+	font-size: 0.75em;
+	font-weight: 700;
 	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	margin: 12px 0px;
-	padding: 4px 18px;
+	padding: 12px 24px;
 	border-radius: 3px;
 	border: none;
-	box-shadow: 0px 3px 0px rgba(0, 0, 0, .2);
+	-webkit-appearance: none;
 	}
 a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover,
-#submit:hover, #comments #respond input#submit:hover, .gform_wrapper input.button:hover, #infinite-handle span:hover {
-	top: 0px;
+#submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover, #wrap #infinite-handle span:hover {
 	background-color: #05ad9c;
 	color: #FFFFFF !important;
 	text-decoration: none;
