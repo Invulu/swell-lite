@@ -2,18 +2,18 @@
 /**
 * Google Fonts Implementation
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 
 /**
 * Register Google Font URLs
 *
-* @since Swell 1.0
+* @since Swell Lite 1.0
 */
 
-function swell_fonts_url() {
+function swelllite_fonts_url() {
     $fonts_url = '';
  
     /* Translators: If there are characters in your language that are not
@@ -21,11 +21,11 @@ function swell_fonts_url() {
     * into your own language.
     */
     
-    $raleway = _x( 'on', 'Raleway font: on or off', 'swelltheme' );
-    $roboto = _x( 'on', 'Roboto font: on or off', 'swelltheme' );
-    $open_sans = _x( 'on', 'Open Sans font: on or off', 'swelltheme' );
-    $montserrat = _x( 'on', 'Montserrat font: on or off', 'swelltheme' );
-    $droid_serif = _x( 'on', 'Droid Serif font: on or off', 'swelltheme' );
+    $raleway = _x( 'on', 'Raleway font: on or off', 'swelllite' );
+    $roboto = _x( 'on', 'Roboto font: on or off', 'swelllite' );
+    $open_sans = _x( 'on', 'Open Sans font: on or off', 'swelllite' );
+    $montserrat = _x( 'on', 'Montserrat font: on or off', 'swelllite' );
+    $droid_serif = _x( 'on', 'Droid Serif font: on or off', 'swelllite' );
  
     if ( 'off' !== $raleway || 'off' !== $open_sans || 'off' !== $montserrat || 'off' !== $droid_serif ) {
         $font_families = array();
@@ -64,30 +64,30 @@ function swell_fonts_url() {
 /**
 * Enqueue Google Fonts on Front End
 *
-* @since Swell 1.0
+* @since Swell Lite 1.0
 */
 
-function swell_scripts_styles() {
-    wp_enqueue_style( 'swell-fonts', swell_fonts_url(), array(), null );
+function swelllite_scripts_styles() {
+    wp_enqueue_style( 'swell-fonts', swelllite_fonts_url(), array(), null );
 }
-add_action( 'wp_enqueue_scripts', 'swell_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'swelllite_scripts_styles' );
 
 /**
 * Enqueue Google Fonts on Custom Header Page
 *
-* @since Swell 1.0
+* @since Swell Lite 1.0
 */
-function swell_custom_header_fonts() {
-    wp_enqueue_style( 'swell-fonts', swell_fonts_url(), array(), null );
+function swelllite_custom_header_fonts() {
+    wp_enqueue_style( 'swell-fonts', swelllite_fonts_url(), array(), null );
 }
-add_action( 'admin_print_styles-appearance_page_custom-header', 'swell_scripts_styles' );
+add_action( 'admin_print_styles-appearance_page_custom-header', 'swelllite_scripts_styles' );
 
 /**
 * Add Google Scripts for use with the editor
 *
-* @since Swell 1.0
+* @since Swell Lite 1.0
 */
-function swell_editor_styles() {
-    add_editor_style( array( 'css/style-editor.css', swell_fonts_url() ) );
+function swelllite_editor_styles() {
+    add_editor_style( array( 'css/style-editor.css', swelllite_fonts_url() ) );
 }
-add_action( 'after_setup_theme', 'swell_editor_styles' );
+add_action( 'after_setup_theme', 'swelllite_editor_styles' );

@@ -2,8 +2,8 @@
 /**
 * This template is used to display category post indexes.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 get_header(); ?>

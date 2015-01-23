@@ -3,8 +3,8 @@
 *
 * This template is used to display a blog. The content is displayed in post formats.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 get_header(); ?>

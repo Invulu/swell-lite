@@ -1,4 +1,4 @@
-Swell Theme v1.0.2
+Swell Lite v1.0.3
 http://www.swelltheme.com
  
 INSTALL: 
@@ -13,3 +13,10 @@ CHANGELOG v1.0.2:
 - Removed extra files
 - Moved loops to content folder
 - Style tweaks
+
+CHANGELOG v1.0.3:
+- Matched textdomain and theme slug
+- Moved en_US.po file
+- Removed option for responsive display
+- Removed favicon
+- Changed footer credit

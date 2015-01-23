@@ -4,8 +4,8 @@ Template Name: Archives
 *
 * This template is used to display site archives of posts, pages and categories.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 get_header(); ?>
@@ -43,20 +43,20 @@ get_header(); ?>
 							<h1 class="headline"><?php the_title(); ?></h1>
 							
 							<div class="archive-column">
-								<h6><?php _e("By Page:", 'swelltheme'); ?></h6>
+								<h6><?php _e("By Page:", 'swelllite'); ?></h6>
 								<ul><?php wp_list_pages('title_li='); ?></ul>
 							</div>
 							
 							<div class="archive-column">
-								<h6><?php _e("By Post:", 'swelltheme'); ?></h6>
+								<h6><?php _e("By Post:", 'swelllite'); ?></h6>
 								<ul><?php wp_get_archives('type=postbypost&limit=100'); ?></ul>
 							</div>
 							
 							<div class="archive-column last">
-								<h6><?php _e("By Month:", 'swelltheme'); ?></h6>
+								<h6><?php _e("By Month:", 'swelllite'); ?></h6>
 								<ul><?php wp_get_archives('type=monthly'); ?></ul>
 								<br />
-								<h6><?php _e("By Category:", 'swelltheme'); ?></h6>
+								<h6><?php _e("By Category:", 'swelllite'); ?></h6>
 								<ul><?php wp_list_categories('sort_column=name&title_li='); ?></ul>
 							</div>
 						

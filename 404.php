@@ -2,8 +2,8 @@
 /**
 * This page template is used to display a 404 error message.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 get_header(); ?>
@@ -28,8 +28,8 @@ get_header(); ?>
 				<!-- BEGIN .article -->
 				<div class="article">
 			
-					<h1 class="headline"><?php _e("Not Found, Error 404", 'swelltheme'); ?></h1>
-					<p><?php _e("The page you are looking for no longer exists.", 'swelltheme'); ?></p>
+					<h1 class="headline"><?php _e("Not Found, Error 404", 'swelllite'); ?></h1>
+					<p><?php _e("The page you are looking for no longer exists.", 'swelllite'); ?></p>
 					
 				<!-- END .article -->
 				</div>
@@ -65,8 +65,8 @@ get_header(); ?>
 					<!-- BEGIN .article -->
 					<div class="article">
 				
-						<h1 class="headline"><?php _e("Not Found, Error 404", 'swelltheme'); ?></h1>
-						<p><?php _e("The page you are looking for no longer exists.", 'swelltheme'); ?></p>
+						<h1 class="headline"><?php _e("Not Found, Error 404", 'swelllite'); ?></h1>
+						<p><?php _e("The page you are looking for no longer exists.", 'swelllite'); ?></p>
 						
 					<!-- END .article -->
 					</div>

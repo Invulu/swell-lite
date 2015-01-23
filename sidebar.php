@@ -3,8 +3,8 @@
 * The default sidebar template for our theme.
 * This template is used to display the sidebar on pages.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 ?>

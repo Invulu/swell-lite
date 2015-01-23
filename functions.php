@@ -4,12 +4,12 @@
 /*	Theme Setup
 /*-----------------------------------------------------------------------------------------------------*/
 
-if ( ! function_exists( 'swell_setup' ) ) :
+if ( ! function_exists( 'swelllite_setup' ) ) :
 
-function swell_setup() {
+function swelllite_setup() {
 
 	// Make theme available for translation
-	load_theme_textdomain( 'swelltheme', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'swelllite', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -23,9 +23,9 @@ function swell_setup() {
 
 	// Create Menus
 	register_nav_menus( array(
-		'fixed-menu' => __( 'Fixed Menu', 'swelltheme' ),
-		'main-menu' => __( 'Main Menu', 'swelltheme' ),
-		'social-menu' => __( 'Social Menu', 'swelltheme' ),
+		'fixed-menu' => __( 'Fixed Menu', 'swelllite' ),
+		'main-menu' => __( 'Main Menu', 'swelllite' ),
+		'social-menu' => __( 'Social Menu', 'swelllite' ),
 	));
 	
 	// Custom Header
@@ -46,14 +46,14 @@ function swell_setup() {
 	);
 	add_theme_support( 'custom-background', $defaults );
 }
-endif; // swell_setup
-add_action( 'after_setup_theme', 'swell_setup' );
+endif; // swelllite_setup
+add_action( 'after_setup_theme', 'swelllite_setup' );
 
 /*-----------------------------------------------------------------------------------------------------//	
 	Category ID to Name		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-function swell_cat_id_to_name( $id ) {
+function swelllite_cat_id_to_name( $id ) {
 	$cat = get_category( $id );
 	if ( is_wp_error( $cat ) )
 		return false;
@@ -64,8 +64,8 @@ function swell_cat_id_to_name( $id ) {
 	Register Scripts		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-if( !function_exists('swell_enqueue_scripts') ) {
-	function swell_enqueue_scripts() {
+if( !function_exists('swelllite_enqueue_scripts') ) {
+	function swelllite_enqueue_scripts() {
 	
 		// Enqueue Styles
 		wp_enqueue_style( 'swell-style', get_stylesheet_uri() );
@@ -92,15 +92,15 @@ if( !function_exists('swell_enqueue_scripts') ) {
 	    }
 	}
 }
-add_action('wp_enqueue_scripts', 'swell_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'swelllite_enqueue_scripts');
 
 /*-----------------------------------------------------------------------------------------------------//	
 	Register Sidebars		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-function swell_widgets_init() {
+function swelllite_widgets_init() {
 	register_sidebar(array(
-		'name'=> __( "Default Sidebar", 'swelltheme' ),
+		'name'=> __( "Default Sidebar", 'swelllite' ),
 		'id' => 'default-sidebar',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
@@ -108,7 +108,7 @@ function swell_widgets_init() {
 		'after_title'=>'</h6>'
 	));
 	register_sidebar(array(
-		'name'=> __( "Blog Sidebar", 'swelltheme' ),
+		'name'=> __( "Blog Sidebar", 'swelllite' ),
 		'id' => 'blog-sidebar',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
@@ -116,7 +116,7 @@ function swell_widgets_init() {
 		'after_title'=>'</h6>'
 	));
 	register_sidebar(array(
-		'name'=> __( "Footer Widgets", 'swelltheme' ),
+		'name'=> __( "Footer Widgets", 'swelllite' ),
 		'id' => 'footer',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s"><div class="footer-widget">',
 		'after_widget'=>'</div></div>',
@@ -124,20 +124,20 @@ function swell_widgets_init() {
 		'after_title'=>'</h6>'
 	));
 }
-add_action( 'widgets_init', 'swell_widgets_init' );
+add_action( 'widgets_init', 'swelllite_widgets_init' );
 
 /*-----------------------------------------------------------------------------------------------------//
 	Add Stylesheet To Visual Editor
 -------------------------------------------------------------------------------------------------------*/
 	
-add_action( 'widgets_init', 'swell_add_editor_styles' );
+add_action( 'widgets_init', 'swelllite_add_editor_styles' );
 /**
 * Apply theme's stylesheet to the visual editor.
 *
 * @uses add_editor_style() Links a stylesheet to visual editor
 * @uses get_stylesheet_uri() Returns URI of theme stylesheet
 */
-function swell_add_editor_styles() {
+function swelllite_add_editor_styles() {
 	add_editor_style( 'css/style-editor.css' );
 }
 	
@@ -151,27 +151,27 @@ if ( ! isset( $content_width ) )
 /**
  * Adjust content_width value based on the presence of widgets
  */
-function swell_content_width() {
+function swelllite_content_width() {
 	if ( ! is_active_sidebar( 'post-sidebar' ) || is_active_sidebar( 'page-sidebar' ) || is_active_sidebar( 'blog-sidebar' ) ) {
 		global $content_width;
 		$content_width = 960;
 	}
 }
-add_action( 'template_redirect', 'swell_content_width' );
+add_action( 'template_redirect', 'swelllite_content_width' );
 	
 /*-----------------------------------------------------------------------------------------------------//	
 	Comments Function		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-if ( ! function_exists( 'swell_comment' ) ) :
-function swell_comment( $comment, $args, $depth ) {
+if ( ! function_exists( 'swelllite_comment' ) ) :
+function swelllite_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'swelltheme' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'swelltheme' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'swelllite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'swelllite' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 		break;
 		default :
@@ -189,13 +189,13 @@ function swell_comment( $comment, $args, $depth ) {
 						echo get_avatar( $comment, $avatar_size );
 
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s <br/> %2$s <br/>', 'swelltheme' ),
+						printf( __( '%1$s <br/> %2$s <br/>', 'swelllite' ),
 							sprintf( '<span class="fn">%s</span>', wp_kses_post( get_comment_author_link() ) ),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s', 'swelltheme' ), get_comment_date(), get_comment_time() )
+								sprintf( __( '%1$s', 'swelllite' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>
@@ -204,14 +204,14 @@ function swell_comment( $comment, $args, $depth ) {
 
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'swelltheme' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'swelllite' ); ?></em>
 					<br />
 				<?php endif; ?>
 				<?php comment_text(); ?>
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'swelltheme' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'swelllite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</div><!-- .reply -->
-				<?php edit_comment_link( __( 'Edit', 'swelltheme' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_comment_link( __( 'Edit', 'swelllite' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 
 		</article><!-- #comment-## -->
@@ -220,41 +220,41 @@ function swell_comment( $comment, $args, $depth ) {
 	break;
 	endswitch;
 }
-endif; // ends check for swell_comment()
+endif; // ends check for swelllite_comment()
 
 /*-----------------------------------------------------------------------------------------------------//	
 	Comments Disabled On Pages By Default		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-function swell_default_comments_off( $data ) {
+function swelllite_default_comments_off( $data ) {
     if( $data['post_type'] == 'page' && $data['post_status'] == 'auto-draft' ) {
         $data['comment_status'] = 0;
     } 
 
     return $data;
 }
-add_filter( 'wp_insert_post_data', 'swell_default_comments_off' );
+add_filter( 'wp_insert_post_data', 'swelllite_default_comments_off' );
 
 /*-----------------------------------------------------------------------------------------------------//	
 	Custom Excerpt Length		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-function swell_excerpt_length( $length ) {
+function swelllite_excerpt_length( $length ) {
 	return 38;
 }
-add_filter( 'excerpt_length', 'swell_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'swelllite_excerpt_length', 999 );
 
-function swell_excerpt_more( $more ) {
-	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'swelltheme') .'</a>';
+function swelllite_excerpt_more( $more ) {
+	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'swelllite') .'</a>';
 }
-add_filter('excerpt_more', 'swell_excerpt_more');
+add_filter('excerpt_more', 'swelllite_excerpt_more');
 
 /*-----------------------------------------------------------------------------------------------------//	
 	Add Excerpt To Pages		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
-add_action( 'init', 'swell_add_excerpts_to_pages' );
-function swell_add_excerpts_to_pages() {
+add_action( 'init', 'swelllite_add_excerpts_to_pages' );
+function swelllite_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
 
@@ -262,15 +262,15 @@ function swell_add_excerpts_to_pages() {
 /*	Pagination Function
 /*-----------------------------------------------------------------------------------------------------*/
 
-function swell_get_pagination_links() {
+function swelllite_get_pagination_links() {
 	global $wp_query;
 	$big = 999999999;
 	echo paginate_links( array(
 		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var('paged') ),
-		'prev_text' => __('&laquo;', 'swelltheme'),
-		'next_text' => __('&raquo;', 'swelltheme'),
+		'prev_text' => __('&laquo;', 'swelllite'),
+		'next_text' => __('&raquo;', 'swelllite'),
 		'total' => $wp_query->max_num_pages
 	) );
 }
@@ -279,7 +279,7 @@ function swell_get_pagination_links() {
 /*	Custom Page Links
 /*-----------------------------------------------------------------------------------------------------*/
 
-function swell_wp_link_pages_args_prevnext_add($args) {
+function swelllite_wp_link_pages_args_prevnext_add($args) {
     global $page, $numpages, $more, $pagenow;
 
     if (!$args['next_or_number'] == 'next_and_number') 
@@ -301,7 +301,7 @@ function swell_wp_link_pages_args_prevnext_add($args) {
     return $args;
 }
 
-add_filter('wp_link_pages_args', 'swell_wp_link_pages_args_prevnext_add');
+add_filter('wp_link_pages_args', 'swelllite_wp_link_pages_args_prevnext_add');
 
 /*-----------------------------------------------------------------------------------------------------//	
 	Featured Video Meta Box		       	     	 
@@ -311,7 +311,7 @@ add_action("admin_init", "admin_init_featurevid");
 add_action('save_post', 'save_featurevid');
 
 function admin_init_featurevid(){
-	add_meta_box("featurevid-meta", __("Featured Video Embed Code", 'swelltheme'), "meta_options_featurevid", "post", "normal", "high");
+	add_meta_box("featurevid-meta", __("Featured Video Embed Code", 'swelllite'), "meta_options_featurevid", "post", "normal", "high");
 }
 
 function meta_options_featurevid(){
@@ -357,7 +357,7 @@ add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
 	Body Class
 -------------------------------------------------------------------------------------------------------*/
 
-function swell_body_class( $classes ) {
+function swelllite_body_class( $classes ) {
 	if ( is_singular() )
 		$classes[] = 'swell-singular';
 
@@ -377,13 +377,13 @@ function swell_body_class( $classes ) {
 
 	return $classes;
 }
-add_action( 'body_class', 'swell_body_class' );
+add_action( 'body_class', 'swelllite_body_class' );
 
 /*-----------------------------------------------------------------------------------------------------//
 	Filters wp_title to print a neat <title> tag based on what is being viewed.
 -------------------------------------------------------------------------------------------------------*/
 
-function swell_wp_title( $title, $sep ) {
+function swelllite_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -399,11 +399,11 @@ function swell_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'swelltheme' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'swelllite' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'swell_wp_title', 10, 2 );
+add_filter( 'wp_title', 'swelllite_wp_title', 10, 2 );
 
 /*-----------------------------------------------------------------------------------------------------//
 	Includes

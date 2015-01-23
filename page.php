@@ -2,8 +2,8 @@
 /**
 * This template displays the default page content.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 get_header(); ?>

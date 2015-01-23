@@ -3,8 +3,8 @@
 * The footer for our theme.
 * This template is used to generate the footer for the theme.
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 *
 */
 ?>
@@ -51,9 +51,9 @@
 		
 				<div class="align-left">
 				
-					<p><?php _e("Copyright", 'swelltheme'); ?> &copy; <?php echo date(__("Y", 'swelltheme')); ?> &middot; <?php _e("All Rights Reserved", 'swelltheme'); ?> &middot; <?php bloginfo('name'); ?></p>
+					<p><?php _e("Copyright", 'swelllite'); ?> &copy; <?php echo date(__("Y", 'swelllite')); ?> &middot; <?php _e("All Rights Reserved", 'swelllite'); ?> &middot; <?php bloginfo('name'); ?></p>
 					
-					<p><a href="http://swelltheme.com" target="_blank"><?php _e("Free Swell Theme", 'swelltheme'); ?></a> <?php _e("by", 'swelltheme'); ?> <a href="http://dav.idmorgan.com" target="_blank"><?php _e("David Morgan", 'swelltheme'); ?></a> &middot; <a href="<?php bloginfo('rss2_url'); ?>"><?php _e("RSS Feed", 'swelltheme'); ?></a> &middot; <?php wp_loginout(); ?></p>
+					<p><?php _e("Swell Lite", 'swelllite'); ?> <?php _e("from", 'swelllite'); ?> <a href="http://organicthemes.com" target="_blank"><?php _e("Organic Themes", 'swelllite'); ?></a> &middot; <a href="<?php bloginfo('rss2_url'); ?>"><?php _e("RSS Feed", 'swelllite'); ?></a> &middot; <?php wp_loginout(); ?></p>
 					
 				</div>
 				

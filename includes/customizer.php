@@ -4,13 +4,13 @@
 *
 * Very helpful: http://ottopress.com/2012/theme-customizer-part-deux-getting-rid-of-options-pages/
 *
-* @package Swell
-* @since Swell 1.0
+* @package Swell Lite
+* @since Swell Lite 1.0
 */
-function swell_theme_customizer( $wp_customize ) {
+function swelllite_theme_customizer( $wp_customize ) {
 
 	// Category Dropdown Control
-	class Swell_Category_Dropdown_Control extends WP_Customize_Control {
+	class SwellLite_Category_Dropdown_Control extends WP_Customize_Control {
 	public $type = 'dropdown-categories';
 
 	public function render_content() {
@@ -18,7 +18,7 @@ function swell_theme_customizer( $wp_customize ) {
 				array(
 					'name'              => '_customize-dropdown-categories-' . $this->id,
 					'echo'              => 0,
-					'show_option_none'  => __( '&mdash; Select &mdash;', 'swelltheme' ),
+					'show_option_none'  => __( '&mdash; Select &mdash;', 'swelllite' ),
 					'option_none_value' => '0',
 					'selected'          => $this->value(),
 				)
@@ -34,7 +34,7 @@ function swell_theme_customizer( $wp_customize ) {
 		}
 	}
 	
-	function swell_sanitize_categories( $input ) {
+	function swelllite_sanitize_categories( $input ) {
 		$categories = get_terms( 'category', array('fields' => 'ids', 'get' => 'all') );
 		
 	   if ( in_array( $input, $categories ) ) {
@@ -44,7 +44,7 @@ function swell_theme_customizer( $wp_customize ) {
 	   }
 	}
 	
-	function swell_sanitize_pages( $input ) {
+	function swelllite_sanitize_pages( $input ) {
 		$pages = get_all_page_ids();
 	 
 	    if ( in_array( $input, $pages ) ) {
@@ -54,18 +54,18 @@ function swell_theme_customizer( $wp_customize ) {
 	    }
 	}
 	
-	function swell_sanitize_transition_interval( $input ) {
+	function swelllite_sanitize_transition_interval( $input ) {
 	    $valid = array(
-	        '2000' 		=> __( '2 Seconds', 'swelltheme' ),
-	        '4000' 		=> __( '4 Seconds', 'swelltheme' ),
-	        '6000' 		=> __( '6 Seconds', 'swelltheme' ),
-	        '8000' 		=> __( '8 Seconds', 'swelltheme' ),
-	        '10000' 	=> __( '10 Seconds', 'swelltheme' ),
-	        '12000' 	=> __( '12 Seconds', 'swelltheme' ),
-	        '20000' 	=> __( '20 Seconds', 'swelltheme' ),
-	        '30000' 	=> __( '30 Seconds', 'swelltheme' ),
-	        '60000' 	=> __( '1 Minute', 'swelltheme' ),
-	        '999999999'	=> __( 'Hold Frame', 'swelltheme' ),
+	        '2000' 		=> __( '2 Seconds', 'swelllite' ),
+	        '4000' 		=> __( '4 Seconds', 'swelllite' ),
+	        '6000' 		=> __( '6 Seconds', 'swelllite' ),
+	        '8000' 		=> __( '8 Seconds', 'swelllite' ),
+	        '10000' 	=> __( '10 Seconds', 'swelllite' ),
+	        '12000' 	=> __( '12 Seconds', 'swelllite' ),
+	        '20000' 	=> __( '20 Seconds', 'swelllite' ),
+	        '30000' 	=> __( '30 Seconds', 'swelllite' ),
+	        '60000' 	=> __( '1 Minute', 'swelllite' ),
+	        '999999999'	=> __( 'Hold Frame', 'swelllite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -75,10 +75,10 @@ function swell_theme_customizer( $wp_customize ) {
 	    }
 	}
 	
-	function swell_sanitize_transition_style( $input ) {
+	function swelllite_sanitize_transition_style( $input ) {
 	    $valid = array(
-	        'fade' 		=> __( 'Fade', 'swelltheme' ),
-	        'slide' 	=> __( 'Slide', 'swelltheme' ),
+	        'fade' 		=> __( 'Fade', 'swelllite' ),
+	        'slide' 	=> __( 'Slide', 'swelllite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -88,11 +88,11 @@ function swell_theme_customizer( $wp_customize ) {
 	    }
 	}
 	
-	function swell_sanitize_columns( $input ) {
+	function swelllite_sanitize_columns( $input ) {
 	    $valid = array(
-	        'one' 		=> __( 'One Column', 'swelltheme' ),
-	        'two' 		=> __( 'Two Columns', 'swelltheme' ),
-	        'three' 	=> __( 'Three Columns', 'swelltheme' ),
+	        'one' 		=> __( 'One Column', 'swelllite' ),
+	        'two' 		=> __( 'Two Columns', 'swelllite' ),
+	        'three' 	=> __( 'Three Columns', 'swelllite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -102,11 +102,11 @@ function swell_theme_customizer( $wp_customize ) {
 	    }
 	}
 	
-	function swell_sanitize_align( $input ) {
+	function swelllite_sanitize_align( $input ) {
 	    $valid = array(
-	        'left' 		=> __( 'Left Align', 'swelltheme' ),
-	        'center' 		=> __( 'Center Align', 'swelltheme' ),
-	        'right' 	=> __( 'Right Align', 'swelltheme' ),
+	        'left' 		=> __( 'Left Align', 'swelllite' ),
+	        'center' 		=> __( 'Center Align', 'swelllite' ),
+	        'right' 	=> __( 'Right Align', 'swelllite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -116,10 +116,10 @@ function swell_theme_customizer( $wp_customize ) {
 	    }
 	}
 	
-	function swell_sanitize_title_color( $input ) {
+	function swelllite_sanitize_title_color( $input ) {
 	    $valid = array(
-	        'black' 	=> __( 'Black', 'swelltheme' ),
-	        'white' 	=> __( 'White', 'swelltheme' ),
+	        'black' 	=> __( 'Black', 'swelllite' ),
+	        'white' 	=> __( 'White', 'swelllite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -129,7 +129,7 @@ function swell_theme_customizer( $wp_customize ) {
 	    }
 	}
 	
-	function swell_sanitize_checkbox( $input ) {
+	function swelllite_sanitize_checkbox( $input ) {
 		if ( $input == 1 ) {
 			return 1;
 		} else {
@@ -137,7 +137,7 @@ function swell_theme_customizer( $wp_customize ) {
 		}
 	}
 	
-	function swell_sanitize_text( $input ) {
+	function swelllite_sanitize_text( $input ) {
 	    return wp_kses_post( force_balance_tags( $input ) );
 	}
 
@@ -153,35 +153,35 @@ function swell_theme_customizer( $wp_customize ) {
 	//-------------------------------------------------------------------------------------------------------------------//	
 		
 	$wp_customize->add_section( 'title_tagline' , array(
-		'title'       => __( 'Site Title, Tagline & Logo', 'swelltheme' ),
+		'title'       => __( 'Site Title, Tagline & Logo', 'swelllite' ),
 		'priority'    => 1,
 	) );
 	
 		// Logo uploader
-		$wp_customize->add_setting( 'swell_logo', array(
+		$wp_customize->add_setting( 'swelllite_logo', array(
 			'default' 	=> get_template_directory_uri() . '/images/logo.png',
 			'sanitize_callback' => 'esc_url_raw',
 		) );
-		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'swell_logo', array(
-			'label' 	=> __( 'Logo', 'swelltheme' ),
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'swelllite_logo', array(
+			'label' 	=> __( 'Logo', 'swelllite' ),
 			'section' 	=> 'title_tagline',
-			'settings'	=> 'swell_logo',
+			'settings'	=> 'swelllite_logo',
 			'priority'	=> 1,
 		) ) );
 		
 		// Site Title Align
 		$wp_customize->add_setting( 'title_align', array(
 		    'default' => 'center',
-		    'sanitize_callback' => 'swell_sanitize_align',
+		    'sanitize_callback' => 'swelllite_sanitize_align',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'title_align', array(
 		    'type' => 'radio',
-		    'label' => __( 'Title & Logo Alignment', 'swelltheme' ),
+		    'label' => __( 'Title & Logo Alignment', 'swelllite' ),
 		    'section' => 'title_tagline',
 		    'choices' => array(
-		        'left' 		=> __( 'Left Align', 'swelltheme' ),
-		        'center' 	=> __( 'Center Align', 'swelltheme' ),
-		        'right' 	=> __( 'Right Align', 'swelltheme' ),
+		        'left' 		=> __( 'Left Align', 'swelllite' ),
+		        'center' 	=> __( 'Center Align', 'swelllite' ),
+		        'right' 	=> __( 'Right Align', 'swelllite' ),
 		    ),
 		    'priority' => 60,
 		) ) );
@@ -190,32 +190,19 @@ function swell_theme_customizer( $wp_customize ) {
 	// Layout
 	//-------------------------------------------------------------------------------------------------------------------//
 	
-	$wp_customize->add_section( 'swell_layout_section' , array(
-		'title'       => __( 'Layout', 'swelltheme' ),
+	$wp_customize->add_section( 'swelllite_layout_section' , array(
+		'title'       => __( 'Layout', 'swelllite' ),
 		'priority'    => 104,
 	) );
-	
-		// Enable Responsive Grid
-		$wp_customize->add_setting( 'enable_responsive', array(
-			'default'	=> true,
-			'sanitize_callback' => 'swell_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'enable_responsive', array(
-			'label'		=> __( 'Enable Responsive Grid?', 'swelltheme' ),
-			'section'	=> 'swell_layout_section',
-			'settings'	=> 'enable_responsive',
-			'type'		=> 'checkbox',
-			'priority' => 20,
-		) ) );
 		
 		// Display Post Author
 		$wp_customize->add_setting( 'display_author_post', array(
 			'default'	=> true,
-			'sanitize_callback' => 'swell_sanitize_checkbox',
+			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_author_post', array(
-			'label'		=> __( 'Show Post Author Link?', 'swelltheme' ),
-			'section'	=> 'swell_layout_section',
+			'label'		=> __( 'Show Post Author Link?', 'swelllite' ),
+			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_author_post',
 			'type'		=> 'checkbox',
 			'priority' => 40,
@@ -224,11 +211,11 @@ function swell_theme_customizer( $wp_customize ) {
 		// Display Blog Author
 		$wp_customize->add_setting( 'display_author_blog', array(
 			'default'	=> true,
-			'sanitize_callback' => 'swell_sanitize_checkbox',
+			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_author_blog', array(
-			'label'		=> __( 'Show Blog Author Link?', 'swelltheme' ),
-			'section'	=> 'swell_layout_section',
+			'label'		=> __( 'Show Blog Author Link?', 'swelllite' ),
+			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_author_blog',
 			'type'		=> 'checkbox',
 			'priority' => 60,
@@ -237,11 +224,11 @@ function swell_theme_customizer( $wp_customize ) {
 		// Display Blog Date
 		$wp_customize->add_setting( 'display_date_blog', array(
 			'default'	=> true,
-			'sanitize_callback' => 'swell_sanitize_checkbox',
+			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_date_blog', array(
-			'label'		=> __( 'Show Blog Date & Comment Link?', 'swelltheme' ),
-			'section'	=> 'swell_layout_section',
+			'label'		=> __( 'Show Blog Date & Comment Link?', 'swelllite' ),
+			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_date_blog',
 			'type'		=> 'checkbox',
 			'priority' => 60,
@@ -250,11 +237,11 @@ function swell_theme_customizer( $wp_customize ) {
 		// Display Post Featured Image or Video
 		$wp_customize->add_setting( 'display_feature_post', array(
 			'default'	=> true,
-			'sanitize_callback' => 'swell_sanitize_checkbox',
+			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_feature_post', array(
-			'label'		=> __( 'Show Post Featured Images?', 'swelltheme' ),
-			'section'	=> 'swell_layout_section',
+			'label'		=> __( 'Show Post Featured Images?', 'swelllite' ),
+			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_feature_post',
 			'type'		=> 'checkbox',
 			'priority' => 80,
@@ -263,24 +250,24 @@ function swell_theme_customizer( $wp_customize ) {
 		// Enable CSS3 Full Width Background
 		$wp_customize->add_setting( 'background_stretch', array(
 			'default'	=> true,
-			'sanitize_callback' => 'swell_sanitize_checkbox',
+			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'background_stretch', array(
-			'label'		=> __( 'Enable Full Width Background Image?', 'swelltheme' ),
-			'section'	=> 'swell_layout_section',
+			'label'		=> __( 'Enable Full Width Background Image?', 'swelllite' ),
+			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'background_stretch',
 			'type'		=> 'checkbox',
 			'priority' => 120,
 		) ) );
 	
 }
-add_action('customize_register', 'swell_theme_customizer');
+add_action('customize_register', 'swelllite_theme_customizer');
 
 /**
 * Binds JavaScript handlers to make Customizer preview reload changes
 * asynchronously.
 */
-function swell_customize_preview_js() {
+function swelllite_customize_preview_js() {
 	wp_enqueue_script( 'swell-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ) );
 }
-add_action( 'customize_preview_init', 'swell_customize_preview_js' );
+add_action( 'customize_preview_init', 'swelllite_customize_preview_js' );
