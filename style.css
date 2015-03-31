@@ -2,15 +2,15 @@
 
 	Theme Name: Swell Lite
 	Theme URI: http://www.swelltheme.com
-	Description: A beautiful base theme framework. Designed and developed by David Morgan of Organic Themes.
-	Author: David Morgan
-	Author URI: http://dav.idmorgan.com
+	Description: A beautifully minimal and responsive blogging theme. Swell Lite features a full width custom header image with parallax, and the option to add a logo within the customizer. The clean design is perfect for professional blogs and sites. The images and scripts are lightweight for fast load times, and the code is well commented for easy editing. A live demo can be viewed here, http://swelltheme.com/demo-free/. The theme was designed and developed by David Morgan of Organic Themes.
+	Author: Organic Themes
+	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.0.3
+	Version: 1.0.9
 	Text Domain: swelllite
 	Domain Path: /languages/
-	Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post
+	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
 	
 	The CSS, XHTML and Design are released under the GPL:
 	http://www.opensource.org/licenses/gpl-license.php
@@ -719,6 +719,7 @@ ul.menu li li li.sfHover ul {
 	display: block;
 	position: relative;
 	padding: 64px 12%;
+	overflow: hidden;
 	}
 .postarea.full .article {
 	padding: 96px 18%;
@@ -968,15 +969,13 @@ ul.menu li li li.sfHover ul {
 *	8.	Images  				     		    * 
 ************************************************/
 
-.feature-img, 
-.feature-vid {
+.feature-img {
 	display: block;
 	text-align: center;
 	line-height: 0;
 	margin: 0px auto 0px;
 	overflow: hidden;
 	}
-.article .feature-vid,
 .article .gallery-slideshow {
 	margin: 24px auto 24px;
 	}
@@ -1023,7 +1022,7 @@ img.hide-img {
 	margin-left: -999em;
 	padding: 0px;
 	}
-img.centered {
+img.aligncenter {
 	display: block;
 	margin: 6px auto 6px;
 	padding: 0px;
@@ -1569,7 +1568,7 @@ p.logged-in-as {
 ************************************************/
 
 a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit, 
-#comments #respond input#submit, .container .gform_wrapper input.button, #wrap #infinite-handle span {
+#comments #respond input#submit, .container .gform_wrapper input.button, #wrapper #infinite-handle span {
 	display: inline-block;
 	position: relative;
 	background-color: #10c7b4;
@@ -1588,7 +1587,7 @@ a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit
 	-webkit-appearance: none;
 	}
 a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover,
-#submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover, #wrap #infinite-handle span:hover {
+#submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover, #wrapper #infinite-handle span:hover {
 	background-color: #05ad9c;
 	color: #FFFFFF !important;
 	text-decoration: none;

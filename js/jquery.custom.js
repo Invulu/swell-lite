@@ -46,7 +46,7 @@
 		});
 		
 		/* Fit Vids ---------------------*/
-		$('.feature-vid, .postarea').fitVids();
+		$('.postarea').fitVids();
 		
 	}
 	

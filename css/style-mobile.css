@@ -121,9 +121,6 @@
 	.archive-holder {
 		margin-bottom: 36px;
 		}
-	.format-video.blog-holder .feature-vid {
-		padding: 18px;
-		}
 	#comments {
 		padding: 36px 8%;
 		}
@@ -346,9 +343,6 @@
 	.blog-holder, 
 	.archive-holder {
 		margin-bottom: 24px;
-		}
-	.format-video.blog-holder .feature-vid {
-		padding: 12px;
 		}
 	i.format-icon {
 		display: none;

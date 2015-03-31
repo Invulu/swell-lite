@@ -6,7 +6,7 @@
 	<!-- BEGIN .article -->
 	<div class="article">
 		
-		<?php if (get_theme_mod('display_date_blog') == '1') { ?>
+		<?php if (get_theme_mod('display_date_blog', '1') == '1') { ?>
 			<div class="post-date">
 				<p><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number(__("Leave a Comment", 'swelllite'), __("1 Comment", 'swelllite'), '% Comments'); ?></a></p>
 				<p><i class="fa fa-clock-o"></i> <?php _e("Posted on", 'swelllite'); ?> <?php the_time(__("F j, Y", 'swelllite')); ?></p>
@@ -17,17 +17,13 @@
 			<h1 class="headline"><?php the_title(); ?></h1>
 		<?php } ?>
 		
-		<?php if (get_theme_mod('display_author_blog') == '1') { ?>
+		<?php if (get_theme_mod('display_author_blog', '1') == '1') { ?>
 			<div class="post-author">
 				<p><?php _e("by", 'swelllite'); ?> <?php esc_url ( the_author_posts_link() ); ?></p>
 			</div>
 		<?php } ?>
 		
 		<span class="divider-small"></span>
-		
-		<?php if ( get_post_meta($post->ID, 'featurevid', true) ) { ?>
-			<div class="feature-vid radius-full"><?php echo get_post_meta($post->ID, 'featurevid', true); ?></div>
-		<?php } ?>
 		
 		<?php the_content(); ?>
 		

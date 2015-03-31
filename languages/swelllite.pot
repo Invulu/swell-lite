@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Swell Lite\n"
-"POT-Creation-Date: 2014-12-13 12:59-1000\n"
-"PO-Revision-Date: 2014-12-13 13:00-1000\n"
+"POT-Creation-Date: 2015-03-01 07:44-1000\n"
+"PO-Revision-Date: 2015-03-01 07:44-1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -75,75 +75,75 @@ msgstr ""
 msgid "No posts by this author."
 msgstr ""
 
-#: content/loop-archive.php:11 content/loop-blog.php:11
+#: content/loop-archive.php:7 content/loop-blog.php:7
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: content/loop-archive.php:20 content/loop-blog.php:20
+#: content/loop-archive.php:15 content/loop-blog.php:15
 #: content/loop-post.php:11
 msgid "Leave a Comment"
 msgstr ""
 
-#: content/loop-archive.php:20 content/loop-blog.php:20
+#: content/loop-archive.php:15 content/loop-blog.php:15
 #: content/loop-post.php:11
 msgid "1 Comment"
 msgstr ""
 
-#: content/loop-archive.php:21 content/loop-blog.php:21
+#: content/loop-archive.php:16 content/loop-blog.php:16
 #: content/loop-post.php:12
 msgid "Posted on"
 msgstr ""
 
-#: content/loop-archive.php:21 content/loop-blog.php:21
+#: content/loop-archive.php:16 content/loop-blog.php:16
 #: content/loop-post.php:12
 msgid "F j, Y"
 msgstr ""
 
-#: content/loop-archive.php:29 content/loop-blog.php:29
-#: content/loop-post.php:22 footer.php:56
+#: content/loop-archive.php:24 content/loop-blog.php:24
+#: content/loop-post.php:22
 msgid "by"
 msgstr ""
 
-#: content/loop-archive.php:35 content/loop-post.php:49
+#: content/loop-archive.php:30 content/loop-post.php:45
 msgid ", "
 msgstr ""
 
-#: content/loop-archive.php:40 content/loop-post.php:49
+#: content/loop-archive.php:35 content/loop-post.php:45
 msgid "Category:"
 msgstr ""
 
-#: content/loop-archive.php:40 content/loop-post.php:49
+#: content/loop-archive.php:35 content/loop-post.php:45
 msgid "Tags:"
 msgstr ""
 
-#: content/loop-archive.php:63
+#: content/loop-archive.php:58
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: content/loop-blog.php:35 content/loop-page.php:15 functions.php:248
+#: content/loop-blog.php:30 content/loop-page.php:15 functions.php:249
 msgid "Read More"
 msgstr ""
 
-#: content/loop-blog.php:56 content/loop-post.php:80
+#: content/loop-blog.php:51 content/loop-post.php:76
 msgid "No Posts Found"
 msgstr ""
 
-#: content/loop-blog.php:57
+#: content/loop-blog.php:52
 msgid ""
 "We're sorry, but no posts have been found. Create a post to be added to this "
 "section, and configure your theme options."
 msgstr ""
 
-#: content/loop-page.php:18 content/loop-post.php:35
+#: content/loop-page.php:18 content/loop-post.php:31
 msgid "Pages:"
 msgstr ""
 
-#: content/loop-page.php:23 content/loop-post.php:40
+#: content/loop-page.php:23 content/loop-post.php:36
 msgid "Next"
 msgstr ""
 
-#: content/loop-page.php:24 content/loop-post.php:41
+#: content/loop-page.php:24 content/loop-post.php:37
 msgid "Previous"
 msgstr ""
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "We're sorry, but the page could not be found."
 msgstr ""
 
-#: content/loop-post.php:81
+#: content/loop-post.php:77
 msgid "We're sorry, but the post was not found."
 msgstr ""
 
@@ -176,82 +176,77 @@ msgid "All Rights Reserved"
 msgstr ""
 
 #: footer.php:56
-msgid "Free Swell Theme"
+msgid "Swell Lite"
 msgstr ""
 
 #: footer.php:56
-msgid "David Morgan"
+msgid "from"
+msgstr ""
+
+#: footer.php:56
+msgid "Organic Themes"
 msgstr ""
 
 #: footer.php:56
 msgid "RSS Feed"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:29
 msgid "Fixed Menu"
 msgstr ""
 
-#: functions.php:27
+#: functions.php:30
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:28
+#: functions.php:31
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:104
 msgid "Default Sidebar"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:112
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:120
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:175
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:174 functions.php:214
+#: functions.php:175 functions.php:215
 msgid "Edit"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:193
 #, php-format
 msgid "%1$s <br/> %2$s <br/>"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:199
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: functions.php:207
+#: functions.php:208
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:212
+#: functions.php:213
 msgid "Reply"
 msgstr ""
 
-#: functions.php:272
+#: functions.php:273
 msgid "&laquo;"
 msgstr ""
 
-#: functions.php:273
+#: functions.php:274
 msgid "&raquo;"
-msgstr ""
-
-#: functions.php:314
-msgid "Featured Video Embed Code"
-msgstr ""
-
-#: functions.php:402
-#, php-format
-msgid "Page %s"
 msgstr ""
 
 #: includes/customizer.php:21
@@ -355,26 +350,22 @@ msgid "Layout"
 msgstr ""
 
 #: includes/customizer.php:204
-msgid "Enable Responsive Grid?"
-msgstr ""
-
-#: includes/customizer.php:217
 msgid "Show Post Author Link?"
 msgstr ""
 
-#: includes/customizer.php:230
+#: includes/customizer.php:217
 msgid "Show Blog Author Link?"
 msgstr ""
 
-#: includes/customizer.php:243
+#: includes/customizer.php:230
 msgid "Show Blog Date & Comment Link?"
 msgstr ""
 
-#: includes/customizer.php:256
+#: includes/customizer.php:243
 msgid "Show Post Featured Images?"
 msgstr ""
 
-#: includes/customizer.php:269
+#: includes/customizer.php:256
 msgid "Enable Full Width Background Image?"
 msgstr ""
 

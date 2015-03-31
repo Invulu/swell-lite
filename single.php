@@ -13,8 +13,8 @@ get_header(); ?>
 <!-- BEGIN .post class -->
 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php if (get_theme_mod('display_feature_post') == '1') { ?>
-		<?php if ( has_post_thumbnail() && ! has_post_format('audio') ) { ?>
+	<?php if (get_theme_mod('display_feature_post', '1') == '1') { ?>
+		<?php if ( has_post_thumbnail() ) { ?>
 			<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo $thumb[0]; ?>);" <?php } ?>>
 				<h1 class="headline img-headline"><?php the_title(); ?></h1>
 				<?php the_post_thumbnail( 'swell-featured-large' ); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 	<div class="row">
 	
 		<!-- BEGIN .content -->
-		<div class="content<?php if ( get_theme_mod('display_feature_post') == '1' && has_post_thumbnail() && ! has_post_format('audio') ) { ?> overlap<?php } ?>">
+		<div class="content<?php if ( get_theme_mod('display_feature_post', '1') == '1' && has_post_thumbnail() ) { ?> overlap<?php } ?>">
 	
 		<?php if ( is_active_sidebar( 'default-sidebar' ) ) { ?>
 			

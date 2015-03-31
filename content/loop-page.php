@@ -1,5 +1,3 @@
-<?php $featured_pages = is_page( array( get_theme_mod( 'page_one' ), get_theme_mod( 'page_two' ), get_theme_mod( 'page_three' ) ) ); ?>
-
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <!-- BEGIN .page-holder -->
@@ -8,7 +6,7 @@
 	<!-- BEGIN .article -->
 	<div class="article">
 		
-		<?php if ( ! has_post_thumbnail() || $featured_pages ) { ?>
+		<?php if ( ! has_post_thumbnail() ) { ?>
 			<h1 class="headline"><?php the_title(); ?></h1>
 		<?php } ?>
 	

@@ -195,19 +195,6 @@ function swelllite_theme_customizer( $wp_customize ) {
 		'priority'    => 104,
 	) );
 		
-		// Display Post Author
-		$wp_customize->add_setting( 'display_author_post', array(
-			'default'	=> true,
-			'sanitize_callback' => 'swelllite_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_author_post', array(
-			'label'		=> __( 'Show Post Author Link?', 'swelllite' ),
-			'section'	=> 'swelllite_layout_section',
-			'settings'	=> 'display_author_post',
-			'type'		=> 'checkbox',
-			'priority' => 40,
-		) ) );
-		
 		// Display Blog Author
 		$wp_customize->add_setting( 'display_author_blog', array(
 			'default'	=> true,
@@ -245,19 +232,6 @@ function swelllite_theme_customizer( $wp_customize ) {
 			'settings'	=> 'display_feature_post',
 			'type'		=> 'checkbox',
 			'priority' => 80,
-		) ) );
-		
-		// Enable CSS3 Full Width Background
-		$wp_customize->add_setting( 'background_stretch', array(
-			'default'	=> true,
-			'sanitize_callback' => 'swelllite_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'background_stretch', array(
-			'label'		=> __( 'Enable Full Width Background Image?', 'swelllite' ),
-			'section'	=> 'swelllite_layout_section',
-			'settings'	=> 'background_stretch',
-			'type'		=> 'checkbox',
-			'priority' => 120,
 		) ) );
 	
 }

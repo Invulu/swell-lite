@@ -1,21 +1,16 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
-<?php if (isset($_POST['featurevid'])){ $custom = get_post_custom($post->ID); $featurevid = $custom['featurevid'][0]; } ?>
 	
 	<!-- BEGIN .post class -->
 	<div <?php post_class('blog-holder shadow radius-full'); ?> id="post-<?php the_ID(); ?>">
-	
-		<?php if ( get_post_meta($post->ID, 'featurevid', true) ) { ?>
-			<div class="feature-vid radius-top"><?php echo get_post_meta($post->ID, 'featurevid', true); ?></div>
-		<?php } else { ?>
-			<?php if ( has_post_thumbnail() ) { ?>
-				<a class="feature-img radius-top" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'swelllite' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail( 'swell-featured-large' ); ?></a>
-			<?php } ?>
+
+		<?php if ( has_post_thumbnail() ) { ?>
+			<a class="feature-img radius-top" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'swelllite' ), the_title_attribute( 'echo=0' ) ) ); ?>"><?php the_post_thumbnail( 'swell-featured-large' ); ?></a>
 		<?php } ?>
 		
 		<!-- BEGIN .article -->
 		<div class="article">
 		
-			<?php if (get_theme_mod('display_date_blog') == '1') { ?>
+			<?php if (get_theme_mod('display_date_blog', '1') == '1') { ?>
 			<div class="post-date">
 				<p><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number(__("Leave a Comment", 'swelllite'), __("1 Comment", 'swelllite'), '% Comments'); ?></a></p>
 				<p><i class="fa fa-clock-o"></i> <?php _e("Posted on", 'swelllite'); ?> <?php the_time(__("F j, Y", 'swelllite')); ?></p>
@@ -24,7 +19,7 @@
 		
 			<h2 class="headline"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php esc_attr(the_title_attribute()); ?>"><?php the_title(); ?></a></h2>
 			
-			<?php if (get_theme_mod('display_author_blog') == '1') { ?>
+			<?php if (get_theme_mod('display_author_blog', '1') == '1') { ?>
 				<div class="post-author">
 					<p><?php _e("by", 'swelllite'); ?> <?php esc_url ( the_author_posts_link() ); ?></p>
 				</div>

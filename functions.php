@@ -17,6 +17,9 @@ function swelllite_setup() {
 	// Enable support for Post Thumbnails
 	add_theme_support( 'post-thumbnails' );
 	
+	// Enable support for site title tag
+	add_theme_support( 'title-tag' );
+	
 	add_image_size( 'swell-featured-large', 1800, 1200, true ); // Large Featured Image
 	add_image_size( 'swell-featured-medium', 1200, 800, true ); // Medium Featured Image
 	add_image_size( 'swell-featured-small', 640, 640, true ); // Small Featured Image
@@ -71,14 +74,12 @@ if( !function_exists('swelllite_enqueue_scripts') ) {
 		wp_enqueue_style( 'swell-style', get_stylesheet_uri() );
 		wp_enqueue_style( 'swell-style-mobile', get_template_directory_uri() . '/css/style-mobile.css', array( 'swell-style' ), '1.0' );
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'swell-style' ), '1.0' );
-		
-		// Resgister Scripts
-		wp_register_script( 'swell-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '20130729' );
-		wp_register_script( 'swell-hover', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ), '20130729' );
-		wp_register_script( 'swell-superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery', 'swell-hover' ), '20130729' );
 	
 		// Enqueue Scripts
 		wp_enqueue_script( 'swell-html5shiv', get_template_directory_uri() . '/js/html5shiv.js' );
+		wp_enqueue_script( 'swell-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '20130729' );
+		wp_enqueue_script( 'swell-hover', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ), '20130729' );
+		wp_enqueue_script( 'swell-superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery', 'swell-hover' ), '20130729' );
 		wp_enqueue_script( 'swell-custom', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery', 'swell-superfish', 'swell-fitvids' ), '20130729', true );
 		wp_enqueue_script( 'swell-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20130729', true );
 		
@@ -304,35 +305,6 @@ function swelllite_wp_link_pages_args_prevnext_add($args) {
 add_filter('wp_link_pages_args', 'swelllite_wp_link_pages_args_prevnext_add');
 
 /*-----------------------------------------------------------------------------------------------------//	
-	Featured Video Meta Box		       	     	 
--------------------------------------------------------------------------------------------------------*/
-
-add_action("admin_init", "admin_init_featurevid");
-add_action('save_post', 'save_featurevid');
-
-function admin_init_featurevid(){
-	add_meta_box("featurevid-meta", __("Featured Video Embed Code", 'swelllite'), "meta_options_featurevid", "post", "normal", "high");
-}
-
-function meta_options_featurevid(){
-	global $post;
-	$custom = get_post_custom($post->ID);
-	$featurevid = isset( $custom["featurevid"] ) ? esc_attr( $custom["featurevid"][0] ) : '';
-
-	echo '<textarea name="featurevid" cols="60" rows="4" style="width:97.6%" />'.$featurevid.'</textarea>';
-}
-
-function save_featurevid($post_id){
-	global $post;
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-        return $post_id;
-    }
-	if ( isset($_POST["featurevid"]) ) { 
-		update_post_meta($post->ID, "featurevid", $_POST["featurevid"]); 
-	}
-}
-
-/*-----------------------------------------------------------------------------------------------------//	
 	Add Home Link To Custom Menu		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
@@ -378,32 +350,6 @@ function swelllite_body_class( $classes ) {
 	return $classes;
 }
 add_action( 'body_class', 'swelllite_body_class' );
-
-/*-----------------------------------------------------------------------------------------------------//
-	Filters wp_title to print a neat <title> tag based on what is being viewed.
--------------------------------------------------------------------------------------------------------*/
-
-function swelllite_wp_title( $title, $sep ) {
-	global $page, $paged;
-
-	if ( is_feed() )
-		return $title;
-
-	// Add the blog name
-	$title .= get_bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " $sep $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'swelllite' ), max( $paged, $page ) );
-
-	return $title;
-}
-add_filter( 'wp_title', 'swelllite_wp_title', 10, 2 );
 
 /*-----------------------------------------------------------------------------------------------------//
 	Includes
