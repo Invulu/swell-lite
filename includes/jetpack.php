@@ -27,5 +27,9 @@ add_action( 'after_setup_theme', 'swelllite_jetpack_setup' );
 * Infinite Scroll: function for rendering posts
 */
 function swelllite_render_IS() {
-	get_template_part( 'content/loop', 'blog' );
+	if ( is_home() ) {
+		get_template_part( 'content/loop', 'blog' );
+	} else {
+		get_template_part( 'content/loop', 'archive' );
+	}
 }

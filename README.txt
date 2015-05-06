@@ -1,4 +1,4 @@
-Swell Lite v1.0.9
+Swell Lite v1.0.10
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -62,3 +62,6 @@ CHANGELOG v1.0.9:
 - Removed leftover post format conditional
 - Removed unused customizer options
 - Updated default customizer option values
+
+CHANGELOG v1.0.10:
+- Infinite Scroll tweaks
