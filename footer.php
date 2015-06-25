@@ -26,8 +26,7 @@
 			<!-- BEGIN .footer-widgets -->
 			<div class="footer-widgets">
 		
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer') ) : ?>
-				<?php endif; ?>
+				<?php dynamic_sidebar( 'footer' ); ?>
 			
 			<!-- END .footer-widgets -->
 			</div>
@@ -57,24 +56,24 @@
 					
 				</div>
 				
+				<?php if ( has_nav_menu( 'social-menu' ) ) { ?>
+				
 				<div class="align-right">
-					
-					<?php if ( has_nav_menu( 'social-menu' ) ) { ?>
-						
-						<?php wp_nav_menu( array(
-							'theme_location' => 'social-menu',
-							'title_li' => '',
-							'depth' => 1,
-							'container_class' => 'social-menu',
-							'menu_class'      => 'social-icons',
-							'link_before'     => '<span>',
-							'link_after'      => '</span>',
-							)
-						); ?>
-						
-					<?php } ?>
+
+					<?php wp_nav_menu( array(
+						'theme_location' => 'social-menu',
+						'title_li' => '',
+						'depth' => 1,
+						'container_class' => 'social-menu',
+						'menu_class'      => 'social-icons',
+						'link_before'     => '<span>',
+						'link_after'      => '</span>',
+						)
+					); ?>
 					
 				</div>
+				
+				<?php } ?>
 		
 			<!-- END .content -->
 			</div>

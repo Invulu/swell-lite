@@ -1,3 +1,5 @@
+<h2 class="headline archive-headline"><?php the_archive_title() ?></h2>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <!-- BEGIN .post class -->

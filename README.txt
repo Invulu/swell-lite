@@ -1,4 +1,4 @@
-Swell Lite v1.0.10
+Swell Lite v1.1
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -65,3 +65,14 @@ CHANGELOG v1.0.9:
 
 CHANGELOG v1.0.10:
 - Infinite Scroll tweaks
+
+CHANGELOG v1.1:
+- Page title for archive pages
+- Default page menu added
+- Default logo update
+- Removed old IE conditionals
+- Updated FontAwesome
+- Updated content width function
+- Removed unnecessary functions
+- Updates to footer.php
+- Style tweaks
