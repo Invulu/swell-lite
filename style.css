@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.1
+	Version: 1.1.1
 	Text Domain: swelllite
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -459,6 +459,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
 	font-weight: 600;
+	text-align: center;
 	margin: 0px;
 	padding: 0px;
 	z-index: 99;
@@ -493,6 +494,7 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	
 /*** ESSENTIAL STYLES ***/
 .menu, .menu * {
+	display: table;
 	margin:	0 auto 0;
 	padding: 0;
 	list-style:	none;
@@ -623,6 +625,7 @@ div.menu ul li li li:hover ul {
 	width: auto;
 	background: none;
 	text-transform: none;
+	text-align: left;
 	line-height: 50px;
 	margin: 0px;
 	padding: 0px 18px;

@@ -50,9 +50,9 @@
 		
 				<div class="align-left">
 				
-					<p><?php _e("Copyright", 'swelllite'); ?> &copy; <?php echo date(__("Y", 'swelllite')); ?> &middot; <?php _e("All Rights Reserved", 'swelllite'); ?> &middot; <?php bloginfo('name'); ?></p>
+					<p><?php esc_html_e("Copyright", 'swelllite'); ?> &copy; <?php echo date( esc_html__("Y", 'swelllite') ); ?> &middot; <?php esc_html_e("All Rights Reserved", 'swelllite'); ?> &middot; <?php bloginfo('name'); ?></p>
 					
-					<p><?php _e("Swell Lite", 'swelllite'); ?> <?php _e("from", 'swelllite'); ?> <a href="http://organicthemes.com" target="_blank"><?php _e("Organic Themes", 'swelllite'); ?></a> &middot; <a href="<?php bloginfo('rss2_url'); ?>"><?php _e("RSS Feed", 'swelllite'); ?></a> &middot; <?php wp_loginout(); ?></p>
+					<p><?php esc_html_e("Swell Lite", 'swelllite'); ?> <?php esc_html_e("from", 'swelllite'); ?> <a href="http://organicthemes.com" target="_blank"><?php esc_html_e("Organic Themes", 'swelllite'); ?></a> &middot; <a href="<?php bloginfo('rss2_url'); ?>"><?php esc_html_e("RSS Feed", 'swelllite'); ?></a> &middot; <?php wp_loginout(); ?></p>
 					
 				</div>
 				

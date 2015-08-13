@@ -26,9 +26,9 @@ function swelllite_setup() {
 
 	// Create Menus
 	register_nav_menus( array(
-		'fixed-menu' => __( 'Fixed Menu', 'swelllite' ),
-		'main-menu' => __( 'Main Menu', 'swelllite' ),
-		'social-menu' => __( 'Social Menu', 'swelllite' ),
+		'fixed-menu' => esc_html__( 'Fixed Menu', 'swelllite' ),
+		'main-menu' => esc_html__( 'Main Menu', 'swelllite' ),
+		'social-menu' => esc_html__( 'Social Menu', 'swelllite' ),
 	));
 	
 	// Custom Header
@@ -38,6 +38,7 @@ function swelllite_setup() {
 		'flex-height'           => true,
 		'flex-width'            => true,
 		'default-text-color'    => '333333',
+		'default-image' 		=> get_template_directory_uri() . '/images/header.jpg',
 		'header-text'           => false,
 		'uploads'               => true,
 	);
@@ -101,7 +102,7 @@ add_action('wp_enqueue_scripts', 'swelllite_enqueue_scripts');
 
 function swelllite_widgets_init() {
 	register_sidebar(array(
-		'name'=> __( "Default Sidebar", 'swelllite' ),
+		'name'=> esc_html__( "Default Sidebar", 'swelllite' ),
 		'id' => 'default-sidebar',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
@@ -109,7 +110,7 @@ function swelllite_widgets_init() {
 		'after_title'=>'</h6>'
 	));
 	register_sidebar(array(
-		'name'=> __( "Blog Sidebar", 'swelllite' ),
+		'name'=> esc_html__( "Blog Sidebar", 'swelllite' ),
 		'id' => 'blog-sidebar',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
@@ -117,7 +118,7 @@ function swelllite_widgets_init() {
 		'after_title'=>'</h6>'
 	));
 	register_sidebar(array(
-		'name'=> __( "Footer Widgets", 'swelllite' ),
+		'name'=> esc_html__( "Footer Widgets", 'swelllite' ),
 		'id' => 'footer',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s"><div class="footer-widget">',
 		'after_widget'=>'</div></div>',
@@ -165,7 +166,7 @@ function swelllite_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'swelllite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'swelllite' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php esc_html_e( 'Pingback:', 'swelllite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', 'swelllite' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 		break;
 		default :
@@ -183,13 +184,13 @@ function swelllite_comment( $comment, $args, $depth ) {
 						echo get_avatar( $comment, $avatar_size );
 
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s <br/> %2$s <br/>', 'swelllite' ),
+						printf( esc_html__( '%1$s <br/> %2$s <br/>', 'swelllite' ),
 							sprintf( '<span class="fn">%s</span>', wp_kses_post( get_comment_author_link() ) ),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s', 'swelllite' ), get_comment_date(), get_comment_time() )
+								sprintf( esc_html__( '%1$s', 'swelllite' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>
@@ -198,14 +199,14 @@ function swelllite_comment( $comment, $args, $depth ) {
 
 			<div class="comment-content">
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'swelllite' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'swelllite' ); ?></em>
 					<br />
 				<?php endif; ?>
 				<?php comment_text(); ?>
 				<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'swelllite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'swelllite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 				</div><!-- .reply -->
-				<?php edit_comment_link( __( 'Edit', 'swelllite' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_comment_link( esc_html__( 'Edit', 'swelllite' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 
 		</article><!-- #comment-## -->
@@ -226,7 +227,7 @@ function swelllite_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'swelllite_excerpt_length', 999 );
 
 function swelllite_excerpt_more( $more ) {
-	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. __('Read More', 'swelllite') .'</a>';
+	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. esc_html__('Read More', 'swelllite') .'</a>';
 }
 add_filter('excerpt_more', 'swelllite_excerpt_more');
 
@@ -241,8 +242,8 @@ function swelllite_get_pagination_links() {
 		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 		'format' => '?paged=%#%',
 		'current' => max( 1, get_query_var('paged') ),
-		'prev_text' => __('&laquo;', 'swelllite'),
-		'next_text' => __('&raquo;', 'swelllite'),
+		'prev_text' => esc_html__('&laquo;', 'swelllite'),
+		'next_text' => esc_html__('&raquo;', 'swelllite'),
 		'total' => $wp_query->max_num_pages
 	) );
 }

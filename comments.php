@@ -15,7 +15,7 @@
 	<div id="comments" class="shadow radius-full">
 	
 	<?php if ( post_password_required() ) : ?>
-		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'swelllite' ); ?></p>
+		<p class="nopassword"><?php esc_html_e( 'This post is password protected. Enter the password to view any comments.', 'swelllite' ); ?></p>
 	</div><!-- #comments -->
 	<?php
 			/* Stop the rest of comments.php from being processed,
@@ -38,9 +38,9 @@
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above">
-			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'swelllite' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'swelllite' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'swelllite' ) ); ?></div>
+			<h1 class="assistive-text"><?php esc_html_e( 'Comment navigation', 'swelllite' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'swelllite' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'swelllite' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
@@ -58,9 +58,9 @@
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below">
-			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'swelllite' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'swelllite' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'swelllite' ) ); ?></div>
+			<h1 class="assistive-text"><?php esc_html_e( 'Comment navigation', 'swelllite' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'swelllite' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'swelllite' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
@@ -70,7 +70,7 @@
 		*/
 		elseif ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'swelllite' ); ?></p>
+		<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'swelllite' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

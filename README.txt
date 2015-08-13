@@ -7,6 +7,7 @@ Image Credits
 - logo.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
+- header.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 
 Font Awesome
 
@@ -76,3 +77,9 @@ CHANGELOG v1.1:
 - Removed unnecessary functions
 - Updates to footer.php
 - Style tweaks
+
+CHANGELOG v1.1.1:
+- Added escaping to i18n translations
+- Updated Font Awesome
+- Fix for menu alignment in Explorer
+- Added default custom header image

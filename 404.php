@@ -28,8 +28,8 @@ get_header(); ?>
 				<!-- BEGIN .article -->
 				<div class="article">
 			
-					<h1 class="headline"><?php _e("Not Found, Error 404", 'swelllite'); ?></h1>
-					<p><?php _e("The page you are looking for no longer exists.", 'swelllite'); ?></p>
+					<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'swelllite'); ?></h1>
+					<p><?php esc_html_e("The page you are looking for no longer exists.", 'swelllite'); ?></p>
 					
 				<!-- END .article -->
 				</div>
@@ -65,8 +65,8 @@ get_header(); ?>
 					<!-- BEGIN .article -->
 					<div class="article">
 				
-						<h1 class="headline"><?php _e("Not Found, Error 404", 'swelllite'); ?></h1>
-						<p><?php _e("The page you are looking for no longer exists.", 'swelllite'); ?></p>
+						<h1 class="headline"><?php esc_html_e("Not Found, Error 404", 'swelllite'); ?></h1>
+						<p><?php esc_html_e("The page you are looking for no longer exists.", 'swelllite'); ?></p>
 						
 					<!-- END .article -->
 					</div>

@@ -15,19 +15,19 @@
 		
 			<?php $website = get_the_author_meta( 'user_url' ); ?>
 			<?php if ( ! empty( $website ) ) : ?>
-				<h6><?php _e("Website:", 'swelllite'); ?></h6>
+				<h6><?php esc_html_e("Website:", 'swelllite'); ?></h6>
 				<p><a href="<?php echo esc_url( $website ); ?>" rel="bookmark" title="<?php esc_attr_e("Link to author page", 'swelllite'); ?>" target="_blank"><?php echo esc_url( $website ); ?></a></p>
 			<?php endif; ?>
 		
 			<?php $description = get_the_author_meta( 'description' ); ?>
 			<?php if ( ! empty( $description ) ) : ?>
-				<h6><?php _e( "Profile:", 'swelllite' ); ?></h6>
+				<h6><?php esc_html_e( "Profile:", 'swelllite' ); ?></h6>
 				<p><?php echo wp_kses_post( $description ); ?></p>
 			<?php endif; ?>
 			
 			<?php if ( have_posts() ) : ?>
 			
-			<h6><?php printf( __( 'Posts by %1$s:', 'swelllite'), get_the_author() );  ?></h6>
+			<h6><?php printf( esc_html__( 'Posts by %1$s:', 'swelllite'), get_the_author() );  ?></h6>
 			
 			<ul class="author-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -40,7 +40,7 @@
 			</div><!-- END .pagination -->
 		
 			<?php else: ?>
-				<p><?php _e("No posts by this author.", 'swelllite'); ?></p>
+				<p><?php esc_html_e("No posts by this author.", 'swelllite'); ?></p>
 			<?php endif; ?>
 		
 		<!-- END .author-column -->
