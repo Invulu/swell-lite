@@ -10,21 +10,21 @@
 			<h1 class="headline"><?php the_title(); ?></h1>
 		<?php } ?>
 	
-		<?php the_content( esc_html__("Read More", 'swelllite') ); ?>
+		<?php the_content( esc_html__("Read More", 'swell-lite') ); ?>
 		
 		<?php wp_link_pages(array(
-			'before' => '<p class="page-links"><span class="link-label">' . esc_html__('Pages:', 'swelllite') . '</span>',
+			'before' => '<p class="page-links"><span class="link-label">' . esc_html__('Pages:', 'swell-lite') . '</span>',
 			'after' => '</p>',
 			'link_before' => '<span>',
 			'link_after' => '</span>',
 			'next_or_number' => 'next_and_number',
-			'nextpagelink' => esc_html__('Next', 'swelllite'),
-			'previouspagelink' => esc_html__('Previous', 'swelllite'),
+			'nextpagelink' => esc_html__('Next', 'swell-lite'),
+			'previouspagelink' => esc_html__('Previous', 'swell-lite'),
 			'pagelink' => '%',
 			'echo' => 1 )
 		); ?>
 		
-		<?php edit_post_link( esc_html__("(Edit)", 'swelllite'), '', ''); ?>
+		<?php edit_post_link( esc_html__("(Edit)", 'swell-lite'), '', ''); ?>
 	
 	<!-- END .article -->
 	</div>
@@ -45,8 +45,8 @@
 	<div class="article">
 
 		<div class="error-404">
-			<h1 class="headline"><?php esc_html_e("Page Not Found", 'swelllite'); ?></h1>
-			<p><?php esc_html_e("We're sorry, but the page could not be found.", 'swelllite'); ?></p>
+			<h1 class="headline"><?php esc_html_e("Page Not Found", 'swell-lite'); ?></h1>
+			<p><?php esc_html_e("We're sorry, but the page could not be found.", 'swell-lite'); ?></p>
 		</div>
 
 	<!-- END .article -->

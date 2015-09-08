@@ -18,7 +18,7 @@ function swelllite_theme_customizer( $wp_customize ) {
 				array(
 					'name'              => '_customize-dropdown-categories-' . $this->id,
 					'echo'              => 0,
-					'show_option_none'  => esc_html__( '&mdash; Select &mdash;', 'swelllite' ),
+					'show_option_none'  => esc_html__( '&mdash; Select &mdash;', 'swell-lite' ),
 					'option_none_value' => '0',
 					'selected'          => $this->value(),
 				)
@@ -56,16 +56,16 @@ function swelllite_theme_customizer( $wp_customize ) {
 	
 	function swelllite_sanitize_transition_interval( $input ) {
 	    $valid = array(
-	        '2000' 		=> esc_html__( '2 Seconds', 'swelllite' ),
-	        '4000' 		=> esc_html__( '4 Seconds', 'swelllite' ),
-	        '6000' 		=> esc_html__( '6 Seconds', 'swelllite' ),
-	        '8000' 		=> esc_html__( '8 Seconds', 'swelllite' ),
-	        '10000' 	=> esc_html__( '10 Seconds', 'swelllite' ),
-	        '12000' 	=> esc_html__( '12 Seconds', 'swelllite' ),
-	        '20000' 	=> esc_html__( '20 Seconds', 'swelllite' ),
-	        '30000' 	=> esc_html__( '30 Seconds', 'swelllite' ),
-	        '60000' 	=> esc_html__( '1 Minute', 'swelllite' ),
-	        '999999999'	=> esc_html__( 'Hold Frame', 'swelllite' ),
+	        '2000' 		=> esc_html__( '2 Seconds', 'swell-lite' ),
+	        '4000' 		=> esc_html__( '4 Seconds', 'swell-lite' ),
+	        '6000' 		=> esc_html__( '6 Seconds', 'swell-lite' ),
+	        '8000' 		=> esc_html__( '8 Seconds', 'swell-lite' ),
+	        '10000' 	=> esc_html__( '10 Seconds', 'swell-lite' ),
+	        '12000' 	=> esc_html__( '12 Seconds', 'swell-lite' ),
+	        '20000' 	=> esc_html__( '20 Seconds', 'swell-lite' ),
+	        '30000' 	=> esc_html__( '30 Seconds', 'swell-lite' ),
+	        '60000' 	=> esc_html__( '1 Minute', 'swell-lite' ),
+	        '999999999'	=> esc_html__( 'Hold Frame', 'swell-lite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -77,8 +77,8 @@ function swelllite_theme_customizer( $wp_customize ) {
 	
 	function swelllite_sanitize_transition_style( $input ) {
 	    $valid = array(
-	        'fade' 		=> esc_html__( 'Fade', 'swelllite' ),
-	        'slide' 	=> esc_html__( 'Slide', 'swelllite' ),
+	        'fade' 		=> esc_html__( 'Fade', 'swell-lite' ),
+	        'slide' 	=> esc_html__( 'Slide', 'swell-lite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -90,9 +90,9 @@ function swelllite_theme_customizer( $wp_customize ) {
 	
 	function swelllite_sanitize_columns( $input ) {
 	    $valid = array(
-	        'one' 		=> esc_html__( 'One Column', 'swelllite' ),
-	        'two' 		=> esc_html__( 'Two Columns', 'swelllite' ),
-	        'three' 	=> esc_html__( 'Three Columns', 'swelllite' ),
+	        'one' 		=> esc_html__( 'One Column', 'swell-lite' ),
+	        'two' 		=> esc_html__( 'Two Columns', 'swell-lite' ),
+	        'three' 	=> esc_html__( 'Three Columns', 'swell-lite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -104,9 +104,9 @@ function swelllite_theme_customizer( $wp_customize ) {
 	
 	function swelllite_sanitize_align( $input ) {
 	    $valid = array(
-	        'left' 		=> esc_html__( 'Left Align', 'swelllite' ),
-	        'center' 		=> esc_html__( 'Center Align', 'swelllite' ),
-	        'right' 	=> esc_html__( 'Right Align', 'swelllite' ),
+	        'left' 		=> esc_html__( 'Left Align', 'swell-lite' ),
+	        'center' 		=> esc_html__( 'Center Align', 'swell-lite' ),
+	        'right' 	=> esc_html__( 'Right Align', 'swell-lite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -118,8 +118,8 @@ function swelllite_theme_customizer( $wp_customize ) {
 	
 	function swelllite_sanitize_title_color( $input ) {
 	    $valid = array(
-	        'black' 	=> esc_html__( 'Black', 'swelllite' ),
-	        'white' 	=> esc_html__( 'White', 'swelllite' ),
+	        'black' 	=> esc_html__( 'Black', 'swell-lite' ),
+	        'white' 	=> esc_html__( 'White', 'swell-lite' ),
 	    );
 	 
 	    if ( array_key_exists( $input, $valid ) ) {
@@ -153,7 +153,7 @@ function swelllite_theme_customizer( $wp_customize ) {
 	//-------------------------------------------------------------------------------------------------------------------//	
 		
 	$wp_customize->add_section( 'title_tagline' , array(
-		'title'       => esc_html__( 'Site Title, Tagline & Logo', 'swelllite' ),
+		'title'       => esc_html__( 'Site Title, Tagline & Logo', 'swell-lite' ),
 		'priority'    => 1,
 	) );
 	
@@ -163,7 +163,7 @@ function swelllite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'esc_url_raw',
 		) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'swelllite_logo', array(
-			'label' 	=> esc_html__( 'Logo', 'swelllite' ),
+			'label' 	=> esc_html__( 'Logo', 'swell-lite' ),
 			'section' 	=> 'title_tagline',
 			'settings'	=> 'swelllite_logo',
 			'priority'	=> 1,
@@ -176,23 +176,36 @@ function swelllite_theme_customizer( $wp_customize ) {
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'title_align', array(
 		    'type' => 'radio',
-		    'label' => esc_html__( 'Title & Logo Alignment', 'swelllite' ),
+		    'label' => esc_html__( 'Title & Logo Alignment', 'swell-lite' ),
 		    'section' => 'title_tagline',
 		    'choices' => array(
-		        'left' 		=> esc_html__( 'Left Align', 'swelllite' ),
-		        'center' 	=> esc_html__( 'Center Align', 'swelllite' ),
-		        'right' 	=> esc_html__( 'Right Align', 'swelllite' ),
+		        'left' 		=> esc_html__( 'Left Align', 'swell-lite' ),
+		        'center' 	=> esc_html__( 'Center Align', 'swell-lite' ),
+		        'right' 	=> esc_html__( 'Right Align', 'swell-lite' ),
 		    ),
 		    'priority' => 60,
 		) ) );
+		
+	//-------------------------------------------------------------------------------------------------------------------//
+	// Theme Options Panel
+	//-------------------------------------------------------------------------------------------------------------------//
+
+	$wp_customize->add_panel( 'swelllite_theme_options', array(
+	    'priority' => 1,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => esc_html__( 'Theme Options', 'swell-lite' ),
+	    'description' => esc_html__( 'This panel allows you to customize specific areas of the theme.', 'swell-lite' ),
+	) );
 		
 	//-------------------------------------------------------------------------------------------------------------------//
 	// Layout
 	//-------------------------------------------------------------------------------------------------------------------//
 	
 	$wp_customize->add_section( 'swelllite_layout_section' , array(
-		'title'       => esc_html__( 'Layout', 'swelllite' ),
+		'title'       => esc_html__( 'Layout', 'swell-lite' ),
 		'priority'    => 104,
+		'panel' => 'swelllite_theme_options',
 	) );
 		
 		// Display Blog Author
@@ -201,7 +214,7 @@ function swelllite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_author_blog', array(
-			'label'		=> esc_html__( 'Show Blog Author Link?', 'swelllite' ),
+			'label'		=> esc_html__( 'Show Blog Author Link?', 'swell-lite' ),
 			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_author_blog',
 			'type'		=> 'checkbox',
@@ -214,7 +227,7 @@ function swelllite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_date_blog', array(
-			'label'		=> esc_html__( 'Show Blog Date & Comment Link?', 'swelllite' ),
+			'label'		=> esc_html__( 'Show Blog Date & Comment Link?', 'swell-lite' ),
 			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_date_blog',
 			'type'		=> 'checkbox',
@@ -227,7 +240,7 @@ function swelllite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'swelllite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_feature_post', array(
-			'label'		=> esc_html__( 'Show Post Featured Images?', 'swelllite' ),
+			'label'		=> esc_html__( 'Show Post Featured Images?', 'swell-lite' ),
 			'section'	=> 'swelllite_layout_section',
 			'settings'	=> 'display_feature_post',
 			'type'		=> 'checkbox',

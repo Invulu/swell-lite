@@ -21,11 +21,11 @@ function swelllite_fonts_url() {
     * into your own language.
     */
     
-    $raleway = _x( 'on', 'Raleway font: on or off', 'swelllite' );
-    $roboto = _x( 'on', 'Roboto font: on or off', 'swelllite' );
-    $open_sans = _x( 'on', 'Open Sans font: on or off', 'swelllite' );
-    $montserrat = _x( 'on', 'Montserrat font: on or off', 'swelllite' );
-    $droid_serif = _x( 'on', 'Droid Serif font: on or off', 'swelllite' );
+    $raleway = _x( 'on', 'Raleway font: on or off', 'swell-lite' );
+    $roboto = _x( 'on', 'Roboto font: on or off', 'swell-lite' );
+    $open_sans = _x( 'on', 'Open Sans font: on or off', 'swell-lite' );
+    $montserrat = _x( 'on', 'Montserrat font: on or off', 'swell-lite' );
+    $droid_serif = _x( 'on', 'Droid Serif font: on or off', 'swell-lite' );
  
     if ( 'off' !== $raleway || 'off' !== $open_sans || 'off' !== $montserrat || 'off' !== $droid_serif ) {
         $font_families = array();

@@ -1,4 +1,4 @@
-Swell Lite v1.1
+Swell Lite v1.1.3
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -83,3 +83,14 @@ CHANGELOG v1.1.1:
 - Updated Font Awesome
 - Fix for menu alignment in Explorer
 - Added default custom header image
+
+CHANGELOG v1.1.2:
+- Fixed escaping issue in comments
+- Created theme options panel in Customizer
+- Changed text domain
+- Regenerated translation files
+- Added screen reader text class
+
+CHANGELOG v1.1.3:
+- More text domain fixes
+- Regenerated translation files
