@@ -1,4 +1,4 @@
-Swell Lite v1.1.3
+Swell Lite v1.1.4
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -94,3 +94,6 @@ CHANGELOG v1.1.2:
 CHANGELOG v1.1.3:
 - More text domain fixes
 - Regenerated translation files
+
+CHANGELOG v1.1.4:
+- Fixed fatal syntax error with logo
