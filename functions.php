@@ -32,13 +32,20 @@ function swelllite_setup() {
 	));
 	
 	// Custom Header
+	register_default_headers( array(
+	    'default' => array(
+		    'url'   => get_template_directory_uri() . '/images/default-header.jpg',
+		    'thumbnail_url' => get_template_directory_uri() . '/images/default-header.jpg',
+		    'description'   => esc_html__( 'Default Custom Header', 'swell-lite' )
+		)
+	));
 	$defaults = array(
 		'width'                 => 1800,
 		'height'                => 480,
 		'flex-height'           => true,
 		'flex-width'            => true,
-		'default-text-color'    => '333333',
-		'default-image' 		=> get_template_directory_uri() . '/images/header.jpg',
+		'default-text-color'    => 'ffffff',
+		'default-image' 		=> get_template_directory_uri() . '/images/default-header.jpg',
 		'header-text'           => false,
 		'uploads'               => true,
 	);

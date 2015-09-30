@@ -1,4 +1,4 @@
-Swell Lite v1.1.4
+Swell Lite v1.2
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -7,7 +7,8 @@ Image Credits
 - logo.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-- header.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- default-header.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
+- default-background.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 
 Font Awesome
 
@@ -97,3 +98,11 @@ CHANGELOG v1.1.3:
 
 CHANGELOG v1.1.4:
 - Fixed fatal syntax error with logo
+
+CHANGELOG v1.2:
+- Added new page template
+- Added modified post date
+- Added default custom header function
+- Updated default images
+- Updated translations
+- Style tweaks
