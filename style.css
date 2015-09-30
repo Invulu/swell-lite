@@ -693,16 +693,16 @@ div.menu ul li li li:hover ul {
 	border-top-color: rgba(0, 0, 0, .4); /* IE8 fallback colour */
 	}
 /* styling for right-facing arrows */
-.sf-arrows ul .sf-with-ul:after {
+.sf-arrows li li .sf-with-ul:after {
 	margin-top: -3px;
 	margin-right: -3px;
 	border-color: transparent;
 	border-left-color: #DDDDDD; /* edit this to suit design (no rgba in IE8) */
 	border-left-color: rgba(0, 0, 0, .24);
 	}
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
+.sf-arrows li li > .sf-with-ul:focus:after,
+.sf-arrows li li:hover > .sf-with-ul:after,
+.sf-arrows li li.sfHover > .sf-with-ul:after {
 	border-left-color: rgba(0, 0, 0, .4);
 	}
 
@@ -829,6 +829,11 @@ div.menu ul li li li:hover ul {
 	padding: 6px 0px;
 	border-bottom: 1px solid rgba(0,0,0, 0.08);
 	}
+	
+/************************************************
+*	6. Page Templates  							*
+************************************************/
+
 .archive-column {
 	float: left;
 	width: 30%;
@@ -838,55 +843,6 @@ div.menu ul li li li:hover ul {
 	}
 .archive-column.last {
 	padding-right: 0;
-	}
-	
-/************************************************
-*	6. Page Templates  							*
-************************************************/
-
-.image-page {
-	position: relative;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center;
-	}
-.image-page .headline {
-	display: none;
-	}
-.image-page .page-holder {
-	background: none;
-	font-size: 1.2em;
-	margin-top: 48px;
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	z-index: 9;
-	}
-.image-page .article p,
-.image-page .article h1,
-.image-page .article h2,
-.image-page .article h3,
-.image-page .article h4,
-.image-page .article h5,
-.image-page .article h6,
-.image-page .article blockquote,
-.image-page .article h1:first-child + p,
-.image-page .article > p:first-child,
-.image-page .article span + p {
-	color: #ffffff;
-	}
-.image-page .article blockquote {
-	border-top-color: #ffffff;
-	border-bottom-color: #ffffff;
-	}
-.image-page .img-shade {
-	background-color: rgba(0, 0, 0, .4);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 6;
 	}
 		
 /************************************************

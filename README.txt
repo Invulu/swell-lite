@@ -100,9 +100,7 @@ CHANGELOG v1.1.4:
 - Fixed fatal syntax error with logo
 
 CHANGELOG v1.2:
-- Added new page template
 - Added modified post date
 - Added default custom header function
-- Updated default images
 - Updated translations
 - Style tweaks
