@@ -1,4 +1,4 @@
-Swell Lite v1.2
+Swell Lite v1.2.1
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -104,3 +104,6 @@ CHANGELOG v1.2:
 - Added default custom header function
 - Updated translations
 - Style tweaks
+
+CHANGELOG v1.2.1:
+- Header tweaks
