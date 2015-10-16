@@ -107,3 +107,6 @@ CHANGELOG v1.2:
 
 CHANGELOG v1.2.1:
 - Header tweaks
+- Screenshot update
+- Added admin notice
+- Updated language files

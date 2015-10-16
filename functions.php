@@ -61,6 +61,34 @@ endif; // swelllite_setup
 add_action( 'after_setup_theme', 'swelllite_setup' );
 
 /*-----------------------------------------------------------------------------------------------------//	
+	Admin Notice		       	     	 
+-------------------------------------------------------------------------------------------------------*/
+
+function swelllite_admin_notice() {
+	global $current_user ;
+        $user_id = $current_user->ID;
+        /* Check that the user hasn't already clicked to ignore the message */
+	if ( ! get_user_meta($user_id, 'swelllite_ignore_notice') ) {
+        echo '<div class="updated"><p>'; 
+        printf( __('Enjoying Swell Lite? <a href="%1$s" target="_blank">Upgrade to the premium Swell Theme</a> to receive many more features, page templates, shortcodes and support. <a style="float:right;" href="%2$s">Hide Notice</a>', 'swelllite'), 'http://organicthemes.com/theme/swell-theme/', '?swelllite_nag_ignore=0');
+        echo "</p></div>";
+	}
+}
+
+add_action('admin_notices', 'swelllite_admin_notice');
+
+function swelllite_nag_ignore() {
+	global $current_user;
+        $user_id = $current_user->ID;
+        /* If user clicks to ignore the notice, add that to their user meta */
+        if ( isset($_GET['swelllite_nag_ignore']) && '0' == $_GET['swelllite_nag_ignore'] ) {
+             add_user_meta($user_id, 'swelllite_ignore_notice', 'true', true);
+	}
+}
+
+add_action('admin_init', 'swelllite_nag_ignore');
+
+/*-----------------------------------------------------------------------------------------------------//	
 	Category ID to Name		       	     	 
 -------------------------------------------------------------------------------------------------------*/
 
