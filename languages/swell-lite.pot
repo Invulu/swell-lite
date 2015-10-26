@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Swell Lite\n"
-"POT-Creation-Date: 2015-10-16 17:26-0500\n"
-"PO-Revision-Date: 2015-10-16 17:26-0500\n"
+"POT-Creation-Date: 2015-10-26 15:34-0500\n"
+"PO-Revision-Date: 2015-10-26 15:34-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -127,7 +127,7 @@ msgstr ""
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
-#: content/loop-blog.php:36 content/loop-page.php:13 functions.php:265
+#: content/loop-blog.php:36 content/loop-page.php:13 functions.php:248
 msgid "Read More"
 msgstr ""
 
@@ -213,58 +213,57 @@ msgstr ""
 msgid "Default Custom Header"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:69
 #, php-format
 msgid ""
 "Enjoying Swell Lite? <a href=\"%1$s\" target=\"_blank\">Upgrade to the "
-"premium Swell Theme</a> to receive many more features, page templates, "
-"shortcodes and support. <a style=\"float:right;\" href=\"%2$s\">Hide Notice</"
-"a>"
+"premium Swell Theme</a> for more options, page templates, shortcodes, "
+"support and additional features."
 msgstr ""
 
-#: functions.php:140
+#: functions.php:123
 msgid "Default Sidebar"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:131
 msgid "Blog Sidebar"
 msgstr ""
 
-#: functions.php:156
+#: functions.php:139
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:187
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:204 functions.php:244
+#: functions.php:187 functions.php:227
 msgid "Edit"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:205
 #, php-format
 msgid "%1$s <br/> %2$s <br/>"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:211
 #, php-format
 msgid "%1$s"
 msgstr ""
 
-#: functions.php:237
+#: functions.php:220
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:242
+#: functions.php:225
 msgid "Reply"
 msgstr ""
 
-#: functions.php:280
+#: functions.php:263
 msgid "&laquo;"
 msgstr ""
 
-#: functions.php:281
+#: functions.php:264
 msgid "&raquo;"
 msgstr ""
 

@@ -1,4 +1,4 @@
-Swell Lite v1.2.1
+Swell Lite v1.2.2
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -110,3 +110,9 @@ CHANGELOG v1.2.1:
 - Screenshot update
 - Added admin notice
 - Updated language files
+
+CHANGELOG v1.2.2:
+- Removed parallax from custom header for faster load
+- Updated admin notice
+- Updated description
+- Minor tweak to fitvids
