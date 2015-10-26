@@ -115,4 +115,5 @@ CHANGELOG v1.2.2:
 - Removed parallax from custom header for faster load
 - Updated admin notice
 - Updated description
+- Regenerated language files
 - Minor tweak to fitvids
