@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.2.2
+	Version: 1.2.3
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -901,6 +901,10 @@ div.menu ul li li li:hover ul {
 .social-icons li a[href*="vine.co"]::before				{ content: '\f1ca'; }
 .social-icons li a[href*="instagram.com"]::before		{ content: '\f16d'; }
 .social-icons li a[href*="stackexchange.com"]::before	{ content: '\f18d'; }
+.social-icons li a[href*="spotify.com"]::before			{ content: '\f1bc'; }
+.social-icons li a[href*="amazon.com"]::before			{ content: '\f270'; }
+.social-icons li a[href*="flickr.com"]::before			{ content: '\f16e'; }
+.social-icons li a[href*="vimeo.com"]::before			{ content: '\f27d'; }
 .social-icons li a[href*="mailto:"]::before				{ content: '\f0e0'; }
 .social-icons li a[href$="/feed/"]::before				{ content: '\f09e'; }
 	

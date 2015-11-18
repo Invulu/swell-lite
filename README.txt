@@ -117,3 +117,7 @@ CHANGELOG v1.2.2:
 - Updated description
 - Regenerated language files
 - Minor tweak to fitvids
+
+CHANGELOG v1.2.3:
+- Minor code cleanup
+- Added new social icons to stylesheet

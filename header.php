@@ -59,7 +59,7 @@
 
 	<?php $header_image = get_header_image(); if ( ! empty( $header_image ) ) { ?>
 	
-		<div id="custom-header" <?php if ( has_nav_menu( 'fixed-menu' ) ) { ?>class="fixed-menu"<?php } ?> style="background-image: url(<?php header_image(); ?>);" data-type="background" data-speed="10">
+		<div id="custom-header" <?php if ( has_nav_menu( 'fixed-menu' ) ) { ?>class="fixed-menu"<?php } ?> style="background-image: url(<?php header_image(); ?>);">
 			
 			<?php get_template_part( 'content/logo', 'title' ); ?>
 		
