@@ -4,7 +4,7 @@
 *
 * The area of the page that contains both current comments
 * and the comment form. The actual display of comments is
-* handled by a callback to swelllite_comment() which is
+* handled by a callback to swell_lite_comment() which is
 * located in the functions.php file.
 *
 * @package Swell Lite
@@ -47,12 +47,12 @@
 		<ol class="commentlist">
 			<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
-				* to use swelllite_comment() to format the comments.
+				* to use swell_lite_comment() to format the comments.
 				* If you want to overload this in a child theme then you can
-				* define swelllite_comment() and that will be used instead.
-				* See swelllite_comment() in flowthemes/functions.php for more.
+				* define swell_lite_comment() and that will be used instead.
+				* See swell_lite_comment() in flowthemes/functions.php for more.
 				*/
-				wp_list_comments( array( 'callback' => 'swelllite_comment' ) );
+				wp_list_comments( array( 'callback' => 'swell_lite_comment' ) );
 			?>
 		</ol>
 

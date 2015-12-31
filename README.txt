@@ -1,4 +1,4 @@
-Swell Lite v1.2.2
+Swell Lite v1.2.5
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -121,3 +121,13 @@ CHANGELOG v1.2.2:
 CHANGELOG v1.2.3:
 - Minor code cleanup
 - Added new social icons to stylesheet
+
+CHANGELOG v1.2.4:
+- Fix for mobile menu
+- Fix for one wrong text domain
+- Updated theme prefixes
+- Updated language file
+
+CHANGELOG v1.2.5:
+- Added styles for columns
+- Menu style tweak

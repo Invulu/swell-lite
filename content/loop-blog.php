@@ -46,7 +46,7 @@
 	<?php if ( $wp_query->max_num_pages > 1 ) { ?>
 		<!-- BEGIN .pagination -->
 		<div class="pagination">
-			<?php echo swelllite_get_pagination_links(); ?>
+			<?php echo swell_lite_get_pagination_links(); ?>
 		<!-- END .pagination -->
 		</div>
 	<?php } ?>

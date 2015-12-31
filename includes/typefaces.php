@@ -13,7 +13,7 @@
 * @since Swell Lite 1.0
 */
 
-function swelllite_fonts_url() {
+function swell_lite_fonts_url() {
     $fonts_url = '';
  
     /* Translators: If there are characters in your language that are not
@@ -67,27 +67,27 @@ function swelllite_fonts_url() {
 * @since Swell Lite 1.0
 */
 
-function swelllite_scripts_styles() {
-    wp_enqueue_style( 'swell-fonts', swelllite_fonts_url(), array(), null );
+function swell_lite_scripts_styles() {
+    wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), null );
 }
-add_action( 'wp_enqueue_scripts', 'swelllite_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'swell_lite_scripts_styles' );
 
 /**
 * Enqueue Google Fonts on Custom Header Page
 *
 * @since Swell Lite 1.0
 */
-function swelllite_custom_header_fonts() {
-    wp_enqueue_style( 'swell-fonts', swelllite_fonts_url(), array(), null );
+function swell_lite_custom_header_fonts() {
+    wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), null );
 }
-add_action( 'admin_print_styles-appearance_page_custom-header', 'swelllite_scripts_styles' );
+add_action( 'admin_print_styles-appearance_page_custom-header', 'swell_lite_scripts_styles' );
 
 /**
 * Add Google Scripts for use with the editor
 *
 * @since Swell Lite 1.0
 */
-function swelllite_editor_styles() {
-    add_editor_style( array( 'css/style-editor.css', swelllite_fonts_url() ) );
+function swell_lite_editor_styles() {
+    add_editor_style( array( 'css/style-editor.css', swell_lite_fonts_url() ) );
 }
-add_action( 'after_setup_theme', 'swelllite_editor_styles' );
+add_action( 'after_setup_theme', 'swell_lite_editor_styles' );

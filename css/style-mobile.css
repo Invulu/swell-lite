@@ -229,12 +229,9 @@
 	.main-small-navigation ul.mobile-menu.toggled-on {
 		display: block;
 		}
-	.navigation-main ul.menu,
+	.navigation-main .menu,
 	.sf-sub-indicator {
 		display: none;
-		}
-	.menu {
-		display: block;
 		}
 	.menu-toggle {
 		color: #666666;

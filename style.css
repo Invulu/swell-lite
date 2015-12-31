@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.2.3
+	Version: 1.2.5
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -39,11 +39,12 @@
 	17.	Footer
 	18.	Comments
 	19.	Buttons
-	20. Tables
-	21. Forms
-	22. CSS3 Styles
-	23. Jetpack
-	24. WordPress Core
+	20. Columns
+	21. Tables
+	22. Forms
+	23. CSS3 Styles
+	24. Jetpack
+	25. WordPress Core
 	  
 *******************************************************************************************************************/
 
@@ -641,18 +642,10 @@ div.menu ul li li li:hover ul {
 .menu li li a:focus,
 .menu li li a:hover,
 .menu li li a:active {
+	color: rgba(0, 0, 0, .8);
 	background: rgba(0, 0, 0, .04);
 	outline: 0;
-	} 
-.menu li li a:hover {
-	color: rgba(0, 0, 0, .8);
 	}
-.menu li.sfHover:hover a {
-	color: rgba(0, 0, 0, .8);
-	}
-.menu li.sfHover:hover {
-	outline: 0;
-	} 
 .menu li {
 	margin: 0px;
 	}
@@ -1584,7 +1577,7 @@ p.logged-in-as {
 *	19.	Buttons  								*
 ************************************************/
 
-a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit, 
+.button, a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit, 
 #comments #respond input#submit, .container .gform_wrapper input.button, #wrapper #infinite-handle span {
 	display: inline-block;
 	position: relative;
@@ -1603,7 +1596,7 @@ a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit
 	border: none;
 	-webkit-appearance: none;
 	}
-a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover,
+.button:hover, a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover,
 #submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover, #wrapper #infinite-handle span:hover {
 	background-color: #05ad9c;
 	color: #FFFFFF !important;
@@ -1617,7 +1610,64 @@ a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLin
 	}
 	
 /************************************************
-*	20. Tables		 							*
+*	20. Columns						   		    * 
+************************************************/
+
+.column {
+	float: left;
+	position: relative; 
+	margin-right: 4%;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	}
+.column:last-child {
+	float: right;
+	margin-right: 0; 
+	clear: right; 
+	}
+.column:after {
+	content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+	}
+.column.one-half { 
+	width:48%; 
+	}
+.column.one-third { 
+	width:30.66%; 
+	}
+.column.two-third { 
+	width:65.33%; 
+	}
+.column.one-fourth { 
+	width:22%; 
+	}
+.column.three-fourth { 
+	width:74%; 
+	}
+.column.one-fifth { 
+	width:16.8%; 
+	}
+.column.two-fifth { 
+	width:37.6%; 
+	}
+.column.three-fifth { 
+	width:58.4%; 
+	}
+.column.four-fifth { 
+	width:67.2%; 
+	}
+.column.one-sixth { 
+	width:13.33%; 
+	}
+.column.five-sixth { 
+	width:82.67%; 
+	}
+	
+/************************************************
+*	21. Tables		 							*
 ************************************************/
 
 table {
@@ -1654,7 +1704,7 @@ table td {
 	}
 	
 /************************************************
-*	21. Forms									*
+*	22. Forms									*
 ************************************************/
 	
 /* General Form Styles */
@@ -1752,7 +1802,7 @@ select {
 	}
 	
 /************************************************
-*	22.	CSS3 Styles								*
+*	23.	CSS3 Styles								*
 ************************************************/
 
 a, a:link {
@@ -1798,7 +1848,7 @@ a, a:link {
 	}
 
 /************************************************
-*	23.	Jetpack	 					     	    * 
+*	24.	Jetpack	 					     	    * 
 ************************************************/
 
 #infinite-handle,
@@ -1838,7 +1888,7 @@ a, a:link {
 	}
 	
 /************************************************
-*	24.	WordPress Core	 			     	    *
+*	25.	WordPress Core	 			     	    *
 ************************************************/
 
 /* Text meant only for screen readers. */
