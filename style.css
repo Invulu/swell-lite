@@ -803,8 +803,10 @@ div.menu ul li li li:hover ul {
 	margin-left: 8px;
 	}
 .post-edit-link {
-	display: inline-block;
-	margin: 12px 0px;
+	display: block;
+	width: 100%;
+	padding-top: 12px;
+	overflow: hidden;
 	}
 .author-column {
 	float: right;
@@ -1577,7 +1579,7 @@ p.logged-in-as {
 *	19.	Buttons  								*
 ************************************************/
 
-.button, a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit, 
+.button, a.button, .reply a, #searchsubmit, #prevLink a, #nextLink a, .more-link, #submit, input[type=submit],
 #comments #respond input#submit, .container .gform_wrapper input.button, #wrapper #infinite-handle span {
 	display: inline-block;
 	position: relative;
@@ -1596,8 +1598,9 @@ p.logged-in-as {
 	border: none;
 	-webkit-appearance: none;
 	}
-.button:hover, a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover,
-#submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover, #wrapper #infinite-handle span:hover {
+.button:hover, a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, 
+.more-link:hover, input[type=submit]:hover, #submit:hover, #comments #respond input#submit:hover, 
+.container .gform_wrapper input.button:hover, #wrapper #infinite-handle span:hover {
 	background-color: #05ad9c;
 	color: #FFFFFF !important;
 	text-decoration: none;
@@ -1613,6 +1616,12 @@ p.logged-in-as {
 *	20. Columns						   		    * 
 ************************************************/
 
+.columns {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	}
 .column {
 	float: left;
 	position: relative; 
@@ -1683,7 +1692,7 @@ table {
 	}
 table thead,
 table tfoot {
-	border: 1px solid #E4E4E4;
+	border: 1px solid #dddddd;
 	}
 table thead th,
 table tfoot td {
@@ -1695,12 +1704,12 @@ table th {
 	text-align: center;
 	margin: 0px;
 	padding: 8px 2px;
-	border: 1px solid #E4E4E4;
+	border: 1px solid #dddddd;
 	}
 table td {
 	padding: 5px 2px;
 	margin: 0px;
-	border: 1px solid #E4E4E4;
+	border: 1px solid #dddddd;
 	}
 	
 /************************************************
@@ -1718,7 +1727,6 @@ table td {
 	overflow: hidden;
 	}
 .container form span {
-	display: block;
 	margin-bottom: 8px;
 	overflow: hidden;
 	}

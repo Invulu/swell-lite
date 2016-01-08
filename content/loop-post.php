@@ -45,6 +45,8 @@
 			'echo' => 1 )
 		); ?>
 		
+		<?php edit_post_link( esc_html__("(Edit)", 'swell-lite'), '', ''); ?>
+		
 		<!-- BEGIN .post-meta -->
 		<div class="post-meta">
 		
