@@ -1,4 +1,4 @@
-Swell Lite v1.2.5
+Swell Lite v1.2.6
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -131,3 +131,7 @@ CHANGELOG v1.2.4:
 CHANGELOG v1.2.5:
 - Added styles for columns
 - Menu style tweak
+
+CHANGELOG v1.2.6:
+- Added edit post link to post
+- Style tweaks
