@@ -1,4 +1,4 @@
-Swell Lite v1.2.6
+Swell Lite v1.2.8
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -135,3 +135,10 @@ CHANGELOG v1.2.5:
 CHANGELOG v1.2.6:
 - Added edit post link to post
 - Style tweaks
+
+CHANGELOG v1.2.7:
+- Fix for mobile menu javascript issues
+- Fix to allow HTML in site description
+
+CHANGELOG v1.2.8:
+- Fixed sidebar issue related to column style additions

@@ -24,7 +24,7 @@
 	}
 
 	holder = container.getElementsByTagName( 'div' )[0];
-	if ( 'undefined' === typeof button )
+	if ( 'undefined' === typeof holder )
 		return;
 
 	button.onclick = function() {
@@ -32,7 +32,6 @@
 			menu.className = 'menu';
 
 		if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
-			holder.className += ' sf-js-enabled';
 			button.className = button.className.replace( ' toggled-on', '' );
 			menu.className = menu.className.replace( ' toggled-on', '' );
 			menu.className = menu.className.replace( 'mobile-menu', 'menu' );
@@ -43,7 +42,6 @@
 			menu.className += ' toggled-on';
 			menu.className = menu.className.replace( 'menu', 'mobile-menu' );
 			holder.className = holder.className.replace( 'menu', 'mobile-menu' );
-			holder.className = holder.className.replace( 'sf-js-enabled', '' );
 			container.className = container.className.replace( 'navigation-main', 'main-small-navigation' );
 		}
 	};

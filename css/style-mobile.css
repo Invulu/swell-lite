@@ -230,7 +230,7 @@
 		display: block;
 		}
 	.navigation-main .menu,
-	.sf-sub-indicator {
+	.sf-arrows .sf-with-ul::after {
 		display: none;
 		}
 	.menu-toggle {
@@ -249,6 +249,7 @@
 	.mobile-menu ul.children {
 		display: block !important;
 		visibility: visible !important;
+		opacity: 1 !important;
 		left: auto;
 		margin: 0;
 		padding: 0;
@@ -286,6 +287,9 @@
 		background: rgba(0, 0, 0, .04);
 		color: rgba(0, 0, 0, .8) !important;
 		text-decoration: none;
+		}
+	.sf-arrows .sf-with-ul {
+		padding-right: 0px;
 		}
 	.slideshow.gallery-slideshow .flexslider {
 		padding: 12px;
