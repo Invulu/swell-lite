@@ -1,4 +1,4 @@
-Swell Lite v1.2.8
+Swell Lite v1.2.9
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -142,3 +142,6 @@ CHANGELOG v1.2.7:
 
 CHANGELOG v1.2.8:
 - Fixed sidebar issue related to column style additions
+
+CHANGELOG v1.2.9:
+- Added Yelp social icon
