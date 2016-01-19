@@ -145,3 +145,5 @@ CHANGELOG v1.2.8:
 
 CHANGELOG v1.2.9:
 - Added Yelp social icon
+- Added function to disable superfish.js on mobile
+- Updated superfish.js script
