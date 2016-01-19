@@ -16,6 +16,7 @@
 		});
 	}
 	
+	/* Disable Superfish on mobile ---------------------*/
 	function superfishMobile() {
 		var sf, body;
 		var breakpoint = 767;
