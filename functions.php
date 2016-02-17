@@ -66,7 +66,7 @@ add_action( 'after_setup_theme', 'swell_lite_setup' );
 
 function swell_lite_admin_notice(){
     echo '<div class="updated"><p>'; 
-    printf( __('Enjoying Swell Lite? <a href="%1$s" target="_blank">Upgrade to the premium Swell Theme</a> for more options, page templates, shortcodes, support and additional features.', 'swell-lite'), 'http://organicthemes.com/theme/swell-theme/');
+    printf( __('Still using the <strong>Lite</strong> version!? <a href="%1$s" target="_blank">Upgrade to the premium Swell Theme</a> for more options, page templates, shortcodes, support and additional features.', 'swell-lite'), 'http://organicthemes.com/theme/swell-theme/');
     echo "</p></div>";
 }
 add_action('admin_notices', 'swell_lite_admin_notice');
@@ -248,23 +248,6 @@ function swell_lite_excerpt_more( $more ) {
 	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. esc_html__('Read More', 'swell-lite') .'</a>';
 }
 add_filter('excerpt_more', 'swell_lite_excerpt_more');
-
-/*-----------------------------------------------------------------------------------------------------//
-/*	Pagination Function
-/*-----------------------------------------------------------------------------------------------------*/
-
-function swell_lite_get_pagination_links() {
-	global $wp_query;
-	$big = 999999999;
-	echo paginate_links( array(
-		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-		'format' => '?paged=%#%',
-		'current' => max( 1, get_query_var('paged') ),
-		'prev_text' => esc_html__('&laquo;', 'swell-lite'),
-		'next_text' => esc_html__('&raquo;', 'swell-lite'),
-		'total' => $wp_query->max_num_pages
-	) );
-}
 
 /*-----------------------------------------------------------------------------------------------------//
 /*	Custom Page Links
