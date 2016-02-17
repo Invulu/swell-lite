@@ -233,16 +233,18 @@
 	.sf-arrows .sf-with-ul::after {
 		display: none;
 		}
-	.menu-toggle {
+	button.menu-toggle {
 		color: #666666;
 		color: rgba(0, 0, 0, .4);
+		background: none;
 		font-size: 24px;
 		text-align: left;
 		line-height: 1.2;
 		margin: 0;
 		padding: 12px 18px;
+		border: none;
 		}
-	.menu-toggle:hover {
+	button.menu-toggle:hover {
 		color: rgba(0, 0, 0, .8);
 		}
 	.mobile-menu ul.sub-menu,

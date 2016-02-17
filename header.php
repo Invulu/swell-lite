@@ -36,7 +36,7 @@
 <!-- BEGIN #nav-top -->
 <nav id="nav-top" class="navigation-main clearfix" role="navigation">
 
-	<span class="menu-toggle"><i class="fa fa-bars"></i></span>
+	<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
 	<?php
 		wp_nav_menu( array(
@@ -80,10 +80,12 @@
 <!-- END #header -->
 </div>
 
+<?php if ( ! has_nav_menu( 'fixed-menu' ) ) { ?>
+
 <!-- BEGIN #navigation -->
 <nav id="navigation" class="navigation-main clearfix" role="navigation">
 
-	<span class="menu-toggle"><i class="fa fa-bars"></i></span>
+	<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
 	<?php
 		wp_nav_menu( array(
@@ -99,3 +101,5 @@
 
 <!-- END #navigation -->
 </nav>
+
+<?php } ?>
