@@ -2,12 +2,12 @@
 
 	Theme Name: Swell Lite
 	Theme URI: http://www.swelltheme.com
-	Description: A beautifully minimal and responsive blogging theme. Swell Lite features a full width custom header image, and the option to add a logo within the customizer. The clean design is perfect for professional blogs and sites. The images and scripts are lightweight for fast load times, and the code is well commented for easy editing. A live demo can be viewed here, http://swelltheme.com/demo-free/. The theme was designed and developed by David Morgan of Organic Themes.
+	Description: A beautifully minimal and responsive blogging theme. Swell Lite features a full width custom header image, and the option to add a logo within the customizer. The clean design is perfect for professional blogs and sites. The images and scripts are lightweight for fast load times, and the code is well commented for easy editing. A live demo can be viewed here, http://organicthemes.com/demo/swell/. The theme was designed and developed by David Morgan of Organic Themes.
 	Author: Organic Themes
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.2.10
+	Version: 1.2.11
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -911,52 +911,56 @@ div.menu ul li li li:hover ul {
 ************************************************/
 
 .pagination {
-	float: left;
 	display: block;
 	width: 100%;
-	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; 
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 	font-weight: bold;
 	text-align: center;
-	line-height: 24px;
-	margin: 0px;
-	padding: 12px 0px;
+	line-height: 36px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 0px auto;
+	padding: 0px;
 	position: relative;
-	z-index: 9;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, .2);
+	overflow: hidden;
+	z-index: 7;
 	}
 .pagination .page-numbers {
-	display: inline-block;
-	background: #F9F9F9;  
-	color: #666666; 
-	min-height: 24px;
-	min-width: 24px;
+	float: left;
+	background: #ffffff;
+	color: #666666;
+	min-height: 36px;
+	min-width: 36px;
 	text-decoration: none;
-	margin: 0px 2px;
+	margin: 0px;
 	padding: 0px;
-	border-radius: 2px;
-	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .2);
+	border-left: 1px solid #dddddd;
+	border-left: 1px solid rgba(0, 0, 0, .12);
+	}
+.pagination .page-numbers:first-child {
+	border-left: none;
 	}
 .pagination .page-numbers:hover,
 .pagination .page-numbers:active {
-	background: #EEEEEE;
-	min-height: 24px;
-	min-width: 24px;
-	line-height: 24px;
-	padding: 0px; 
-	border-radius: 2px;
+	background: #eeeeee;
+	min-height: 36px;
+	min-width: 36px;
+	line-height: 36px;
+	padding: 0px;
 	}
 .pagination .page-numbers.current {
-	display: inline-block;
-	background: #EEEEEE;  
-	min-height: 24px;
-	min-width: 24px;
-	line-height: 24px; 
+	background: #eeeeee;
+	min-height: 36px;
+	min-width: 36px;
+	line-height: 36px;
 	padding: 0px;
-	border-radius: 2px;
 	}
 .post-navigation {
 	display: block;
 	margin: 0px;
-	padding: 0px;
+	padding-bottom: 12px;
 	overflow: hidden;
 	}
 .previous-post {
