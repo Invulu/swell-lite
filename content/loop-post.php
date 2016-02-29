@@ -6,7 +6,7 @@
 	<!-- BEGIN .article -->
 	<div class="article">
 		
-		<?php if (get_theme_mod('display_date_blog', '1') == '1') { ?>
+		<?php if ( '1' == get_theme_mod('display_date_blog', '1') ) { ?>
 			<div class="post-date">
 				<p><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__("Leave a Comment", 'swell-lite'), esc_html__("1 Comment", 'swell-lite'), '% Comments'); ?></a></p>
 				<p><i class="fa fa-clock-o"></i> 
@@ -19,11 +19,11 @@
 			</div>
 		<?php } ?>
 		
-		<?php if ( get_theme_mod('display_feature_post') == '' || ! has_post_thumbnail() ) { ?>
+		<?php if ( '' == get_theme_mod('display_feature_post') || ! has_post_thumbnail() ) { ?>
 			<h1 class="headline"><?php the_title(); ?></h1>
 		<?php } ?>
 		
-		<?php if (get_theme_mod('display_author_blog', '1') == '1') { ?>
+		<?php if ( '1' == get_theme_mod('display_author_blog', '1') ) { ?>
 			<div class="post-author">
 				<p><?php esc_html_e("by", 'swell-lite'); ?> <?php esc_url ( the_author_posts_link() ); ?></p>
 			</div>

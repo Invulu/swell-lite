@@ -1,4 +1,4 @@
-Swell Lite v1.2.11
+Swell Lite v1.3
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -152,5 +152,7 @@ CHANGELOG v1.2.10:
 - Replaced pagination function
 - Replaced mobile nav toggle with button instead of span
 
-CHANGELOG v1.2.11:
+CHANGELOG v1.3:
 - Pagination style tweaks
+- Created customizer option to hide main menu
+- Changed options to Yoda conditions

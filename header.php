@@ -80,7 +80,7 @@
 <!-- END #header -->
 </div>
 
-<?php if ( ! has_nav_menu( 'fixed-menu' ) ) { ?>
+<?php if ( '1' == get_theme_mod('display_main_menu', '1') ) { ?>
 
 <!-- BEGIN #navigation -->
 <nav id="navigation" class="navigation-main clearfix" role="navigation">
