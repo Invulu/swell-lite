@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Swell Lite\n"
-"POT-Creation-Date: 2015-12-04 11:39-0500\n"
-"PO-Revision-Date: 2015-12-04 11:39-0500\n"
+"POT-Creation-Date: 2016-03-01 12:23-0500\n"
+"PO-Revision-Date: 2016-03-01 12:23-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -71,7 +71,17 @@ msgstr ""
 msgid "Posts by %1$s:"
 msgstr ""
 
-#: content/author-page.php:43
+#: content/author-page.php:39 content/loop-archive.php:59
+#: content/loop-blog.php:49
+msgid "Previous Page"
+msgstr ""
+
+#: content/author-page.php:40 content/loop-archive.php:60
+#: content/loop-blog.php:50
+msgid "Next Page"
+msgstr ""
+
+#: content/author-page.php:44
 msgid "No posts by this author."
 msgstr ""
 
@@ -111,19 +121,19 @@ msgstr ""
 msgid "by"
 msgstr ""
 
-#: content/loop-archive.php:38 content/loop-post.php:51
+#: content/loop-archive.php:38 content/loop-post.php:53
 msgid ", "
 msgstr ""
 
-#: content/loop-archive.php:43 content/loop-post.php:51
+#: content/loop-archive.php:43 content/loop-post.php:53
 msgid "Category:"
 msgstr ""
 
-#: content/loop-archive.php:43 content/loop-post.php:51
+#: content/loop-archive.php:43 content/loop-post.php:53
 msgid "Tags:"
 msgstr ""
 
-#: content/loop-archive.php:66
+#: content/loop-archive.php:65
 msgid "Sorry, no posts matched your criteria."
 msgstr ""
 
@@ -131,11 +141,11 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
-#: content/loop-blog.php:57 content/loop-post.php:82
+#: content/loop-blog.php:58 content/loop-post.php:84
 msgid "No Posts Found"
 msgstr ""
 
-#: content/loop-blog.php:58
+#: content/loop-blog.php:59
 msgid ""
 "We're sorry, but no posts have been found. Create a post to be added to this "
 "section, and configure your theme options."
@@ -153,7 +163,7 @@ msgstr ""
 msgid "Previous"
 msgstr ""
 
-#: content/loop-page.php:27
+#: content/loop-page.php:27 content/loop-post.php:48
 msgid "(Edit)"
 msgstr ""
 
@@ -165,7 +175,7 @@ msgstr ""
 msgid "We're sorry, but the page could not be found."
 msgstr ""
 
-#: content/loop-post.php:83
+#: content/loop-post.php:85
 msgid "We're sorry, but the post was not found."
 msgstr ""
 
@@ -216,9 +226,9 @@ msgstr ""
 #: functions.php:69
 #, php-format
 msgid ""
-"Enjoying Swell Lite? <a href=\"%1$s\" target=\"_blank\">Upgrade to the "
-"premium Swell Theme</a> for more options, page templates, shortcodes, "
-"support and additional features."
+"Still using the <strong>Lite</strong> version!? <a href=\"%1$s\" target="
+"\"_blank\">Upgrade to the premium Swell Theme</a> for more options, page "
+"templates, shortcodes, support and additional features."
 msgstr ""
 
 #: functions.php:123
@@ -257,14 +267,6 @@ msgstr ""
 
 #: functions.php:225
 msgid "Reply"
-msgstr ""
-
-#: functions.php:263
-msgid "&laquo;"
-msgstr ""
-
-#: functions.php:264
-msgid "&raquo;"
 msgstr ""
 
 #: includes/customizer.php:21
@@ -376,14 +378,18 @@ msgid "Layout"
 msgstr ""
 
 #: includes/customizer.php:217
-msgid "Show Blog Author Link?"
+msgid "Show Main Menu?"
 msgstr ""
 
 #: includes/customizer.php:230
-msgid "Show Blog Date & Comment Link?"
+msgid "Show Blog Author Link?"
 msgstr ""
 
 #: includes/customizer.php:243
+msgid "Show Blog Date & Comment Link?"
+msgstr ""
+
+#: includes/customizer.php:256
 msgid "Show Post Featured Images?"
 msgstr ""
 

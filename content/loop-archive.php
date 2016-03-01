@@ -56,8 +56,8 @@
 <?php endwhile; ?>
 
 <?php the_posts_pagination( array(
-    'prev_text' => esc_attr__( '&laquo;', 'swell-lite' ),
-    'next_text' => esc_attr__( '&raquo;', 'swell-lite' ),
+	'prev_text' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Previous Page', 'swell-lite' ) . ' </span>&laquo;',
+	'next_text' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Next Page', 'swell-lite' ) . ' </span>&raquo;',
 ) ); ?>
 
 <?php else: ?>

@@ -159,3 +159,7 @@ CHANGELOG v1.3:
 
 CHANGELOG v1.3.1:
 - Deleted unnecessary styles
+- More pagination updates
+- Hid comment navigation title
+- Escaped custom header
+- Regenerated language files
