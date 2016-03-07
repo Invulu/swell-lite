@@ -163,3 +163,7 @@ CHANGELOG v1.3.1:
 - Hid comment navigation title
 - Escaped custom header
 - Regenerated language files
+
+CHANGELOG v1.3.2:
+- Fixed mobile menu bug
+- Removed HTML5Shiv.js

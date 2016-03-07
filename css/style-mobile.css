@@ -225,7 +225,7 @@
 		margin: 0px;
 		padding: 0px;
 		}
-	.menu-toggle,
+	button.menu-toggle,
 	.main-small-navigation ul.mobile-menu.toggled-on {
 		display: block;
 		}

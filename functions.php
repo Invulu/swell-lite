@@ -95,16 +95,11 @@ if( !function_exists('swell_lite_enqueue_scripts') ) {
 		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array( 'swell-style' ), '1.0' );
 	
 		// Enqueue Scripts
-		wp_enqueue_script( 'swell-html5shiv', get_template_directory_uri() . '/js/html5shiv.js' );
 		wp_enqueue_script( 'swell-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), '20130729' );
 		wp_enqueue_script( 'swell-hover', get_template_directory_uri() . '/js/hoverIntent.js', array( 'jquery' ), '20130729' );
 		wp_enqueue_script( 'swell-superfish', get_template_directory_uri() . '/js/superfish.js', array( 'jquery', 'swell-hover' ), '20130729' );
 		wp_enqueue_script( 'swell-custom', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery', 'swell-superfish', 'swell-fitvids' ), '20130729', true );
 		wp_enqueue_script( 'swell-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20130729', true );
-		
-		// IE Conditional Scripts
-		global $wp_scripts;
-		$wp_scripts->add_data( 'swell-html5shiv', 'conditional', 'lt IE 9' );
 	
 		// Load single scripts only on single pages
 	    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
