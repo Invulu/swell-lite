@@ -1,4 +1,4 @@
-Swell Lite v1.3.1
+Swell Lite v1.4
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -18,8 +18,8 @@ Font Awesome
 Navigation.js
 
 - Licensed under the GPLv2 license.
- 
-INSTALL: 
+
+INSTALL:
 1. Upload the theme by navigating to Appearance > Themes > Install Themes within the WordPress admin. Select the theme zip file to upload.
 2. Activate the theme after uploading.
 3. Configure and save the theme options within Appearance > Customize.
@@ -167,3 +167,7 @@ CHANGELOG v1.3.1:
 CHANGELOG v1.3.2:
 - Fixed mobile menu bug
 - Removed HTML5Shiv.js
+
+CHANGELOG v1.4:
+- PHP code cleanup
+- Added more commenting

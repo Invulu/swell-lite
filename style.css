@@ -1,4 +1,4 @@
-/******************************************************************************************************************* 
+/*******************************************************************************************************************
 
 	Theme Name: Swell Lite
 	Theme URI: http://www.swelltheme.com
@@ -7,11 +7,11 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.3.2
+	Version: 1.4
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
-	
+
 	The CSS, XHTML and Design are released under the GPL:
 	http://www.opensource.org/licenses/gpl-license.php
 
@@ -20,7 +20,7 @@
 	Table of Contents:
 
 	 0.	Global
-	 1.	Hyperlinks		
+	 1.	Hyperlinks
 	 2.	Headings
 	 3.	Header
 	 4.	Navigation
@@ -45,7 +45,7 @@
 	23. CSS3 Styles
 	24. Jetpack
 	25. WordPress Core
-	  
+
 *******************************************************************************************************************/
 
 /* Nicolas Gallagher's micro clearfix */
@@ -81,7 +81,7 @@ em {
 	}
 strong {
 	font-weight: bold;
-	}	
+	}
 hr {
 	border: 0;
 	width: 100%;
@@ -195,16 +195,16 @@ table {
 	width: 12%;
 	margin: 6px 0px 12px 0px;
 	}
-.text-left { 
-	text-align: left; 
+.text-left {
+	text-align: left;
 	}
-.text-right { 
-	text-align: right; 
+.text-right {
+	text-align: right;
 	}
-.text-center { 
-	text-align: center; 
+.text-center {
+	text-align: center;
 	}
-.text-white, .text-white p, .text-white h1, 
+.text-white, .text-white p, .text-white h1,
 .text-white h2, .text-white h3, .text-white h4,
 .text-white h5, .text-white h6, .text-white blockquote {
 	color: #ffffff;
@@ -246,7 +246,7 @@ a:focus, a:hover, a:active {
 	color: #007f72;
 	text-decoration: underline;
 	}
-	
+
 /************************************************
 *	2.	Headings  								*
 ************************************************/
@@ -496,7 +496,7 @@ button.menu-toggle {
 .main-small-navigation ul.mobile-menu {
 	display: none;
 	}
-	
+
 /*** ESSENTIAL STYLES ***/
 .menu, .menu * {
 	display: table;
@@ -513,13 +513,13 @@ button.menu-toggle {
 .menu ul {
 	margin: 0px;
 	padding: 0px;
-	} 
+	}
 ul.menu ul,
 div.menu ul ul {
 	position: absolute;
 	top: -9999px;
 	width: 240px; /* left offset of submenus need to match (see below) */
-	} 
+	}
 ul.menu ul li,
 div.menu ul ul li {
 	width: 100%;
@@ -558,7 +558,7 @@ div.menu ul li li.sfHover ul {
 	left: 240px; /* match ul width */
 	top: 0;
 	}
-	
+
 /*** SKIN ***/
 #navigation .menu .current_page_item a,
 #navigation .menu .current_page_ancestor a,
@@ -608,8 +608,8 @@ div.menu ul li li.sfHover ul {
 	padding: 0px 18px;
 	border-left: 1px solid rgba(0, 0, 0, .08);
 	}
-.menu a:focus, 
-.menu a:hover, 
+.menu a:focus,
+.menu a:hover,
 .menu a:active {
 	color: rgba(0, 0, 0, .8);
 	outline: 0;
@@ -630,7 +630,7 @@ div.menu ul li li.sfHover ul {
 .menu li li a:link,
 .menu li li a:visited {
 	color: rgba(0, 0, 0, .5);
-	} 
+	}
 .menu li li a:focus,
 .menu li li a:hover,
 .menu li li a:active {
@@ -653,7 +653,7 @@ div.menu ul li li.sfHover ul {
 .menu li li:first-child a {
 	border-top: none;
 	}
-	
+
 /*** ARROWS **/
 .sf-arrows .sf-with-ul {
 	padding-right: 2em;
@@ -692,11 +692,11 @@ div.menu ul li li.sfHover ul {
 	}
 
 /************************************************
-*	5. Content	 					     	    * 
+*	5. Content	 					     	    *
 ************************************************/
 
-#wrapper, 
-.container { 
+#wrapper,
+.container {
 	margin: 0px;
 	padding: 0px;
 	}
@@ -706,12 +706,12 @@ div.menu ul li li.sfHover ul {
 	padding: 48px 4%;
 	position: relative;
 	}
-.content:before, .content:after { 
-	content:""; 
-	display:table; 
+.content:before, .content:after {
+	content:"";
+	display:table;
 	}
-.content:after { 
-	clear: both; 
+.content:after {
+	clear: both;
 	}
 .content.overlap {
 	margin-top: -96px;
@@ -728,7 +728,7 @@ div.menu ul li li.sfHover ul {
 	}
 .post-holder,
 .page-holder,
-.blog-holder, 
+.blog-holder,
 .archive-holder {
 	background: #ffffff;
 	position: relative;
@@ -815,7 +815,7 @@ div.menu ul li li.sfHover ul {
 	padding: 6px 0px;
 	border-bottom: 1px solid rgba(0,0,0, 0.08);
 	}
-	
+
 /************************************************
 *	6. Page Templates  							*
 ************************************************/
@@ -830,7 +830,7 @@ div.menu ul li li.sfHover ul {
 .archive-column.last {
 	padding-right: 0;
 	}
-		
+
 /************************************************
 *	7. Social Media   							*
 ************************************************/
@@ -894,9 +894,9 @@ div.menu ul li li.sfHover ul {
 .social-icons li a[href*="yelp.com"]::before			{ content: '\f1e9'; }
 .social-icons li a[href*="mailto:"]::before				{ content: '\f0e0'; }
 .social-icons li a[href$="/feed/"]::before				{ content: '\f09e'; }
-	
+
 /************************************************
-*	8.	Pagination 	  		      		     	* 
+*	8.	Pagination 	  		      		     	*
 ************************************************/
 
 .pagination {
@@ -975,7 +975,7 @@ div.menu ul li li.sfHover ul {
 	}
 
 /************************************************
-*	9.	Images  				     		    * 
+*	9.	Images  				     		    *
 ************************************************/
 
 .feature-img {
@@ -1084,7 +1084,7 @@ img.alignleft {
 	margin: 0px;
 	padding: 0px;
 	}
-	
+
 /************************************************
 *	10.	WordPress Gallery					    *
 ************************************************/
@@ -1129,7 +1129,7 @@ img.alignleft {
 	}
 
 /************************************************
-*	11.	Sidebar 	        		    	    * 
+*	11.	Sidebar 	        		    	    *
 ************************************************/
 
 .sidebar {
@@ -1192,7 +1192,7 @@ img.alignleft {
 .tagcloud {
 	line-height: 1.2;
 	}
-	
+
 /************************************************
 *	13.	RSS Widget								*
 ************************************************/
@@ -1246,7 +1246,7 @@ img.alignleft {
 	text-align: right;
 	padding-right: 12px;
 	}
-	
+
 /************************************************
 *	15.	Custom Menu Widget						*
 ************************************************/
@@ -1256,7 +1256,7 @@ img.alignleft {
 	width: 100%;
 	text-align: left;
 	}
-.widget ul.menu .current_page_item a, 
+.widget ul.menu .current_page_item a,
 .widget ul.menu .current-menu-item a {
 	color: #007f72;
 	background: none;
@@ -1315,7 +1315,7 @@ img.alignleft {
 .widget ul.menu li ul.sub-menu li ul.sub-menu li {
 	display: none;
 	}
-	
+
 /************************************************
 *	16.	Search Form								*
 ************************************************/
@@ -1570,7 +1570,7 @@ p.logged-in-as {
 	margin: 0px;
 	padding: 0px;
 	}
-	
+
 /************************************************
 *	19.	Buttons  								*
 ************************************************/
@@ -1594,8 +1594,8 @@ p.logged-in-as {
 	border: none;
 	-webkit-appearance: none;
 	}
-.button:hover, a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, 
-.more-link:hover, input[type=submit]:hover, #submit:hover, #comments #respond input#submit:hover, 
+.button:hover, a.button:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover,
+.more-link:hover, input[type=submit]:hover, #submit:hover, #comments #respond input#submit:hover,
 .container .gform_wrapper input.button:hover, #wrapper #infinite-handle span:hover {
 	background-color: #05ad9c;
 	color: #FFFFFF !important;
@@ -1607,9 +1607,9 @@ p.logged-in-as {
 .article .more-link {
 	margin: 24px 0px 0px 0px;
 	}
-	
+
 /************************************************
-*	20. Columns						   		    * 
+*	20. Columns						   		    *
 ************************************************/
 
 .content-columns {
@@ -1620,15 +1620,15 @@ p.logged-in-as {
 	}
 .content-column {
 	float: left;
-	position: relative; 
+	position: relative;
 	margin-right: 4%;
 	padding-top: 24px;
 	padding-bottom: 24px;
 	}
 .content-column:last-child {
 	float: right;
-	margin-right: 0; 
-	clear: right; 
+	margin-right: 0;
+	clear: right;
 	}
 .content-column:after {
 	content: '';
@@ -1637,40 +1637,40 @@ p.logged-in-as {
     clear: both;
     visibility: hidden;
 	}
-.content-column.one-half { 
-	width:48%; 
+.content-column.one-half {
+	width:48%;
 	}
-.content-column.one-third { 
-	width:30.66%; 
+.content-column.one-third {
+	width:30.66%;
 	}
-.content-column.two-third { 
-	width:65.33%; 
+.content-column.two-third {
+	width:65.33%;
 	}
-.content-column.one-fourth { 
-	width:22%; 
+.content-column.one-fourth {
+	width:22%;
 	}
-.content-column.three-fourth { 
-	width:74%; 
+.content-column.three-fourth {
+	width:74%;
 	}
-.content-column.one-fifth { 
-	width:16.8%; 
+.content-column.one-fifth {
+	width:16.8%;
 	}
-.content-column.two-fifth { 
-	width:37.6%; 
+.content-column.two-fifth {
+	width:37.6%;
 	}
-.content-column.three-fifth { 
-	width:58.4%; 
+.content-column.three-fifth {
+	width:58.4%;
 	}
-.content-column.four-fifth { 
-	width:67.2%; 
+.content-column.four-fifth {
+	width:67.2%;
 	}
-.content-column.one-sixth { 
-	width:13.33%; 
+.content-column.one-sixth {
+	width:13.33%;
 	}
-.content-column.five-sixth { 
-	width:82.67%; 
+.content-column.five-sixth {
+	width:82.67%;
 	}
-	
+
 /************************************************
 *	21. Tables		 							*
 ************************************************/
@@ -1707,11 +1707,11 @@ table td {
 	margin: 0px;
 	border: 1px solid #dddddd;
 	}
-	
+
 /************************************************
 *	22. Forms									*
 ************************************************/
-	
+
 /* General Form Styles */
 
 .container form {
@@ -1804,7 +1804,7 @@ select {
 	border-radius: 3px;
 	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .1);
 	}
-	
+
 /************************************************
 *	23.	CSS3 Styles								*
 ************************************************/
@@ -1852,7 +1852,7 @@ a, a:link {
 	}
 
 /************************************************
-*	24.	Jetpack	 					     	    * 
+*	24.	Jetpack	 					     	    *
 ************************************************/
 
 #infinite-handle,
@@ -1880,7 +1880,7 @@ a, a:link {
 .infinity-end.neverending .footer {
     display: block;
 	}
-.grofile-thumbnail, 
+.grofile-thumbnail,
 .widgets-grid-layout {
 	float: left;
 	width: 28% !important;
@@ -1890,7 +1890,7 @@ a, a:link {
 .widget-grofile h4 {
 	margin: 24px 0px 0px 0px !important;
 	}
-	
+
 /************************************************
 *	25.	WordPress Core	 			     	    *
 ************************************************/

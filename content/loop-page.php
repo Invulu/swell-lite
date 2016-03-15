@@ -1,31 +1,42 @@
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php
+/**
+ * This template displays the page loop.
+ *
+ * @package Swell Lite
+ * @since Swell Lite 1.0
+ */
+
+?>
+
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <!-- BEGIN .page-holder -->
 <div class="page-holder shadow radius-full">
 
 	<!-- BEGIN .article -->
 	<div class="article">
-		
+
 		<?php if ( ! has_post_thumbnail() ) { ?>
 			<h1 class="headline"><?php the_title(); ?></h1>
 		<?php } ?>
-	
-		<?php the_content( esc_html__("Read More", 'swell-lite') ); ?>
-		
+
+		<?php the_content( esc_html__( 'Read More', 'swell-lite' ) ); ?>
+
 		<?php wp_link_pages(array(
-			'before' => '<p class="page-links"><span class="link-label">' . esc_html__('Pages:', 'swell-lite') . '</span>',
+			'before' => '<p class="page-links"><span class="link-label">' . esc_html__( 'Pages:', 'swell-lite' ) . '</span>',
 			'after' => '</p>',
 			'link_before' => '<span>',
 			'link_after' => '</span>',
 			'next_or_number' => 'next_and_number',
-			'nextpagelink' => esc_html__('Next', 'swell-lite'),
-			'previouspagelink' => esc_html__('Previous', 'swell-lite'),
+			'nextpagelink' => esc_html__( 'Next', 'swell-lite' ),
+			'previouspagelink' => esc_html__( 'Previous', 'swell-lite' ),
 			'pagelink' => '%',
-			'echo' => 1 )
+			'echo' => 1,
+			)
 		); ?>
-		
-		<?php edit_post_link( esc_html__("(Edit)", 'swell-lite'), '', ''); ?>
-	
+
+		<?php edit_post_link( esc_html__( '(Edit)', 'swell-lite' ), '', '' ); ?>
+
 	<!-- END .article -->
 	</div>
 
@@ -36,7 +47,7 @@
 
 <div class="clear"></div>
 
-<?php endwhile; else: ?>
+<?php endwhile; else : ?>
 
 <!-- BEGIN .page-holder -->
 <div class="page-holder shadow radius-full">
@@ -45,8 +56,8 @@
 	<div class="article">
 
 		<div class="error-404">
-			<h1 class="headline"><?php esc_html_e("Page Not Found", 'swell-lite'); ?></h1>
-			<p><?php esc_html_e("We're sorry, but the page could not be found.", 'swell-lite'); ?></p>
+			<h1 class="headline"><?php esc_html_e( 'Page Not Found', 'swell-lite' ); ?></h1>
+			<p><?php esc_html_e( "We're sorry, but the page could not be found.", 'swell-lite' ); ?></p>
 		</div>
 
 	<!-- END .article -->
