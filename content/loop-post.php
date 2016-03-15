@@ -53,7 +53,7 @@
 			'previouspagelink' => esc_html__( 'Previous', 'swell-lite' ),
 			'pagelink' => '%',
 			'echo' => 1,
-			),
+			)
 		); ?>
 
 		<?php edit_post_link( esc_html__( '(Edit)', 'swell-lite' ), '', '' ); ?>

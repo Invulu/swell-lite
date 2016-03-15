@@ -1,4 +1,4 @@
-Swell Lite v1.4
+Swell Lite v1.4.1
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -171,3 +171,6 @@ CHANGELOG v1.3.2:
 CHANGELOG v1.4:
 - PHP code cleanup
 - Added more commenting
+
+CHANGELOG v1.4.1:
+- Fixed error with page links in post loop
