@@ -220,51 +220,58 @@ if ( ! function_exists( 'swell_lite_comment' ) ) :
 			case 'pingback' :
 			case 'trackback' :
 		?>
+
 		<li class="post pingback">
-		<p><?php esc_html_e( 'Pingback:', 'swell-lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', 'swell-lite' ), '<span class="edit-link">', '</span>' ); ?></p>
-	<?php
-		break;
+			<p><?php esc_html_e( 'Pingback:', 'swell-lite' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( esc_html__( 'Edit', 'swell-lite' ), '<span class="edit-link">', '</span>' ); ?></p>
+		</li>
+
+		<?php
+			break;
 			default :
 		?>
+
 		<li <?php comment_class(); ?> id="<?php echo esc_attr( 'li-comment-' . get_comment_ID() ); ?>">
 
-		<article id="<?php echo esc_attr( 'comment-' . get_comment_ID() ); ?>" class="comment">
-			<footer class="comment-meta">
-				<div class="comment-author vcard">
-					<?php
-						$avatar_size = 72;
-					if ( '0' != $comment->comment_parent ) {
-						$avatar_size = 48; }
+			<article id="<?php echo esc_attr( 'comment-' . get_comment_ID() ); ?>" class="comment">
 
-						echo get_avatar( $comment, $avatar_size );
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<?php
+							$avatar_size = 72;
+						if ( '0' != $comment->comment_parent ) {
+							$avatar_size = 48; }
 
-						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s <br/> %2$s <br/>', 'swell-lite' ),
-							sprintf( '<span class="fn">%s</span>', wp_kses_post( get_comment_author_link() ) ),
-							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-								esc_url( get_comment_link( $comment->comment_ID ) ),
-								get_comment_time( 'c' ),
-								/* translators: 1: date, 2: time */
-								sprintf( esc_html__( '%1$s', 'swell-lite' ), get_comment_date(), get_comment_time() )
-							)
-						);
-						?>
-					</div><!-- END .comment-author .vcard -->
-				</footer>
+							echo get_avatar( $comment, $avatar_size );
 
-				<div class="comment-content">
-					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'swell-lite' ); ?></em>
-					<br />
-				<?php endif; ?>
-					<?php comment_text(); ?>
-					<div class="reply">
-					<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'swell-lite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-					</div><!-- .reply -->
-					<?php edit_comment_link( esc_html__( 'Edit', 'swell-lite' ), '<span class="edit-link">', '</span>' ); ?>
-				</div>
+							/* translators: 1: comment author, 2: date and time */
+							printf( __( '%1$s <br/> %2$s <br/>', 'swell-lite' ),
+								sprintf( '<span class="fn">%s</span>', wp_kses_post( get_comment_author_link() ) ),
+								sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
+									esc_url( get_comment_link( $comment->comment_ID ) ),
+									get_comment_time( 'c' ),
+									/* translators: 1: date, 2: time */
+									sprintf( esc_html__( '%1$s', 'swell-lite' ), get_comment_date(), get_comment_time() )
+								)
+							);
+							?>
+						</div><!-- END .comment-author .vcard -->
+					</footer>
 
-			</article><!-- #comment-## -->
+					<div class="comment-content">
+						<?php if ( '0' == $comment->comment_approved ) : ?>
+						<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'swell-lite' ); ?></em>
+						<br />
+					<?php endif; ?>
+						<?php comment_text(); ?>
+						<div class="reply">
+						<?php comment_reply_link( array_merge( $args, array( 'reply_text' => esc_html__( 'Reply', 'swell-lite' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+						</div><!-- .reply -->
+						<?php edit_comment_link( esc_html__( 'Edit', 'swell-lite' ), '<span class="edit-link">', '</span>' ); ?>
+					</div>
+
+				</article><!-- #comment-## -->
+
+		</li>
 
 		<?php
 		break;
