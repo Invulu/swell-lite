@@ -13,7 +13,7 @@
 <!-- BEGIN .page-holder -->
 <div class="page-holder shadow radius-full">
 
-	<?php if ( has_post_thumbnail() && '' == get_theme_mod( 'display_main_menu', '1' ) ) { ?>
+	<?php if ( has_post_thumbnail() && ! has_nav_menu( 'main-menu' ) ) { ?>
 
 	<!-- BEGIN .entry -->
 	<div class="entry">

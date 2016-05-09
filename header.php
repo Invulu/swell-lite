@@ -40,9 +40,9 @@
 
 	<?php
 		wp_nav_menu( array(
-			'theme_location' 	=> 'fixed-menu',
-			'title_li' 			=> '',
-			'depth' 			=> 4,
+			'theme_location' 		=> 'fixed-menu',
+			'title_li' 					=> '',
+			'depth' 						=> 4,
 			'container_class' 	=> '',
 			'menu_class'      	=> 'menu',
 			)
@@ -80,7 +80,7 @@
 <!-- END #header -->
 </div>
 
-<?php if ( '1' == get_theme_mod( 'display_main_menu', '1' ) ) { ?>
+<?php if ( has_nav_menu( 'main-menu' ) ) { ?>
 
 <!-- BEGIN #navigation -->
 <nav id="navigation" class="navigation-main clearfix" role="navigation">
@@ -89,10 +89,9 @@
 
 	<?php
 		wp_nav_menu( array(
-			'theme_location' 	=> 'main-menu',
-			'title_li' 			=> '',
-			'depth' 			=> 4,
-			'fallback_cb'     	=> 'wp_page_menu',
+			'theme_location' 		=> 'main-menu',
+			'title_li' 					=> '',
+			'depth' 						=> 4,
 			'container_class' 	=> '',
 			'menu_class'      	=> 'menu',
 			)

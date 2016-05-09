@@ -13,7 +13,7 @@ get_header(); ?>
 <!-- BEGIN .post class -->
 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php if ( has_post_thumbnail() && '1' == get_theme_mod( 'display_main_menu', '1' ) ) { ?>
+	<?php if ( has_post_thumbnail() && has_nav_menu( 'main-menu' ) ) { ?>
 		<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo $thumb[0]; ?>);" <?php } ?>>
 			<h1 class="headline img-headline"><?php the_title(); ?></h1>
 			<?php the_post_thumbnail( 'swell-featured-large' ); ?>

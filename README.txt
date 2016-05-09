@@ -180,4 +180,5 @@ CHANGELOG v1.5:
 - Updated default custom header image
 - Changed layout of featured single featured images if main menu is hidden
 - Added body class for fixed menu
+- Replaced option to hide main menu with custom menu active conditional 
 - Style tweaks

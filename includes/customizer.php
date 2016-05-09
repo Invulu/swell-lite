@@ -276,19 +276,6 @@ function swell_lite_theme_customizer( $wp_customize ) {
 			'panel' => 'swell_lite_theme_options',
 		) );
 
-		// Display Main Menu.
-		$wp_customize->add_setting( 'display_main_menu', array(
-			'default'	=> '1',
-			'sanitize_callback' => 'swell_lite_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_main_menu', array(
-			'label'		=> esc_html__( 'Show Main Menu?', 'swell-lite' ),
-			'section'	=> 'swell_lite_layout_section',
-			'settings'	=> 'display_main_menu',
-			'type'		=> 'checkbox',
-			'priority' => 20,
-		) ) );
-
 		// Display Blog Author.
 		$wp_customize->add_setting( 'display_author_blog', array(
 			'default'	=> '1',
