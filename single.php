@@ -13,13 +13,11 @@ get_header(); ?>
 <!-- BEGIN .post class -->
 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php if ( '1' == get_theme_mod( 'display_feature_post', '1' ) ) { ?>
-		<?php if ( has_post_thumbnail() ) { ?>
-			<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo $thumb[0]; ?>);" <?php } ?>>
-				<h1 class="headline img-headline"><?php the_title(); ?></h1>
-				<?php the_post_thumbnail( 'swell-featured-large' ); ?>
-			</div>
-		<?php } ?>
+	<?php if ( has_post_thumbnail() && '1' == get_theme_mod( 'display_main_menu', '1' ) ) { ?>
+		<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo $thumb[0]; ?>);" <?php } ?>>
+			<h1 class="headline img-headline"><?php the_title(); ?></h1>
+			<?php the_post_thumbnail( 'swell-featured-large' ); ?>
+		</div>
 	<?php } ?>
 
 	<!-- BEGIN .row -->

@@ -50,7 +50,7 @@ if ( ! function_exists( 'swell_lite_setup' ) ) :
 		));
 		$defaults = array(
 		'width'                 => 1800,
-		'height'                => 480,
+		'height'                => 520,
 		'flex-height'           => true,
 		'flex-width'            => true,
 		'default-text-color'    => 'ffffff',
@@ -358,6 +358,9 @@ add_filter( 'wp_link_pages_args', 'swell_lite_wp_link_pages_args_prevnext_add' )
 function swell_lite_body_class( $classes ) {
 	if ( is_singular() ) {
 		$classes[] = 'swell-singular'; }
+
+	if ( has_nav_menu( 'fixed-menu' ) ) {
+		$classes[] = 'swell-fixed-menu'; }
 
 	if ( is_active_sidebar( 'right-sidebar' ) ) {
 		$classes[] = 'swell-right-sidebar'; }

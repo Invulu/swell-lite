@@ -12,7 +12,7 @@
 .column, .columns {
 	float: left;
 	min-height: 1px;
-	position: relative; 
+	position: relative;
 }
 [class*="column"] + [class*="column"]:last-child {
 	float: right;
@@ -80,8 +80,12 @@
 	.admin-bar #navigation {
 		margin-top: 0px;
 	}
-	#header #custom-header.fixed-menu #masthead,
-	#header #custom-header.fixed-menu #logo {
+	.admin-bar #custom-header,
+	.admin-bar.swell-fixed-menu #custom-header {
+		background-position: center top;
+	}
+	.swell-fixed-menu #custom-header {
+		background-position: center top;
 		margin-top: 0px;
 	}
 	#custom-header {
@@ -111,6 +115,12 @@
 	}
 	.postarea.full .article {
 		padding: 48px 12%;
+	}
+	.entry {
+		padding: 24px 8%;
+	}
+	.postarea.full .entry {
+		padding: 36px 12%;
 	}
 	.postarea.middle .article {
 		padding: 18px 8%;
@@ -336,9 +346,10 @@
 	.postarea.full {
 		padding: 12px 0px;
 	}
-	.article,
+	.article, .entry,
 	.postarea.full .article,
-	.postarea.middle .article {
+	.postarea.middle .article,
+	.postarea.full .entry {
 		padding: 24px 6%;
 	}
 	.post-holder,

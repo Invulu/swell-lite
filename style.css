@@ -7,7 +7,7 @@
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.4.2
+	Version: 1.5
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: light, gray, white, green, silver, one-column, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, photoblogging
@@ -377,12 +377,18 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	margin: 0px;
 	padding: 0px;
 }
+.admin-bar #custom-header {
+	background-position: center 32px;
+}
+.admin-bar.swell-fixed-menu #custom-header {
+	background-position: center 112px;
+}
+.swell-fixed-menu #custom-header {
+	background-position: center 80px;
+	margin-top: 80px;
+}
 #custom-header.non-active {
 	min-height: 320px;
-}
-#header #custom-header.fixed-menu #masthead,
-#header #custom-header.fixed-menu #logo {
-	margin-top: 24px;
 }
 #logo {
 	display: block;
@@ -518,7 +524,7 @@ ul.menu ul,
 div.menu ul ul {
 	position: absolute;
 	top: -9999px;
-	width: 240px; /* left offset of submenus need to match (see below) */
+	width: 280px; /* left offset of submenus need to match (see below) */
 }
 ul.menu ul li,
 div.menu ul ul li {
@@ -555,7 +561,7 @@ div.menu ul li:hover li ul {
 ul.menu li li:hover ul,
 ul.menu li li.sfHover ul,
 div.menu ul li li.sfHover ul {
-	left: 240px; /* match ul width */
+	left: 280px; /* match ul width */
 	top: 0;
 }
 
@@ -607,6 +613,7 @@ div.menu ul li li.sfHover ul {
 	margin: 32px 0px;
 	padding: 0px 18px;
 	border-left: 1px solid rgba(0, 0, 0, .08);
+	word-wrap: break-word;
 }
 .menu a:focus,
 .menu a:hover,
@@ -620,9 +627,9 @@ div.menu ul li li.sfHover ul {
 	background: none;
 	text-transform: none;
 	text-align: left;
-	line-height: 50px;
+	line-height: 1.8;
 	margin: 0px;
-	padding: 0px 18px;
+	padding: 12px 18px;
 	border-left: none;
 	border-top: 1px solid rgba(0, 0, 0, .08);
 }
@@ -643,6 +650,7 @@ div.menu ul li li.sfHover ul {
 }
 .menu li li {
 	background: none;
+	max-width: 280px;
 	margin: 0px;
 }
 .menu li:first-child,
@@ -717,14 +725,25 @@ div.menu ul li li.sfHover ul {
 	margin-top: -96px;
 	z-index: 9;
 }
-.article {
+.article, .entry {
 	display: block;
 	position: relative;
-	padding: 64px 12%;
 	overflow: hidden;
+}
+.article {
+	padding: 64px 12%;
 }
 .postarea.full .article {
 	padding: 96px 18%;
+}
+.entry {
+	padding: 36px 12%;
+}
+.postarea.full .entry {
+	padding: 48px 18%;
+}
+.page .entry .headline {
+	padding-bottom: 0px;
 }
 .post-holder,
 .page-holder,

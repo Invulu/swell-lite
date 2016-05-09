@@ -13,6 +13,22 @@
 <!-- BEGIN .page-holder -->
 <div class="page-holder shadow radius-full">
 
+	<?php if ( has_post_thumbnail() && '' == get_theme_mod( 'display_main_menu', '1' ) ) { ?>
+
+	<!-- BEGIN .entry -->
+	<div class="entry">
+
+		<h1 class="headline"><?php the_title(); ?></h1>
+
+	<!-- END .entry -->
+	</div>
+
+	<div class="feature-img">
+		<?php the_post_thumbnail( 'swell-featured-large' ); ?>
+	</div>
+
+	<?php } ?>
+
 	<!-- BEGIN .article -->
 	<div class="article">
 

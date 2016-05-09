@@ -315,19 +315,6 @@ function swell_lite_theme_customizer( $wp_customize ) {
 			'priority' => 60,
 		) ) );
 
-		// Display Post Featured Image or Video.
-		$wp_customize->add_setting( 'display_feature_post', array(
-			'default'	=> '1',
-			'sanitize_callback' => 'swell_lite_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_feature_post', array(
-			'label'		=> esc_html__( 'Show Post Featured Images?', 'swell-lite' ),
-			'section'	=> 'swell_lite_layout_section',
-			'settings'	=> 'display_feature_post',
-			'type'		=> 'checkbox',
-			'priority' => 80,
-		) ) );
-
 }
 add_action( 'customize_register', 'swell_lite_theme_customizer' );
 

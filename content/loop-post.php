@@ -13,8 +13,10 @@
 <!-- BEGIN .post-holder -->
 <div class="post-holder shadow radius-full">
 
-	<!-- BEGIN .article -->
-	<div class="article">
+	<?php if ( has_post_thumbnail() && '' == get_theme_mod( 'display_main_menu', '1' ) ) { ?>
+
+	<!-- BEGIN .entry -->
+	<div class="entry">
 
 		<?php if ( '1' == get_theme_mod( 'display_date_blog', '1' ) ) { ?>
 			<div class="post-date">
@@ -29,9 +31,7 @@
 			</div>
 		<?php } ?>
 
-		<?php if ( '' == get_theme_mod( 'display_feature_post' ) || ! has_post_thumbnail() ) { ?>
-			<h1 class="headline"><?php the_title(); ?></h1>
-		<?php } ?>
+		<h1 class="headline"><?php the_title(); ?></h1>
 
 		<?php if ( '1' == get_theme_mod( 'display_author_blog', '1' ) ) { ?>
 			<div class="post-author">
@@ -40,6 +40,22 @@
 		<?php } ?>
 
 		<span class="divider-small"></span>
+
+	<!-- END .entry -->
+	</div>
+
+	<div class="feature-img">
+		<?php the_post_thumbnail( 'swell-featured-large' ); ?>
+	</div>
+
+	<?php } ?>
+
+	<!-- BEGIN .article -->
+	<div class="article">
+
+		<?php if ( ! has_post_thumbnail() ) { ?>
+			<h1 class="headline"><?php the_title(); ?></h1>
+		<?php } ?>
 
 		<?php the_content(); ?>
 

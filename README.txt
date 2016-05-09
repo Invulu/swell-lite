@@ -1,4 +1,4 @@
-Swell Lite v1.4.1
+Swell Lite v1.5
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -174,3 +174,10 @@ CHANGELOG v1.4:
 
 CHANGELOG v1.4.1:
 - Fixed error with page links in post loop
+
+CHANGELOG v1.5:
+- Updated screenshot
+- Updated default custom header image
+- Changed layout of featured single featured images if main menu is hidden
+- Added body class for fixed menu
+- Style tweaks
