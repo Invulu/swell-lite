@@ -15,7 +15,7 @@ get_header(); ?>
 <!-- BEGIN .post class -->
 <div <?php post_class(); ?> id="page-<?php the_ID(); ?>">
 
-	<?php if ( has_post_thumbnail() ) { ?>
+	<?php if ( has_post_thumbnail() && has_nav_menu( 'main-menu' ) ) { ?>
 		<div class="feature-img page-banner" <?php if ( ! empty( $thumb ) ) { ?> style="background-image: url(<?php echo $thumb[0]; ?>);" <?php } ?>>
 			<h1 class="headline img-headline"><?php the_title(); ?></h1>
 			<?php the_post_thumbnail( 'swell-featured-large' ); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 	<div class="row">
 
 		<!-- BEGIN .content -->
-		<div class="content<?php if ( has_post_thumbnail() ) { ?> overlap<?php } ?>">
+		<div class="content">
 
 			<!-- BEGIN .sixteen columns -->
 			<div class="sixteen columns">
@@ -59,7 +59,7 @@ get_header(); ?>
 								<h6><?php esc_html_e( 'By Category:', 'swell-lite' ); ?></h6>
 								<ul><?php wp_list_categories( 'sort_column=name&title_li=' ); ?></ul>
 							</div>
-						
+
 						<!-- END .article -->
 						</div>
 

@@ -33,8 +33,8 @@
 
 <?php if ( has_nav_menu( 'fixed-menu' ) ) { ?>
 
-<!-- BEGIN #nav-top -->
-<nav id="nav-top" class="navigation-main clearfix" role="navigation">
+<!-- BEGIN #navigation -->
+<nav id="navigation" class="navigation-main fixed-nav clearfix" role="navigation">
 
 	<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
@@ -49,7 +49,7 @@
 		);
 	?>
 
-<!-- END #nav-top -->
+<!-- END #navigation -->
 </nav>
 
 <?php } ?>
@@ -85,7 +85,9 @@
 <!-- BEGIN #navigation -->
 <nav id="navigation" class="navigation-main clearfix" role="navigation">
 
-	<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+	<?php if ( ! has_nav_menu( 'fixed-menu' ) ) { ?>
+		<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+	<?php } ?>
 
 	<?php
 		wp_nav_menu( array(

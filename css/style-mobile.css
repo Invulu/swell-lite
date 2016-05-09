@@ -73,11 +73,11 @@
 
 	/* Theme */
 
-	#nav-top {
+	#navigation.fixed-nav {
 		position: relative;
 	}
-	.admin-bar #nav-top,
-	.admin-bar #navigation {
+	.admin-bar #navigation,
+	.admin-bar #navigation.fixed-nav {
 		margin-top: 0px;
 	}
 	.admin-bar #custom-header,
@@ -221,9 +221,6 @@
 	#custom-header {
 		background-position: center center !important;
 		margin: 0px;
-	}
-	#nav-top {
-		display: none;
 	}
 	#navigation {
 		position: relative;

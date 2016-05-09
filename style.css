@@ -473,24 +473,16 @@ h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
 	padding: 0px;
 	z-index: 99;
 }
-#nav-top {
-	display: block;
-	background-color: #ffffff;
-	color: #999999;
-	font-family: 'Raleway', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-	font-size: 0.9em;
-	font-weight: 600;
-	position: fixed;
+#navigation.fixed-nav {
 	top: 0;
+	position: fixed;
 	width: 100%;
-	margin: 0px;
-	padding: 0px;
 	z-index: 999;
 }
 .admin-bar #navigation {
 	margin-top: -32px;
 }
-.admin-bar #nav-top {
+.admin-bar #navigation.fixed-nav {
 	margin-top: 32px;
 }
 
