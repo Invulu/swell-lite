@@ -37,9 +37,8 @@
 			<div class="post-author">
 				<p><?php esc_html_e( 'by', 'swell-lite' ); ?> <?php esc_url( the_author_posts_link() ); ?></p>
 			</div>
+			<span class="divider-small"></span>
 		<?php } ?>
-
-		<span class="divider-small"></span>
 
 	<!-- END .entry -->
 	</div>
