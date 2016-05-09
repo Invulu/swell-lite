@@ -256,12 +256,9 @@ function swell_lite_theme_customizer( $wp_customize ) {
 		-------------------------------------------------------------------------------------------------------
 		*/
 
-		$wp_customize->add_panel( 'swell_lite_theme_options', array(
-			'priority' => 1,
-			'capability' => 'edit_theme_options',
-			'theme_supports' => '',
-			'title' => esc_html__( 'Theme Options', 'swell-lite' ),
-			'description' => esc_html__( 'This panel allows you to customize specific areas of the theme.', 'swell-lite' ),
+		$wp_customize->add_section( 'swell_lite_theme_options' , array(
+			'title'       => esc_attr__( 'Theme Options', 'swell-lite' ),
+			'priority'    => 1,
 		) );
 
 		/*
@@ -270,11 +267,18 @@ function swell_lite_theme_customizer( $wp_customize ) {
 		-------------------------------------------------------------------------------------------------------
 		*/
 
-		$wp_customize->add_section( 'swell_lite_layout_section' , array(
-			'title'       => esc_html__( 'Layout', 'swell-lite' ),
-			'priority'    => 104,
-			'panel' => 'swell_lite_theme_options',
+		// Display Blog Date.
+		$wp_customize->add_setting( 'display_date_blog', array(
+			'default'	=> '1',
+			'sanitize_callback' => 'swell_lite_sanitize_checkbox',
 		) );
+		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_date_blog', array(
+			'label'		=> esc_html__( 'Show Post Date & Comment Link?', 'swell-lite' ),
+			'section'	=> 'swell_lite_theme_options',
+			'settings'	=> 'display_date_blog',
+			'type'		=> 'checkbox',
+			'priority' => 20,
+		) ) );
 
 		// Display Blog Author.
 		$wp_customize->add_setting( 'display_author_blog', array(
@@ -282,24 +286,11 @@ function swell_lite_theme_customizer( $wp_customize ) {
 			'sanitize_callback' => 'swell_lite_sanitize_checkbox',
 		) );
 		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_author_blog', array(
-			'label'		=> esc_html__( 'Show Blog Author Link?', 'swell-lite' ),
-			'section'	=> 'swell_lite_layout_section',
+			'label'		=> esc_html__( 'Show Post Author Link?', 'swell-lite' ),
+			'section'	=> 'swell_lite_theme_options',
 			'settings'	=> 'display_author_blog',
 			'type'		=> 'checkbox',
 			'priority' => 40,
-		) ) );
-
-		// Display Blog Date.
-		$wp_customize->add_setting( 'display_date_blog', array(
-			'default'	=> '1',
-			'sanitize_callback' => 'swell_lite_sanitize_checkbox',
-		) );
-		$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'display_date_blog', array(
-			'label'		=> esc_html__( 'Show Blog Date & Comment Link?', 'swell-lite' ),
-			'section'	=> 'swell_lite_layout_section',
-			'settings'	=> 'display_date_blog',
-			'type'		=> 'checkbox',
-			'priority' => 60,
 		) ) );
 
 }

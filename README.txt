@@ -186,3 +186,5 @@ CHANGELOG v1.5:
 
 CHANGELOG v1.5.1:
 - Updated screenshot
+- Updated customizer text
+- Removed customizer layout panel
