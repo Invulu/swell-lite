@@ -1,4 +1,4 @@
-Swell Lite v1.5.2
+Swell Lite v1.5.3
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -191,3 +191,6 @@ CHANGELOG v1.5.1:
 
 CHANGELOG v1.5.2:
 - Removed escaping in comments function
+
+CHANGELOG v1.5.3:
+- Removed depreciated style tags
