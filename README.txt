@@ -1,4 +1,4 @@
-Swell Lite v1.5.1
+Swell Lite v1.5.2
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -188,3 +188,6 @@ CHANGELOG v1.5.1:
 - Updated screenshot
 - Updated customizer text
 - Removed customizer layout panel
+
+CHANGELOG v1.5.2:
+- Removed escaping in comments function

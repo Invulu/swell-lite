@@ -250,7 +250,7 @@ if ( ! function_exists( 'swell_lite_comment' ) ) :
 									esc_url( get_comment_link( $comment->comment_ID ) ),
 									get_comment_time( 'c' ),
 									/* translators: 1: date, 2: time */
-									sprintf( esc_html__( '%1$s', 'swell-lite' ), get_comment_date(), get_comment_time() )
+									sprintf( __( '%1$s', 'swell-lite' ), get_comment_date(), get_comment_time() )
 								)
 							);
 							?>
