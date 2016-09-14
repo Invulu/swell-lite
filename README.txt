@@ -1,4 +1,4 @@
-Swell Lite v1.5.3
+Swell Lite v1.5.4
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -194,3 +194,6 @@ CHANGELOG v1.5.2:
 
 CHANGELOG v1.5.3:
 - Removed depreciated style tags
+
+CHANGELOG v1.5.3:
+- Footer change plugin notice
