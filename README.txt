@@ -1,4 +1,4 @@
-Swell Lite v1.5.5
+Swell Lite v1.5.6
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -200,3 +200,6 @@ CHANGELOG v1.5.4:
 
 CHANGELOG v1.5.5:
 - Admin notice update
+
+CHANGELOG v1.5.6:
+- Fixed issue with theme options not displaying post date and author on single posts with no featured image

@@ -53,7 +53,29 @@
 	<div class="article">
 
 		<?php if ( ! has_post_thumbnail() ) { ?>
+
+			<?php if ( '1' == get_theme_mod( 'display_date_blog', '1' ) ) { ?>
+				<div class="post-date">
+					<p><i class="fa fa-comment"></i> <a href="<?php the_permalink(); ?>#comments"><?php comments_number( esc_html__( 'Leave a Comment', 'swell-lite' ), esc_html__( '1 Comment', 'swell-lite' ), '% Comments' ); ?></a></p>
+					<p><i class="fa fa-clock-o"></i>
+						<?php if ( get_the_modified_time() != get_the_time() ) { ?>
+							<?php esc_html_e( 'Updated on', 'swell-lite' ); ?> <?php the_modified_date( esc_html__( 'F j, Y', 'swell-lite' ) ); ?>
+						<?php } else { ?>
+							<?php esc_html_e( 'Posted on', 'swell-lite' ); ?> <?php the_time( esc_html__( 'F j, Y', 'swell-lite' ) ); ?>
+						<?php } ?>
+					</p>
+				</div>
+			<?php } ?>
+
 			<h1 class="headline"><?php the_title(); ?></h1>
+
+			<?php if ( '1' == get_theme_mod( 'display_author_blog', '1' ) ) { ?>
+				<div class="post-author">
+					<p><?php esc_html_e( 'by', 'swell-lite' ); ?> <?php esc_url( the_author_posts_link() ); ?></p>
+				</div>
+				<span class="divider-small"></span>
+			<?php } ?>
+			
 		<?php } ?>
 
 		<?php the_content(); ?>
