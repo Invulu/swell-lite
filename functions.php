@@ -71,29 +71,6 @@ add_action( 'after_setup_theme', 'swell_lite_setup' );
 
 /*
 -------------------------------------------------------------------------------------------------------
-	Admin Notice
--------------------------------------------------------------------------------------------------------
-*/
-
-/** Function swell_lite_admin_notice */
-function swell_lite_admin_notice() {
-	echo '<div class="updated"><p>';
-	printf( __( 'Still using the <strong>Lite</strong> version!? <a href="%1$s" target="_blank">Upgrade to the premium Swell Theme</a> for more options, page templates, shortcodes, support and additional features.', 'swell-lite' ), 'http://organicthemes.com/theme/swell-theme/' );
-	echo '</p></div>';
-}
-add_action( 'admin_notices', 'swell_lite_admin_notice' );
-
-if ( ! class_exists( 'Organic_Footer_Modifier' ) ) {
-	function swell_lite_admin_footer_notice() {
-		echo '<div class="updated"><p>';
-		printf( __( 'Want to remove or change those pesky footer credits? Get the <a href="%1$s" target="_blank">Footer Change Plugin</a> from Organic Themes! Use discount code <b>FOOTERSAVE10</b> to save $10!', 'swell-lite' ), 'http://organicthemes.com/footer-change-plugin/' );
-		echo '</p></div>';
-	}
-	add_action( 'admin_notices', 'swell_lite_admin_footer_notice' );
-}
-
-/*
--------------------------------------------------------------------------------------------------------
 	Category ID to Name
 -------------------------------------------------------------------------------------------------------
 */
