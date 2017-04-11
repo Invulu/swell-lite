@@ -49,14 +49,14 @@ if ( ! function_exists( 'swell_lite_setup' ) ) :
 			),
 		));
 		$defaults = array(
-		'width'                 => 1800,
-		'height'                => 520,
-		'flex-height'           => true,
-		'flex-width'            => true,
-		'default-text-color'    => 'ffffff',
-		'default-image' 		=> get_template_directory_uri() . '/images/default-header.jpg',
-		'header-text'           => false,
-		'uploads'               => true,
+			'width'                 => 1800,
+			'height'                => 520,
+			'flex-height'           => true,
+			'flex-width'            => true,
+			'default-text-color'    => 'ffffff',
+			'default-image' 		=> get_template_directory_uri() . '/images/default-header.jpg',
+			'header-text'           => false,
+			'uploads'               => true,
 		);
 		add_theme_support( 'custom-header', $defaults );
 
