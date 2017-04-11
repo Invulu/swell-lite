@@ -2,12 +2,12 @@
 
 	Theme Name: Swell Lite
 	Theme URI: http://organicthemes.com/theme/swell-theme/
-	Description: A beautifully minimal and responsive blogging theme. Swell Lite features a full width custom header image, and the option to add a logo within the customizer. The clean design is perfect for professional blogs and sites. The images and scripts are lightweight for fast load times, and the code is well commented for easy editing. A live demo can be viewed here, http://organicthemes.com/demo/swell/. The theme was designed and developed by David Morgan of Organic Themes.
+	Description: A beautifully minimal and responsive blogging theme. Swell Lite features a full width custom header image, and the option to add a logo within the customizer. The clean multi-purpose design is perfect for any professional blog or business and website. The images and scripts are lightweight for fast load times, and the code is well commented for easy editing. As a result, Swell Lite is a perfect starter theme or canvas for theme developers and designers. A live demo can be viewed here, http://organicthemes.com/demo/swell/.
 	Author: Organic Themes
 	Author URI: http://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.5.7
+	Version: 1.5.8
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
@@ -866,11 +866,11 @@ div.menu ul li li.sfHover ul {
 	color: rgba(255, 255, 255, .4);
 	text-align: center;
 	text-decoration: none;
-	line-height: 32px;
-	min-width: 32px;
-	margin: 4px;
+	line-height: 36px;
+	min-width: 36px;
+	margin: 2px;
 	padding: 0px;
-	border-radius: 16px;
+	border-radius: 18px;
 }
 .social-icons li a:hover {
 	background: #444444;

@@ -1,4 +1,4 @@
-Swell Lite v1.5.7
+Swell Lite v1.5.8
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -206,3 +206,8 @@ CHANGELOG v1.5.6:
 
 CHANGELOG v1.5.7:
 - Removed admin notices
+
+CHANGELOG v1.5.8:
+- Added dismissible admin notice
+- Updated theme description
+- Style tweaks
