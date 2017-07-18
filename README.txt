@@ -1,4 +1,4 @@
-Swell Lite v1.5.8
+Swell Lite v1.5.9
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -211,3 +211,8 @@ CHANGELOG v1.5.8:
 - Added dismissible admin notice
 - Updated theme description
 - Style tweaks
+
+CHANGELOG v1.5.9:
+- Enable selective refresh for widgets
+- Added 'use strict' to jquery.custom.js
+- Added plugin activation recommendations

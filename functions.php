@@ -26,6 +26,9 @@ if ( ! function_exists( 'swell_lite_setup' ) ) :
 		// Enable support for Post Thumbnails.
 		add_theme_support( 'post-thumbnails' );
 
+		// Enable selective refresh for Widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
 		// Enable support for site title tag.
 		add_theme_support( 'title-tag' );
 
@@ -75,23 +78,41 @@ add_action( 'after_setup_theme', 'swell_lite_setup' );
 -------------------------------------------------------------------------------------------------------
 */
 
-function swell_lite_theme_notice() {
-	global $current_user;
-	$user_id = $current_user->ID;
-	if ( ! get_user_meta( $user_id, 'swell_lite_theme_notice_ignore') ) {
-		echo '<div class="notice notice-warning" style="position: relative;"><p>'. __( 'Enjoying the <b>Swell Lite</b> theme? Consider <a href="https://organicthemes.com/theme/swell-theme/" target="_blank">upgrading</a> to the premium version for more customization options, page templates and support.', 'swell-lite' ) .' <a class="notice-dismiss" href="?swell-lite-ignore-notice" style="text-decoration: none;"></a></p></div>';
+/** Function swell_lite_admin_notice */
+function swell_lite_admin_notice() {
+	if ( ! PAnD::is_admin_notice_active( 'notice-swell-lite-30' ) ) {
+		return;
 	}
-}
-add_action( 'admin_notices', 'swell_lite_theme_notice' );
+	?>
+	<div data-dismissible="notice-swell-lite-30" class="notice updated is-dismissible">
 
-function swell_lite_theme_notice_ignore() {
-	global $current_user;
-	$user_id = $current_user->ID;
-	if ( isset( $_GET['swell-lite-ignore-notice'] ) ) {
-		add_user_meta( $user_id, 'swell_lite_theme_notice_ignore', 'true', true );
-	}
+		<p><?php printf( __( 'Enter your email to receive important updates and information from <a href="%1$s" target="_blank">Organic Themes</a>.', 'swell-lite' ), 'https://organicthemes.com' ); ?></p>
+
+		<div id="mc_embed_signup" class="clear" style="overflow: hidden; margin-bottom: 12px;">
+			<form action="//organicthemes.us1.list-manage.com/subscribe/post?u=7cf6b005868eab70f031dc806&amp;id=c3cce2fac0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<div id="mc_embed_signup_scroll">
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>
+					<div class="mc-field-group" style="float: left;">
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+					</div>
+					<div style="float: left; margin-left: 6px;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7cf6b005868eab70f031dc806_c3cce2fac0" tabindex="-1" value=""></div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+	<?php
 }
-add_action( 'admin_init', 'swell_lite_theme_notice_ignore' );
+add_action( 'admin_init', array( 'PAnD', 'init' ) );
+add_action( 'admin_notices', 'swell_lite_admin_notice' );
+
+require( get_template_directory() . '/includes/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php' );
 
 /*
 -------------------------------------------------------------------------------------------------------
@@ -398,6 +419,8 @@ add_action( 'body_class', 'swell_lite_body_class' );
 
 require_once( get_template_directory() . '/includes/customizer.php' );
 require_once( get_template_directory() . '/includes/typefaces.php' );
+require_once( get_template_directory() . '/includes/plugin-activation.php' );
+require_once( get_template_directory() . '/includes/plugin-activation-class.php' );
 
 /*
 -------------------------------------------------------------------------------------------------------
