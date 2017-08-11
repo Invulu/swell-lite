@@ -1,4 +1,4 @@
-Swell Lite v1.5.9
+Swell Lite v1.6
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -216,3 +216,8 @@ CHANGELOG v1.5.9:
 - Enable selective refresh for widgets
 - Added 'use strict' to jquery.custom.js
 - Added plugin activation recommendations
+
+CHANGELOG v1.6:
+- Updated plugin activation scripts
+- Require Organic Customizer Widgets plugin
+- Recommend Customize Posts plugin

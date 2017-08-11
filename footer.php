@@ -52,7 +52,7 @@
 
 					<p><?php esc_html_e( 'Copyright', 'swell-lite' ); ?> &copy; <?php echo date( esc_html__( 'Y', 'swell-lite' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'swell-lite' ); ?> &middot; <?php bloginfo( 'name' ); ?></p>
 
-					<p><?php esc_html_e( 'Swell Lite', 'swell-lite' ); ?> <?php esc_html_e( 'from', 'swell-lite' ); ?> <a href="http://organicthemes.com" target="_blank"><?php esc_html_e( 'Organic Themes', 'swell-lite' ); ?></a> &middot; <a href="<?php bloginfo( 'rss2_url' ); ?>"><?php esc_html_e( 'RSS Feed', 'swell-lite' ); ?></a> &middot; <?php wp_loginout(); ?></p>
+					<p><?php esc_html_e( 'Swell Lite', 'swell-lite' ); ?> <?php esc_html_e( 'from', 'swell-lite' ); ?> <a href="https://organicthemes.com" target="_blank"><?php esc_html_e( 'Organic Themes', 'swell-lite' ); ?></a> &middot; <a href="<?php bloginfo( 'rss2_url' ); ?>"><?php esc_html_e( 'RSS Feed', 'swell-lite' ); ?></a> &middot; <?php wp_loginout(); ?></p>
 
 				</div>
 
