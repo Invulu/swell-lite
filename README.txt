@@ -1,4 +1,4 @@
-Swell Lite v1.6
+Swell Lite v1.6.1
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -221,3 +221,6 @@ CHANGELOG v1.6:
 - Updated plugin activation scripts
 - Require Organic Customizer Widgets plugin
 - Recommend Customize Posts plugin
+
+CHANGELOG v1.6.1:
+- Updates to admin notice
