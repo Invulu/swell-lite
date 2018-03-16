@@ -1,4 +1,4 @@
-Swell Lite v1.6.1
+Swell Lite v1.6.2
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -224,3 +224,8 @@ CHANGELOG v1.6:
 
 CHANGELOG v1.6.1:
 - Updates to admin notice
+
+CHANGELOG v1.6.2:
+- Removed force activation
+- Removed recommended Customize Posts plugin
+- Updated theme description
