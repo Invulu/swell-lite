@@ -200,6 +200,18 @@ if ( ! function_exists( 'swell_lite_enqueue_scripts' ) ) {
 }
 add_action( 'wp_enqueue_scripts', 'swell_lite_enqueue_scripts' );
 
+if ( ! function_exists( 'swell_lite_enqueue_admin_scripts' ) ) {
+
+	/** Function swell_lite_enqueue_admin_scripts */
+	function swell_lite_enqueue_admin_scripts( $hook ) {
+		if ( 'themes.php' !== $hook ) {
+			return;
+		}
+		wp_enqueue_script( 'swell-custom-admin', get_template_directory_uri() . '/js/jquery.custom.admin.js', array( 'jquery' ), '1.0', true );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'swell_lite_enqueue_admin_scripts' );
+
 /*
 -------------------------------------------------------------------------------------------------------
 	Register Sidebars
