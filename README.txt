@@ -1,4 +1,4 @@
-Swell Lite v1.6.4
+Swell Lite v1.6.5
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -236,3 +236,6 @@ CHANGELOG v1.6.3:
 CHANGELOG v1.6.4:
 - Updated OCW plugin name to Organic Builder Widgets
 - Added theme support submenu link
+
+CHANGELOG v1.6.5
+- Fixed issue of custom admin submenu link overwriting other links

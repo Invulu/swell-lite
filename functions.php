@@ -81,7 +81,7 @@ add_action( 'after_setup_theme', 'swell_lite_setup' );
 function swell_lite_support_link() {
 	global $submenu;
 	$menu_link = esc_url( 'https://organicthemes.com/support/' );
-	$submenu['themes.php'][6] = array( __( 'Theme Support', 'swell-lite' ), 'manage_options', $menu_link, '', 1 );
+	$submenu['themes.php'][] = array( __( 'Theme Support', 'swell-lite' ), 'manage_options', $menu_link, '', 1 );
 }
 add_action( 'admin_menu', 'swell_lite_support_link' );
 
