@@ -44,9 +44,9 @@ function swell_lite_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name'               => 'Organic Customizer Widgets', // The plugin name.
+			'name'               => 'Organic Builder Widgets', // The plugin name.
 			'slug'               => 'organic-customizer-widgets', // The plugin slug (typically the folder name).
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
 		),
 
 	);
