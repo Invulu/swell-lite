@@ -41,9 +41,6 @@
 
 	function modifyPosts() {
 
-		/* Insert Line Break Before More Links ---------------------*/
-		$('<br />').insertBefore('.postarea .more-link');
-
 		/* Hide Comments When No Comments Activated ---------------------*/
 		$('.nocomments').parent().css('display', 'none');
 

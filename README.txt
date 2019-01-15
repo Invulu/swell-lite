@@ -1,4 +1,4 @@
-Swell Lite v1.6.5
+Swell Lite v1.7
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -239,3 +239,12 @@ CHANGELOG v1.6.4:
 
 CHANGELOG v1.6.5
 - Fixed issue of custom admin submenu link overwriting other links
+
+CHANGELOG v1.7
+- Added Gutenberg support
+- Added wide and full alignment block support
+- Added Gutenberg editor styles
+- Added HTML5 theme support
+- Updated content more link functions
+- Body class updates for conditional sidebars
+- Admin notification updates

@@ -43,7 +43,7 @@
 
 			<span class="divider-small"></span>
 
-			<?php the_content( esc_html__( 'Read More', 'swell-lite' ) ); ?>
+			<?php the_content( /* translators: 1: Permalink. */ sprintf( esc_html__( 'Continue reading%s', 'swell-lite' ), '<span class="screen-reader-text">  ' . get_the_title() . '</span>', false ) ); ?>
 
 		<!-- END .article -->
 		</div>

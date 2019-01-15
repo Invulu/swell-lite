@@ -32,49 +32,66 @@ if ( ! function_exists( 'swell_lite_setup' ) ) :
 		// Enable support for site title tag.
 		add_theme_support( 'title-tag' );
 
+		/*
+		* Enable support for wide alignment class for Gutenberg blocks.
+		*/
+		add_theme_support( 'align-wide' );
+
+		/*
+		* Enable support for HTML5 output.
+		*/
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
 		add_image_size( 'swell-featured-large', 1800, 1200, true ); // Large Featured Image.
 		add_image_size( 'swell-featured-medium', 1200, 800, true ); // Medium Featured Image.
 		add_image_size( 'swell-featured-small', 640, 640, true ); // Small Featured Image.
 
 		// Create Menus.
 		register_nav_menus( array(
-			'fixed-menu' => esc_html__( 'Fixed Menu', 'swell-lite' ),
-			'main-menu' => esc_html__( 'Main Menu', 'swell-lite' ),
+			'fixed-menu'  => esc_html__( 'Fixed Menu', 'swell-lite' ),
+			'main-menu'   => esc_html__( 'Main Menu', 'swell-lite' ),
 			'social-menu' => esc_html__( 'Social Menu', 'swell-lite' ),
 		));
 
 		// Custom Header.
 		register_default_headers( array(
 			'default' => array(
-			'url'   => get_template_directory_uri() . '/images/default-header.jpg',
-			'thumbnail_url' => get_template_directory_uri() . '/images/default-header.jpg',
-			'description'   => esc_html__( 'Default Custom Header', 'swell-lite' ),
+				'url'           => get_template_directory_uri() . '/images/default-header.jpg',
+				'thumbnail_url' => get_template_directory_uri() . '/images/default-header.jpg',
+				'description'   => esc_html__( 'Default Custom Header', 'swell-lite' ),
 			),
 		));
 		$defaults = array(
-			'width'                 => 1800,
-			'height'                => 520,
-			'flex-height'           => true,
-			'flex-width'            => true,
-			'default-text-color'    => 'ffffff',
-			'default-image' 		=> get_template_directory_uri() . '/images/default-header.jpg',
-			'header-text'           => false,
-			'uploads'               => true,
+			'width'              => 1800,
+			'height'             => 520,
+			'flex-height'        => true,
+			'flex-width'         => true,
+			'default-text-color' => 'ffffff',
+			'default-image'      => get_template_directory_uri() . '/images/default-header.jpg',
+			'header-text'        => false,
+			'uploads'            => true,
 		);
 		add_theme_support( 'custom-header', $defaults );
 
 		// Custom Background.
 		$defaults = array(
-		'default-color'          => 'eeeeee',
+			'default-color' => 'eeeeee',
 		);
 		add_theme_support( 'custom-background', $defaults );
+
 	}
 endif; // End function swell_lite_setup.
 add_action( 'after_setup_theme', 'swell_lite_setup' );
 
 /*
 -------------------------------------------------------------------------------------------------------
-	Admin Support Link
+	Admin Support and Upgrade Link
 -------------------------------------------------------------------------------------------------------
 */
 
@@ -85,14 +102,21 @@ function swell_lite_support_link() {
 }
 add_action( 'admin_menu', 'swell_lite_support_link' );
 
+function swell_lite_upgrade_link() {
+	global $submenu;
+	$upgrade_link = esc_url( 'https://organicthemes.com/theme/swell-theme/?utm_source=lite_upgrade' );
+	$submenu['themes.php'][] = array( __( 'Theme Upgrade', 'swell-lite' ), 'manage_options', $upgrade_link );
+}
+add_action( 'admin_menu', 'swell_lite_upgrade_link' );
+
 /*
 -------------------------------------------------------------------------------------------------------
 	Admin Notice
 -------------------------------------------------------------------------------------------------------
 */
 
-/** Function swell_lite_admin_notice */
-function swell_lite_admin_notice() {
+/** Function swell_lite_admin_notice_follow */
+function swell_lite_admin_notice_follow() {
 	if ( ! PAnD::is_admin_notice_active( 'notice-swell-lite-30' ) ) {
 		return;
 	}
@@ -126,7 +150,7 @@ function swell_lite_admin_notice() {
 
 	<div data-dismissible="notice-swell-lite-30" class="notice updated is-dismissible">
 
-		<p><?php printf( __( 'Thanks for choosing the Swell Lite theme! Enter your email to receive important updates and information from <a href="%1$s" target="_blank">Organic Themes</a>.', 'swell-lite' ), 'https://organicthemes.com' ); ?></p>
+		<p><?php printf( __( 'Thanks for choosing the Swell Lite theme! Enter your email for important updates and information regarding <a href="%1$s" target="_blank">Organic Themes</a>.', 'swell-lite' ), 'https://organicthemes.com' ); ?></p>
 
 		<div class="follows" style="overflow: hidden; margin-bottom: 12px;">
 
@@ -156,10 +180,31 @@ function swell_lite_admin_notice() {
 	</div>
 
 	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 	<?php
 }
+
+/** Function swell_lite_admin_notice_review */
+function swell_lite_admin_notice_review() {
+	if ( ! PAnD::is_admin_notice_active( 'notice-swell-lite-review-30' ) ) {
+		return;
+	}
+	?>
+
+	<div data-dismissible="notice-swell-lite-review-30" class="notice updated is-dismissible">
+
+		<p><?php printf( wp_kses_post( '🍍 Aloha! Mahalo for using the <a href="%1$s" target="_blank">Swell Lite</a> theme. As a <b>BIG</b> favor, could you please take a moment to <a href="%2$s" target="_blank">leave a positive review</a> for this theme. Just consider it your good deed for the day ;) Additionally, you may consider upgrading to the <a href="%3$s" target="_blank">Premium Swell Theme</a> for more options, page templates, and support.', 'swell-lite' ), 'https://organicthemes.com/theme/swell-lite/', 'https://wordpress.org/support/theme/swell-lite/reviews/#new-post', 'https://organicthemes.com/theme/swell-theme/?utm_source=lite_upgrade' ); ?></p>
+		<p><b><?php esc_html_e( '&mdash; David Morgan', 'swell-lite' ); ?></b><br/>
+		<b><?php printf( wp_kses_post( 'Co-founder of <a href="%1$s" target="_blank">Organic Themes</a>', 'swell-lite' ), 'https://organicthemes.com/' ); ?></b></p>
+
+	</div>
+
+	<?php
+}
+
 add_action( 'admin_init', array( 'PAnD', 'init' ) );
-add_action( 'admin_notices', 'swell_lite_admin_notice' );
+add_action( 'admin_notices', 'swell_lite_admin_notice_follow', 10 );
+add_action( 'admin_notices', 'swell_lite_admin_notice_review', 10 );
 
 require( get_template_directory() . '/includes/persist-admin-notices-dismissal/persist-admin-notices-dismissal.php' );
 
@@ -206,9 +251,9 @@ if ( ! function_exists( 'swell_lite_enqueue_scripts' ) ) {
 		wp_enqueue_script( 'swell-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20130729', true );
 
 		// Load single scripts only on single pages.
-	    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-	    	wp_enqueue_script( 'comment-reply' );
-	    }
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'swell_lite_enqueue_scripts' );
@@ -224,6 +269,27 @@ if ( ! function_exists( 'swell_lite_enqueue_admin_scripts' ) ) {
 	}
 }
 add_action( 'admin_enqueue_scripts', 'swell_lite_enqueue_admin_scripts' );
+
+/*
+-------------------------------------------------------------------------------------------------------
+	Gutenberg Editor Styles
+-------------------------------------------------------------------------------------------------------
+*/
+
+/**
+ * Enqueue WordPress theme styles within Gutenberg.
+ */
+function swell_lite_gutenberg_styles() {
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style(
+		'swell-lite-gutenberg',
+		get_theme_file_uri( '/css/gutenberg.css' ),
+		false,
+		'1.0',
+		'all'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'swell_lite_gutenberg_styles', 10 );
 
 /*
 -------------------------------------------------------------------------------------------------------
@@ -279,7 +345,7 @@ function swell_lite_add_editor_styles() {
 
 /*
 ------------------------------------------------------------------------------------------------------
-   Content Width
+	Content Width
 ------------------------------------------------------------------------------------------------------
 */
 
@@ -389,19 +455,45 @@ function swell_lite_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'swell_lite_excerpt_length', 999 );
 
 /**
- * Return custom read more link text for the excerpt.
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+ * a 'Continue reading' link.
  *
- * @param array $more is the excerpt more link.
- * @return array
+ * @since Swell Lite 1.0
+ * @param string $link Exacerpt permalink to post.
+ * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function swell_lite_excerpt_more( $more ) {
-	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'. esc_html__( 'Read More', 'swell-lite' ) .'</a>';
+function swell_lite_excerpt_more( $link ) {
+	if ( is_admin() ) {
+		return $link;
+	}
+
+	$link = sprintf( '<div class="more-link-wrapper"><a href="%1$s" class="more-link">%2$s</a></div>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'swell-lite' ), get_the_title( get_the_ID() ) )
+	);
+	return ' &hellip; ' . $link;
 }
 add_filter( 'excerpt_more', 'swell_lite_excerpt_more' );
 
+/**
+ * Creates a custom 'Read More' link by prepending and appending columns on either
+ * side of the anchor to create a divider between the next post.
+ *
+ * @param string $link The anchor for rendering the more tag.
+ * @param string $text The text for the more tag.
+ */
+function swell_lite_add_more_link_class( $link, $text ) {
+	$html = '<div class="more-link-wrapper">';
+		$html .= $link;
+	$html .= '</div>';
+	return $html;
+} // End swell_lite_add_more_link_class.
+add_action( 'the_content_more_link', 'swell_lite_add_more_link_class', 10, 2 );
+
 /*
 -------------------------------------------------------------------------------------------------------
-   Custom Page Links
+	Custom Page Links
 -------------------------------------------------------------------------------------------------------
 */
 
@@ -454,8 +546,11 @@ function swell_lite_body_class( $classes ) {
 	if ( has_nav_menu( 'fixed-menu' ) ) {
 		$classes[] = 'swell-fixed-menu'; }
 
-	if ( is_active_sidebar( 'right-sidebar' ) ) {
-		$classes[] = 'swell-right-sidebar'; }
+	if ( is_singular() && is_active_sidebar( 'default-sidebar' ) || is_home() && is_active_sidebar( 'blog-sidebar' ) ) {
+		$classes[] = 'swell-sidebar-active';
+	} else {
+		$classes[] = 'swell-sidebar-inactive';
+	}
 
 	if ( '' != get_theme_mod( 'background_image' ) ) {
 		// This class will render when a background image is set
