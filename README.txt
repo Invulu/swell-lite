@@ -1,4 +1,4 @@
-Swell Lite v1.7
+Swell Lite v1.7.1
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -248,3 +248,6 @@ CHANGELOG v1.7
 - Updated content more link functions
 - Body class updates for conditional sidebars
 - Admin notification updates
+
+CHANGELOG v1.7.1
+- Gutenberg style updates for image alignment

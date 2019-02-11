@@ -7,7 +7,7 @@
 	Author URI: https://organicthemes.com
 	License: GNU General Public License v2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Version: 1.7
+	Version: 1.7.1
 	Text Domain: swell-lite
 	Domain Path: /languages/
 	Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, featured-images, featured-image-header, flexible-header, full-width-template, translation-ready, sticky-post, threaded-comments, editor-style, theme-options, footer-widgets
@@ -1047,28 +1047,29 @@ img.hide-img {
 	padding: 0px;
 }
 img.aligncenter,
-.wp-block-image.aligncenter {
-	display: block;
+.wp-block-image.aligncenter,
+.wp-block-image .aligncenter {
+	text-align: center;
 	margin: 12px auto;
 	padding: 0px;
 }
 img.alignnone,
-.wp-block-image.alignnone {
-	padding: 0px;
+.wp-block-image.alignnone,
+.wp-block-image .alignnone {
 	margin: 12px 0px;
-	display: inline;
+	padding: 0px;
 }
 img.alignright,
-.wp-block-image.alignright {
-	padding: 0px;
+.wp-block-image.alignright,
+.wp-block-image .alignright {
 	margin: 12px 0px 12px 24px;
-	display: inline;
+	padding: 0px;
 }
 img.alignleft,
-.wp-block-image.alignleft {
-	display: inline;
-	padding: 0px;
+.wp-block-image.alignleft,
+.wp-block-image .alignleft {
 	margin: 12px 24px 12px 0px;
+	padding: 0px;
 }
 .alignfull {
 	position: relative;
@@ -2061,17 +2062,9 @@ blockquote[class*="wp-block"] {
 	margin: 32px auto;
 	padding: 0px;
 }
-.wp-block-image .aligncenter,
-.wp-block-image .alignleft,
-.wp-block-image .alignright,
-.wp-block-image.is-resized {
-	display: inline;
-}
-.wp-block-image .aligncenter > figcaption,
-.wp-block-image .alignleft > figcaption,
-.wp-block-image .alignright > figcaption,
-.wp-block-image.is-resized > figcaption {
-	display: block;
+.wp-block-embed {
+	margin-left: auto;
+	margin-right: auto;
 }
 .wp-block-gallery .blocks-gallery-item {
 	padding: 0px;
