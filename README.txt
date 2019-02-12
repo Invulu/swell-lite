@@ -1,4 +1,4 @@
-Swell Lite v1.7.1
+Swell Lite v1.7.2
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -251,3 +251,6 @@ CHANGELOG v1.7
 
 CHANGELOG v1.7.1
 - Gutenberg style updates for image alignment
+
+CHANGELOG v1.7.2
+- Updated plugin recommendation to recognize if pro version installed
