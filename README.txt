@@ -1,4 +1,4 @@
-Swell Lite v1.7.2
+Swell Lite v1.7.3
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -254,3 +254,6 @@ CHANGELOG v1.7.1
 
 CHANGELOG v1.7.2
 - Updated plugin recommendation to recognize if pro version installed
+
+CHANGELOG v1.7.3
+- Updated recommended plugins
