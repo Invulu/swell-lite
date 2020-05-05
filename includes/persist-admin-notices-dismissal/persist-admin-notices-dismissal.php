@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Persist Admin notices Dismissal
  *
@@ -19,7 +18,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package Persist Admin notices Dismissal
- * @author  Agbonghama Collins
  * @author  Andy Fragen
  * @license http://www.gnu.org/licenses GNU General Public License
  * @version 1.3
@@ -55,7 +53,7 @@ if ( ! class_exists( 'PAnD' ) ) {
 				'dismissible-notices',
 				get_template_directory_uri() . '/includes/persist-admin-notices-dismissal/dismiss-notice.js',
 				array( 'jquery', 'common' ),
-				false,
+				'1.0',
 				true
 			);
 
@@ -75,17 +73,15 @@ if ( ! class_exists( 'PAnD' ) ) {
 		public static function dismiss_admin_notice() {
 			$option_name        = sanitize_text_field( $_POST['option_name'] );
 			$dismissible_length = sanitize_text_field( $_POST['dismissible_length'] );
-			$transient          = 0;
 
-			if ( 'forever' != $dismissible_length ) {
-				// If $dismissible_length is not an integer default to 1
-				$dismissible_length = ( 0 == absint( $dismissible_length ) ) ? 1 : $dismissible_length;
-				$transient          = absint( $dismissible_length ) * DAY_IN_SECONDS;
+			if ( 'forever' !== $dismissible_length ) {
+				// If $dismissible_length is not an integer default to 1.
+				$dismissible_length = ( 0 === absint( $dismissible_length ) ) ? 1 : $dismissible_length;
 				$dismissible_length = strtotime( absint( $dismissible_length ) . ' days' );
 			}
 
 			check_ajax_referer( 'dismissible-notice', 'nonce' );
-			set_site_transient( $option_name, $dismissible_length, $transient );
+			self::set_admin_notice_cache( $option_name, $dismissible_length );
 			wp_die();
 		}
 
@@ -102,7 +98,7 @@ if ( ! class_exists( 'PAnD' ) ) {
 			$option_name = implode( '-', $array );
 			$db_record   = get_site_transient( $option_name );
 
-			if ( 'forever' == $db_record ) {
+			if ( 'forever' === $db_record ) {
 				return false;
 			} elseif ( absint( $db_record ) >= time() ) {
 				return false;

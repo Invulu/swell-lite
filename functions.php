@@ -281,13 +281,19 @@ add_action( 'admin_enqueue_scripts', 'swell_lite_enqueue_admin_scripts' );
  */
 function swell_lite_gutenberg_styles() {
 	// Load the theme styles within Gutenberg.
-	wp_enqueue_style(
-		'swell-lite-gutenberg',
-		get_theme_file_uri( '/css/gutenberg.css' ),
-		false,
-		'1.0',
-		'all'
-	);
+		wp_enqueue_style(
+			'swell-lite-gutenberg',
+			get_theme_file_uri( '/css/gutenberg.css' ),
+			false,
+			'1.0',
+			'all'
+		);
+		wp_enqueue_style(
+			'font-awesome',
+			get_template_directory_uri() . '/css/font-awesome.css',
+			array( 'swell-lite-gutenberg' ),
+			'1.0'
+		);
 }
 add_action( 'enqueue_block_editor_assets', 'swell_lite_gutenberg_styles', 10 );
 
@@ -300,28 +306,28 @@ add_action( 'enqueue_block_editor_assets', 'swell_lite_gutenberg_styles', 10 );
 /** Function swell_lite_widgets_init */
 function swell_lite_widgets_init() {
 	register_sidebar(array(
-		'name' => esc_html__( 'Default Sidebar', 'swell-lite' ),
-		'id' => 'default-sidebar',
+		'name'          => esc_html__( 'Default Sidebar', 'swell-lite' ),
+		'id'            => 'default-sidebar',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h6 class="title">',
-		'after_title' => '</h6>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h6 class="title">',
+		'after_title'   => '</h6>',
 	));
 	register_sidebar(array(
-		'name' => esc_html__( 'Blog Sidebar', 'swell-lite' ),
-		'id' => 'blog-sidebar',
+		'name'          => esc_html__( 'Blog Sidebar', 'swell-lite' ),
+		'id'            => 'blog-sidebar',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h6 class="title">',
-		'after_title' => '</h6>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h6 class="title">',
+		'after_title'   => '</h6>',
 	));
 	register_sidebar(array(
-		'name' => esc_html__( 'Footer Widgets', 'swell-lite' ),
-		'id' => 'footer',
+		'name'          => esc_html__( 'Footer Widgets', 'swell-lite' ),
+		'id'            => 'footer',
 		'before_widget' => '<div id="%1$s" class="widget %2$s"><div class="footer-widget">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<h6 class="title">',
-		'after_title' => '</h6>',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h6 class="title">',
+		'after_title'   => '</h6>',
 	));
 }
 add_action( 'widgets_init', 'swell_lite_widgets_init' );

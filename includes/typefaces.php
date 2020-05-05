@@ -15,10 +15,10 @@ function swell_lite_fonts_url() {
 	$fonts_url = '';
 
 	/*
-	Translators: If there are characters in your language that are not
-    * supported by Lora, translate this to 'off'. Do not translate
-    * into your own language.
-    */
+	 * Translators: If there are characters in your language that are not
+	 * supported by Lora, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
 
 	$raleway = _x( 'on', 'Raleway font: on or off', 'swell-lite' );
 	$roboto = _x( 'on', 'Roboto font: on or off', 'swell-lite' );
@@ -50,8 +50,8 @@ function swell_lite_fonts_url() {
 		}
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => rawurlencode( implode( '|', $font_families ) ),
+			'subset' => rawurlencode( 'latin,latin-ext' ),
 		);
 
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
@@ -66,7 +66,7 @@ function swell_lite_fonts_url() {
  * @since Swell Lite 1.0
  */
 function swell_lite_scripts_styles() {
-	wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), null );
+	wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'swell_lite_scripts_styles' );
 
@@ -76,7 +76,7 @@ add_action( 'wp_enqueue_scripts', 'swell_lite_scripts_styles' );
  * @since Swell Lite 1.0
  */
 function swell_lite_custom_header_fonts() {
-	wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), null );
+	wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), '1.0' );
 }
 add_action( 'admin_print_styles-appearance_page_custom-header', 'swell_lite_scripts_styles' );
 
@@ -89,3 +89,16 @@ function swell_lite_editor_styles() {
 	add_editor_style( array( 'css/style-editor.css', swell_lite_fonts_url() ) );
 }
 add_action( 'after_setup_theme', 'swell_lite_editor_styles' );
+
+if ( ! function_exists( 'swell_lite_block_editor_styles' ) ) {
+
+	/**
+	 * Add Google Scripts for use with the block editor
+	 *
+	 * @since Swell Lite 1.0
+	 */
+	function swell_lite_block_editor_styles() {
+		wp_enqueue_style( 'swell-fonts', swell_lite_fonts_url(), array(), '1.0' );
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'swell_lite_block_editor_styles' );

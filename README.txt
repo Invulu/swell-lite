@@ -1,4 +1,4 @@
-Swell Lite v1.7.3
+Swell Lite v1.8
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -257,3 +257,11 @@ CHANGELOG v1.7.2
 
 CHANGELOG v1.7.3
 - Updated recommended plugins
+
+CHANGELOG v1.8
+- Updated Gutenberg frontend and editor styles
+- Updated plugin activation script
+- Updated dismissible notice script
+- Added Font Awesome to Gutenberg editor
+- Enqueued Google fonts in Gutenberg editor
+- General cleanup
