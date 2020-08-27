@@ -25,6 +25,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php wp_body_open(); ?>
+
 <!-- BEGIN #wrapper -->
 <div id="wrapper">
 
@@ -39,12 +41,13 @@
 	<button class="menu-toggle"><i class="fa fa-bars"></i></button>
 
 	<?php
-		wp_nav_menu( array(
-			'theme_location' 		=> 'fixed-menu',
-			'title_li' 					=> '',
-			'depth' 						=> 4,
-			'container_class' 	=> '',
-			'menu_class'      	=> 'menu',
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'fixed-menu',
+				'title_li'        => '',
+				'depth'           => 4,
+				'container_class' => '',
+				'menu_class'      => 'menu',
 			)
 		);
 	?>
@@ -90,12 +93,13 @@
 	<?php } ?>
 
 	<?php
-		wp_nav_menu( array(
-			'theme_location' 		=> 'main-menu',
-			'title_li' 					=> '',
-			'depth' 						=> 4,
-			'container_class' 	=> '',
-			'menu_class'      	=> 'menu',
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'main-menu',
+				'title_li'        => '',
+				'depth'           => 4,
+				'container_class' => '',
+				'menu_class'      => 'menu',
 			)
 		);
 	?>

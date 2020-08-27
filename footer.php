@@ -50,9 +50,9 @@
 
 				<div class="align-left">
 
-					<p><?php esc_html_e( 'Copyright', 'swell-lite' ); ?> &copy; <?php echo date( esc_html__( 'Y', 'swell-lite' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'swell-lite' ); ?> &middot; <?php bloginfo( 'name' ); ?></p>
+					<p class="footer-copyright"><?php esc_html_e( 'Copyright', 'swell-lite' ); ?> &copy; <?php echo esc_html( date( 'Y' ) ); ?> &middot; <?php esc_html_e( 'All Rights Reserved', 'swell-lite' ); ?> &middot; <?php bloginfo( 'name' ); ?></p>
 
-					<p><?php esc_html_e( 'Swell Lite', 'swell-lite' ); ?> <?php esc_html_e( 'from', 'swell-lite' ); ?> <a href="https://organicthemes.com" target="_blank"><?php esc_html_e( 'Organic Themes', 'swell-lite' ); ?></a> &middot; <a href="<?php bloginfo( 'rss2_url' ); ?>"><?php esc_html_e( 'RSS Feed', 'swell-lite' ); ?></a> &middot; <?php wp_loginout(); ?></p>
+					<p class="footer-credit"><?php esc_html_e( 'Swell Lite', 'swell-lite' ); ?> <?php esc_html_e( 'from', 'swell-lite' ); ?> <a href="https://organicthemes.com" target="_blank"><?php esc_html_e( 'Organic Themes', 'swell-lite' ); ?></a> &middot; <a href="<?php bloginfo( 'rss2_url' ); ?>"><?php esc_html_e( 'RSS Feed', 'swell-lite' ); ?></a></p>
 
 				</div>
 
@@ -60,16 +60,19 @@
 
 				<div class="align-right">
 
-					<?php wp_nav_menu( array(
-						'theme_location' => 'social-menu',
-						'title_li' => '',
-						'depth' => 1,
-						'container_class' => 'social-menu',
-						'menu_class'      => 'social-icons',
-						'link_before'     => '<span>',
-						'link_after'      => '</span>',
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'social-menu',
+							'title_li'        => '',
+							'depth'           => 1,
+							'container_class' => 'social-menu',
+							'menu_class'      => 'social-icons',
+							'link_before'     => '<span>',
+							'link_after'      => '</span>',
 						)
-					); ?>
+					);
+					?>
 
 				</div>
 

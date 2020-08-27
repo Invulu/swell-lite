@@ -1,4 +1,4 @@
-Swell Lite v1.8
+Swell Lite v1.8.1
 http://www.swelltheme.com
 http://organicthemes.com
 
@@ -7,8 +7,6 @@ Image Credits
 - logo.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - logo.psd: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
 - screenshot.png: Created by David Morgan, http://dav.idmorgan.com. Licensed under the GPLv2 license.
-- default-header.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
-- default-background.jpg: Downloaded from Unsplash, https://unsplash.com. Licensed under Creative Commons Zero license, https://unsplash.com/license.
 
 Font Awesome
 
@@ -264,4 +262,12 @@ CHANGELOG v1.8
 - Updated dismissible notice script
 - Added Font Awesome to Gutenberg editor
 - Enqueued Google fonts in Gutenberg editor
+- General cleanup
+
+CHANGELOG v1.8.1
+- Updated Gutenberg styles
+- Added new stylesheet tags
+- Better handling of plugin recommendation
+- Added wp_body_open action in header.php
+- Added missing escaping in header.php
 - General cleanup
